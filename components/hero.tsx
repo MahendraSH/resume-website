@@ -24,7 +24,7 @@ const Hero: FC<HeroProps> = ({}) => {
               <div className="avatar">
                 <div className=" w-80 p-12 rounded">
                   <Image
-                    src="https://github.com/MahendraSH.png "
+                    src="https://github.com/MahendraSH.png"
                     className=" rounded  "
                     width={3000}
                     height={4000}
