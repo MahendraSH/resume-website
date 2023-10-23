@@ -16,10 +16,6 @@ const NavRoutes = [
     label: "About",
   },
   {
-    href: "/contact",
-    label: "Contact",
-  },
-  {
     href: "/#skills",
     label: "Skills",
   },
@@ -27,14 +23,26 @@ const NavRoutes = [
     href: "/#strengths",
     label: "Strengths",
   },
+  
+  // {
+  //   href: "/#edu",
+  //   label: "education",
+  // },
+
   {
     href: "/#projects",
     label: "Projects",
   },
+  // {
+  //   href: "/blogs",
+  //   label: "Blogs",
+  // },
+
   {
-    href: "/blogs",
-    label: "Blogs",
+    href: "/contact",
+    label: "Contact",
   },
+
 ];
 
 const NavLinks: FC<NavLinksProps> = ({ isSidbar }) => {

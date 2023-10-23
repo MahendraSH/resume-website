@@ -7,6 +7,7 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import { Button } from "./button";
+import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 interface SocailLinksProps {}
 
 const SocailLinks: FC<SocailLinksProps> = ({}) => {
@@ -14,18 +15,18 @@ const SocailLinks: FC<SocailLinksProps> = ({}) => {
     <>
       <Button size={"icon"} variant={"outline"}>
         <Link href={"https://github.com/MahendraSH/"}>
-          <GithubIcon className="h-5 w-5  text-muted-foreground " />
+          <GitHubLogoIcon className="h-5 w-5  text-muted-foreground " />
         </Link>
       </Button>
       <Button size={"icon"} variant={"outline"}>
         <Link href={"https://www.linkedin.com/in/mahendra-s-h-14a74721a/"}>
-          <LinkedinIcon className="h-5 w-5  text-muted-foreground " />
+          <LinkedInLogoIcon className="h-5 w-5  text-muted-foreground " />
         </Link>
       </Button>
 
       <Button size={"icon"} variant={"outline"}>
         <Link href={"https://github.com/MahendraSH/"}>
-          <TwitterIcon className=" h-5 w-5 text-muted-foreground" />
+          <TwitterLogoIcon className=" h-5 w-5 text-muted-foreground" />
         </Link>
       </Button>
      

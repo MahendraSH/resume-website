@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Sidebar from "@/components/sidbar";
 import { siteConfig } from "@/lib/site-config";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,8 +43,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
           <Sidebar />
+
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

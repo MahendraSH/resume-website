@@ -1,6 +1,4 @@
-import Footer from "@/components/footer";
 import Hero from "@/components/hero";
-import Navbar from "@/components/navbar";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Strengths from "@/components/strengths";
@@ -11,7 +9,6 @@ interface MainPageProps {}
 const MainPage: FC<MainPageProps> = ({}) => {
   return (
     <>
-      <Navbar />
       <main>
         <Hero />
         <div
@@ -25,12 +22,10 @@ const MainPage: FC<MainPageProps> = ({}) => {
           <div className="hero-content flex-col  m-auto">
             <Skills />
             <Strengths />
-             <Projects/>
+            <Projects />
           </div>
         </div>
-        
       </main>
-      <Footer />
     </>
   );
 };
