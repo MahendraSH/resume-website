@@ -1,7 +1,10 @@
+"use client";
+
 import { FC } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { XIcon } from "lucide-react";
+import NavItem from "./ui/nav-item";
 
 interface NavLinksProps {
   isSidbar: boolean;
@@ -9,7 +12,7 @@ interface NavLinksProps {
 
 const NavRoutes = [
   {
-    href: "/about",
+    href: "/",
     label: "About",
   },
   {
@@ -46,9 +49,12 @@ const NavLinks: FC<NavLinksProps> = ({ isSidbar }) => {
         </Button>
       )}
       {routers.map((route) => (
-        <Button variant={"ghost"} key={route.href}>
-          <Link href={route.href}> {route.label} </Link>
-        </Button>
+        <NavItem
+          isSidbar
+          label={route.label}
+          href={route.href}
+          key={route.href}
+        />
       ))}
     </>
   );

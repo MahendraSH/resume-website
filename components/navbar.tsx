@@ -35,7 +35,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </div>
         <div className="flex  md:hidden ">
           <div className="menu menu-horizontal px-1 gap-x-2 ">
-            <Button size={"icon" } variant={"outline"}>
+            <Button size={"icon"} variant={"outline"}>
               <label htmlFor="my-drawer-4" className="drawer-button ">
                 <LucideMenu className="h-6 w-6   mx-2 " />
               </label>
