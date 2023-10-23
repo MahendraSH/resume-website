@@ -25,7 +25,18 @@ export const metadata: Metadata = {
     },
   ],
   icons: {
-    icon: "/logo.png",
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/logo-dark.png",
+        href: "/logo-dark.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/logo.png",
+        href: "/logo.png",
+      }
+    ],
   },
 };
 

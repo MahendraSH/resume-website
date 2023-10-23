@@ -1,11 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
 
-
-interface LogoProps {
-  
-}
+interface LogoProps {}
 
 const Logo: FC<LogoProps> = ({}) => {
   return (
@@ -16,12 +13,19 @@ const Logo: FC<LogoProps> = ({}) => {
           width={40}
           height={40}
           alt="logo"
-          className="ml-2"
+          className="ml-2 hidden dark:block "
+        />
+        <Image
+          src={"/logo-dark.png"}
+          width={40}
+          height={40}
+          alt="logo"
+          className="ml-2 dark:hidden  "
         />
         Mahendra S H
       </Link>
     </>
   );
-}
+};
 
-export default Logo 
+export default Logo;
