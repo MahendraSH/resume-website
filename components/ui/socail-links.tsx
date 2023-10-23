@@ -7,29 +7,35 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import { Button } from "./button";
-import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 interface SocailLinksProps {}
 
 const SocailLinks: FC<SocailLinksProps> = ({}) => {
   return (
     <>
-      <Button size={"icon"} variant={"outline"}>
-        <Link href={"https://github.com/MahendraSH/"}>
-          <GitHubLogoIcon className="h-5 w-5  text-muted-foreground " />
-        </Link>
-      </Button>
-      <Button size={"icon"} variant={"outline"}>
-        <Link href={"https://www.linkedin.com/in/mahendra-s-h-14a74721a/"}>
-          <LinkedInLogoIcon className="h-5 w-5  text-muted-foreground " />
-        </Link>
-      </Button>
+      <Link
+        href={"https://github.com/MahendraSH/"}
+        className="kdb bg-background rounded-md p-1 "
+      >
+        <GitHubLogoIcon className="h-7 w-7  text-muted-foreground " />
+      </Link>
+      <Link
+        href={"https://www.linkedin.com/in/mahendra-s-h-14a74721a/"}
+        className="kdb bg-background rounded-md p-1 "
+      >
+        <LinkedInLogoIcon className="h-7 w-7  text-muted-foreground " />
+      </Link>
 
-      <Button size={"icon"} variant={"outline"}>
-        <Link href={"https://github.com/MahendraSH/"}>
-          <TwitterLogoIcon className=" h-5 w-5 text-muted-foreground" />
-        </Link>
-      </Button>
-     
+      <Link
+        href={"https://github.com/MahendraSH/"}
+        className="kdb bg-background rounded-md p-1 "
+      >
+        <TwitterLogoIcon className=" h-7 w-7 text-muted-foreground" />
+      </Link>
     </>
   );
 };
