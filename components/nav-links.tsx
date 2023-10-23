@@ -50,7 +50,7 @@ const NavLinks: FC<NavLinksProps> = ({ isSidbar }) => {
       )}
       {routers.map((route) => (
         <NavItem
-          isSidbar
+          isSidbar={isSidbar}
           label={route.label}
           href={route.href}
           key={route.href}
