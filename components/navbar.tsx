@@ -2,12 +2,12 @@
 
 import { FC } from "react";
 import { ModeToggle } from "./mode-toggle";
-import Link from "next/link";
 import NavLinks from "./nav-links";
 import { LucideMenu } from "lucide-react";
 import { useScrollTop } from "@/hooks/use-sroll-top";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import Logo from "./ui/logo";
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
@@ -23,9 +23,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         )}
       >
         <div className="flex-1">
-          <Link href={"/"} className="btn btn-ghost normal-case text-xl">
-            Mahendra S H
-          </Link>
+         <Logo/>
         </div>
         <div className="hidden md:flex">
           <div className="menu menu-horizontal px-1 gap-x-2 ">
