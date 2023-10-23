@@ -16,7 +16,7 @@ const NavItem: FC<NavItemProps> = ({ isSidbar, label, href }) => {
   const router = useRouter();
   const pathname = usePathname();
   const isActive = href;
-  if (isSidbar) {
+  if (!isSidbar) {
     return (
       <Button variant={"ghost"}>
         <Link href={href}>{label}</Link>
