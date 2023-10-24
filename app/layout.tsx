@@ -35,8 +35,12 @@ export const metadata: Metadata = {
         media: "(prefers-color-scheme: dark)",
         url: "/logo.png",
         href: "/logo.png",
-      }
+      },
     ],
+  },
+  other: {
+    "og:image": "https://mahendrash.vercel.app/og-dark.png",
+    "twitter:image": "https://mahendrash.vercel.app/og-dark.png",
   },
 };
 
