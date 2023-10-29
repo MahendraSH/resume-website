@@ -41,6 +41,13 @@ export const metadata: Metadata = {
   other: {
     "og:image": "https://mahendrash.vercel.app/og-dark.png",
     "twitter:image": "https://mahendrash.vercel.app/og-dark.png",
+
+    "og:title": siteConfig.name,
+    "og:description": siteConfig.description,
+    "og:url": siteConfig.url,
+    "twitter:card": "summary_large_image",
+    "twitter:title": siteConfig.name,
+    "twitter:description": siteConfig.description,
   },
 };
 
