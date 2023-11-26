@@ -14,6 +14,7 @@ const skills = [
   "SQL",
   "tailwindcss",
   "Nextjs",
+  "prisma",
 ];
 const Skills: FC<SkillsProps> = ({}) => {
   return (

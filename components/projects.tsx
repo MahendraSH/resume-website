@@ -58,13 +58,32 @@ const Projects: FC<ProjectsProps> = ({}) => {
                       href={project.liveUrl ?? project.sourceCode}
                       className="relative w-full aspect-video lg:border-2 border-slate-700 rounded-xl"
                     >
-                      <Image
-                        src={project.image}
-                        alt={project.name}
-                        className="block rounded-xl lg:p-1"
-                        fill
-                        sizes="100%"
-                      />
+                      {project.imagedark ? (
+                        <>
+                        <Image
+                          src={project.imagedark}
+                          alt={project.name}
+                          className="hidden rounded-xl lg:p-1 dark:block "
+                          fill
+                          sizes="100%"
+                          />
+                        <Image
+                          src={project.image}
+                          alt={project.name}
+                          className="blockrounded-xl lg:p-1 dark:hidden "
+                          fill
+                          sizes="100%"
+                          />
+                          </>
+                      ) : (
+                        <Image
+                          src={project.image}
+                          alt={project.name}
+                          className="block rounded-xl lg:p-1 "
+                          fill
+                          sizes="100%"
+                        />
+                      )}
                     </Link>
                   </div>
                 )

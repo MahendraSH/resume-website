@@ -17,7 +17,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
     <>
       <div
         className={cn(
-          "navbar z-40 fixed top-0  bg-background   ",
+          "navbar z-40 fixed top-0  bg-background  text-sm m-0 p-0   ",
           scrolled &&
             " border-b shadow w shadow-slate-800  dark:shadow-gray-300"
         )}
