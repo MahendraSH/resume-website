@@ -55,6 +55,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                       </div>
                     </div>
                     <Link
+                    target="_blank"
                       href={project.liveUrl ?? project.sourceCode}
                       className="relative w-full aspect-video lg:border-2 border-slate-700 rounded-xl"
                     >
