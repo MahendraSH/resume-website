@@ -17,9 +17,9 @@ const NavItem: FC<NavItemProps> = ({ isSidbar, label, href }) => {
   const pathname = usePathname();
   if (isSidbar == false ) {
     return (
-      <Button variant={"ghost"}>
-        <Link href={href}>{label}</Link>
-      </Button>
+      <Link href={href}>
+        <Button variant={"ghost"}>{label}</Button>
+      </Link>
     );
   } else {
     return (
@@ -28,6 +28,7 @@ const NavItem: FC<NavItemProps> = ({ isSidbar, label, href }) => {
           htmlFor="my-drawer-4"
           className="drawer-button"
           onClick={() => router.push(href)}
+        
         >
           {label}
         </label>
