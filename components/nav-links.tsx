@@ -23,7 +23,7 @@ const NavRoutes = [
     href: "/#strengths",
     label: "Strengths",
   },
-  
+
   // {
   //   href: "/#edu",
   //   label: "education",
@@ -42,20 +42,12 @@ const NavRoutes = [
     href: "/contact",
     label: "Contact",
   },
-
 ];
 
 const NavLinks: FC<NavLinksProps> = ({ isSidbar }) => {
   const routers = NavRoutes;
   return (
     <>
-      {isSidbar && (
-        <Button size={"icon"} variant={"outline"}>
-          <label htmlFor="my-drawer-4" className="drawer-button ">
-            <XIcon className=" h-6 w-6    text-muted-foreground  " />
-          </label>
-        </Button>
-      )}
       {routers.map((route) => (
         <NavItem
           isSidbar={isSidbar}

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import Sidebar from "@/components/sidbar";
 import { siteConfig } from "@/lib/site-config";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -67,7 +66,6 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          <Sidebar />
 
           <Footer />
         </ThemeProvider>

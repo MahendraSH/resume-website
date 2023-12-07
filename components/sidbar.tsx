@@ -1,25 +1,34 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useState } from "react";
 
 import NavLinks from "./nav-links";
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "./ui/sheet";
+import { Button } from "./ui/button";
+import { SidebarIcon } from "lucide-react";
+import Logo from "./ui/logo";
 interface SidebarProps {}
 
 const Sidebar: FC<SidebarProps> = ({}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <div className="drawer drawer-end">
-        <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">{/* Page content here */}</div>
-        <div className="drawer-side z-50">
-          <label
-            htmlFor="my-drawer-4"
-            aria-label="close sidebar"
-            className="drawer-overlay"
-          ></label>
-          <div className="menu p-4 w-72 min-h-full  bg-zinc-300 dark:bg-zinc-900 ">
-            <NavLinks isSidbar={true} />
-          </div>
-        </div>
-      </div>
+      <Sheet open={isOpen} onOpenChange={() => setIsOpen(false)}>
+        <Button variant={"ghost"} size={"icon"} onClick={() => setIsOpen(true)}>
+          <SidebarIcon className=" h-6 w-6 my-auto  " />
+        </Button>
+        <SheetContent className=" w-[90%]" side={"left"}>
+          <SheetHeader className="w-full">
+            <SheetTitle>
+              <Logo />
+            </SheetTitle>
+            <div className="flex  justify-start flex-col gap-y-2  w-full ">
+              <NavLinks isSidbar={true} />
+            </div>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
     </>
   );
 };
