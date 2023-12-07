@@ -34,8 +34,7 @@ const Hero: FC<HeroProps> = ({}) => {
               </div>
             </figure>
             <div className="card-body  md:w-[calc(100%-320px)]   ">
-              <h2 className=" md:text-5xl text-3xl font-medium  ">
-                {" "}
+              <h2 className=" md:text-5xl text-3xl font-bold bg-clip-text text-transparent  bg-gradient-to-tr from-slate-700  via-primary to-secondary-foreground dark:bg-gradient-to-tr dark:from-slate-300  dark:via-primary dark:to-secondary-foreground  ">
                 Mahendra S H
               </h2>
 
@@ -53,15 +52,15 @@ const Hero: FC<HeroProps> = ({}) => {
               <div className="card-actions  md:mt-3 mt-1  ">
                 <SocailLinks />
                 <Link
-        className=" ml-auto"
-        href={"Mahendra's Resume.pdf"}
-        download={"Mahendra's Resume.pdf"}
-      >
-        <Button>
-          Resume
-          <LucideDownload className="h-4 w-4  ml-2 " />
-        </Button>
-      </Link>
+                  className=" ml-auto"
+                  href={"Mahendra's Resume.pdf"}
+                  download={"Mahendra's Resume.pdf"}
+                >
+                  <Button>
+                    Resume
+                    <LucideDownload className="h-4 w-4  ml-2 " />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
