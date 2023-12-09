@@ -18,7 +18,7 @@ const Strengths: FC<StrengthsProps> = ({}) => {
           <Separator />
           <div className="  md:m-2 md:p-2  space-x-8  md:space-x-12 space-y-4 justify-center text-center text-primary-foreground  ">
             {strengths.map((strength) => (
-              <kbd key={strength} className="kbd bg-primary h-7">
+              <kbd key={strength} className="kbd bg-primary ">
                 {strength}
               </kbd>
             ))}
