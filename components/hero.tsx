@@ -21,8 +21,8 @@ const Hero: FC<HeroProps> = ({}) => {
         <div className="hero-content flex-col lg:flex-row m-auto">
           <div className="card md:card-side  w-full h-full glass  ">
             <figure>
-              <div className="avatar">
-                <div className=" w-80 p-12 rounded">
+              <div className=" flex-1  rounded-2xl ">
+                <div className=" md:w-80 sm:w-50  p-10 md:pr-12   max-h-90 ">
                   <Image
                     src="https://github.com/MahendraSH.png"
                     className=" rounded  "
@@ -33,7 +33,7 @@ const Hero: FC<HeroProps> = ({}) => {
                 </div>
               </div>
             </figure>
-            <div className="card-body  md:w-[calc(100%-320px)]   ">
+            <div className="card-body  md:w-[calc(100%-320px)]   flex-1  ">
               <h2 className=" md:text-5xl text-3xl font-bold bg-clip-text text-transparent  bg-gradient-to-tr from-slate-700  via-primary to-secondary-foreground dark:bg-gradient-to-tr dark:from-slate-300  dark:via-primary dark:to-secondary-foreground  ">
                 Mahendra S H
               </h2>

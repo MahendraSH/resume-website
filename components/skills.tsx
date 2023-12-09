@@ -25,7 +25,7 @@ const Skills: FC<SkillsProps> = ({}) => {
           <Separator />
           <div className="  md:m-2 md:p-2  space-x-8  md:space-x-12 space-y-4 justify-center text-center text-secondary-foreground  ">
             {skills.map((skill) => (
-              <kbd key={skill} className="kbd bg-secondary">
+              <kbd key={skill} className="kbd bg-secondary h-7">
                 {skill}
               </kbd>
             ))}
