@@ -18,7 +18,6 @@ const MainPage: FC<MainPageProps> = ({}) => {
           //     "url(images-dark.avif)",
           // }}
         >
-          <div className="hero-overlay bg-opacity-60 dark:bg-opacity-90"></div>
           <div className="hero-content flex-col  m-auto">
             <Skills />
             <Strengths />

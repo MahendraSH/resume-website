@@ -6,13 +6,12 @@ import { Button } from "./ui/button";
 import { projects } from "@/lib/project-list";
 import { Code2Icon, LinkIcon } from "lucide-react";
 
-
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = ({}) => {
   return (
     <div id="projects">
-      <div className="card md:card-side  w-full h-full glass   ">
+      <div className="card md:card-side  w-full h-full    shadow shadow-primary    ">
         <div className="card-body    ">
           <h2 className="  text-3xl font-medium  "> Projects </h2>
           <Separator />
@@ -41,7 +40,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                         ))}
                       </div>
                       <div className="mt-2 lg:mt-0 flex justify-between">
-                        <p className="text-slate-300">{project.date}</p>
+                        <p className= " dark:text-slate-300  text-slate-600 ">{project.date}</p>
                         <div className="flex gap-2 text-xl">
                           <Link href={project.sourceCode} target="_blank">
                             <Code2Icon />
@@ -55,27 +54,27 @@ const Projects: FC<ProjectsProps> = ({}) => {
                       </div>
                     </div>
                     <Link
-                    target="_blank"
+                      target="_blank"
                       href={project.liveUrl ?? project.sourceCode}
                       className="relative w-full aspect-video lg:border-2 border-slate-700 rounded-xl"
                     >
                       {project.imagedark ? (
                         <>
-                        <Image
-                          src={project.imagedark}
-                          alt={project.name}
-                          className="hidden rounded-xl lg:p-1 dark:block "
-                          fill
-                          sizes="100%"
+                          <Image
+                            src={project.imagedark}
+                            alt={project.name}
+                            className="hidden rounded-xl lg:p-1 dark:block "
+                            fill
+                            sizes="100%"
                           />
-                        <Image
-                          src={project.image}
-                          alt={project.name}
-                          className="blockrounded-xl lg:p-1 dark:hidden "
-                          fill
-                          sizes="100%"
+                          <Image
+                            src={project.image}
+                            alt={project.name}
+                            className="blockrounded-xl lg:p-1 dark:hidden "
+                            fill
+                            sizes="100%"
                           />
-                          </>
+                        </>
                       ) : (
                         <Image
                           src={project.image}
