@@ -8,7 +8,9 @@ import NavItem from "./ui/nav-item";
 
 interface NavLinksProps {
   isSidbar: boolean;
+  onClose?:()=>void;
 }
+
 
 const NavRoutes = [
   {
@@ -44,7 +46,7 @@ const NavRoutes = [
   },
 ];
 
-const NavLinks: FC<NavLinksProps> = ({ isSidbar }) => {
+const NavLinks: FC<NavLinksProps> = ({ isSidbar,onClose }) => {
   const routers = NavRoutes;
   return (
     <>
@@ -54,6 +56,7 @@ const NavLinks: FC<NavLinksProps> = ({ isSidbar }) => {
           label={route.label}
           href={route.href}
           key={route.href}
+          onClose={onClose}
         />
       ))}
     </>

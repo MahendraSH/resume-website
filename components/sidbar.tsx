@@ -24,9 +24,9 @@ const Sidebar: FC<SidebarProps> = ({}) => {
               <Logo />
             </SheetTitle>
             <div className="flex  justify-start flex-col gap-y-2  w-full ">
-              <NavLinks isSidbar={true} />
+              <NavLinks isSidbar={true} onClose={() => setIsOpen(false)} />
             </div>
-          </SheetHeader>
+          </SheetHeader>  
         </SheetContent>
       </Sheet>
     </>

@@ -10,12 +10,13 @@ interface NavItemProps {
   isSidbar: boolean;
   href: string;
   label: string;
+  onClose?: () => void;
 }
 
-const NavItem: FC<NavItemProps> = ({ isSidbar, label, href }) => {
+const NavItem: FC<NavItemProps> = ({ isSidbar, label, href, onClose }) => {
   const router = useRouter();
   const pathname = usePathname();
-  if (isSidbar == false ) {
+  if (isSidbar == false) {
     return (
       <Link href={href}>
         <Button variant={"ghost"}>{label}</Button>
@@ -23,12 +24,11 @@ const NavItem: FC<NavItemProps> = ({ isSidbar, label, href }) => {
     );
   } else {
     return (
-      <Button variant={"ghost"}>
+      <Button variant={"ghost"} onClick={onClose}>
         <label
           htmlFor="my-drawer-4"
           className="drawer-button"
           onClick={() => router.push(href)}
-        
         >
           {label}
         </label>
