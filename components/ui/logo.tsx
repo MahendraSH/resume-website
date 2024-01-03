@@ -20,14 +20,14 @@ const Logo: FC<LogoProps> = ({}) => {
     >
       <Link href={"/"} className=" flex justify-center items-center">
         <Image
-          src={"/logo.png"}
+          src={"/_logo.png"}
           width={40}
           height={40}
           alt="logo"
           className="ml-2 hidden dark:block "
         />
         <Image
-          src={"/logo-dark.png"}
+          src={"/_logo-dark.png"}
           width={40}
           height={40}
           alt="logo"
