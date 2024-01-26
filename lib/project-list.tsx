@@ -18,7 +18,7 @@ export const projects = [
     image: "/projects/cenin.png",
 
     labels: ["MERN Stack", "TailwindCSS", "Daisyui"],
-    date: "July 2023",
+    date: "June 2023",
     sourceCode: "https://github.com/MahendraSH/min-pro-frontend/",
     liveUrl: "https://ceinmain.onrender.com/",
   },
@@ -30,7 +30,7 @@ export const projects = [
     image: "/projects/e-store.png",
     imagedark: "/projects/e-store-dark.png",
     labels: ["Nextjs", "TailwindCSS", "shadcn/ui", "prisma", "MySQL"],
-    date: "Nov 2023",
+    date: "Dec 2023",
     sourceCode: "https://github.com/MahendraSH/estore",
     liveUrl: "https://estore-ms.vercel.app/",
   },
