@@ -8,9 +8,8 @@ import NavItem from "./ui/nav-item";
 
 interface NavLinksProps {
   isSidbar: boolean;
-  onClose?:()=>void;
+  onClose?: () => void;
 }
-
 
 const NavRoutes = [
   {
@@ -46,7 +45,7 @@ const NavRoutes = [
   },
 ];
 
-const NavLinks: FC<NavLinksProps> = ({ isSidbar,onClose }) => {
+const NavLinks: FC<NavLinksProps> = ({ isSidbar, onClose }) => {
   const routers = NavRoutes;
   return (
     <>

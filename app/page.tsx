@@ -18,7 +18,7 @@ const MainPage: FC<MainPageProps> = ({}) => {
           //     "url(images-dark.avif)",
           // }}
         >
-          <div className="hero-content flex-col  m-auto">
+          <div className="hero-content  flex flex-col  m-auto">
             <Skills />
             <Strengths />
             <Projects />
