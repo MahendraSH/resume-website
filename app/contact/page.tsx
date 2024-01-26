@@ -46,8 +46,8 @@ const ContactPage: FC<ContactPageProps> = ({}) => {
             </a>
             <span> mahendrashongunti@gmail.com</span>
           </div>
-          <Link href="https://github.com/MahendraSH/">
-            <div className=" mt-6 kbd bg-secondary-foreground text-secondary">
+          <Link href="https://github.com/MahendraSH/" className=" block">
+            <div className=" mt-6 kbd bg-secondary-foreground text-secondary ">
               <GitHubLogoIcon className=" h-8 w-8 mr-2" />
 
               <span> https://github.com/MahendraSH/</span>

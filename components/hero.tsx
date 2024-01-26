@@ -11,10 +11,10 @@ interface HeroProps {}
 const Hero: FC<HeroProps> = ({}) => {
   return (
     <>
-      <div className="hero min-h-screen   bg-[url('/images.jpeg')] dark:bg-[url('/image.png')]">
+      <div className="hero min-h-screen   bg-[url('/images.jpeg')] dark:bg-[url('/image.png')] ">
         <div className="hero-overlay  opacity-80  dark:opacity-40  "></div>
-        <div className="hero-content flex-col lg:flex-row m-auto">
-          <div className="card md:card-side  w-full h-full  shadow-md  shadow-primary glass    ">
+        <div className="hero-content flex-col lg:flex-row m-auto ">
+          <div className="card md:card-side  w-full h-full  shadow-md  shadow-primary glass      ">
             <figure>
               <div className=" flex-1  rounded-2xl ">
                 <div className=" md:w-80 sm:w-50  p-10 md:pr-12   max-h-90 ">
