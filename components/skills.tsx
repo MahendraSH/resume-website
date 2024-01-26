@@ -19,7 +19,7 @@ const skills = [
 const Skills: FC<SkillsProps> = ({}) => {
   return (
     <div id="skills" className=" pt-12 ">
-      <div className="card md:card-side  w-full h-full    shadow shadow-primary  ">
+      <div className="card md:card-side  w-full h-full    shadow shadow-muted-foregroundy  ">
         <div className="card-body    ">
           <h2 className="  text-3xl font-medium  "> Teck Skills</h2>
           <Separator />
