@@ -43,8 +43,10 @@ export const projects = [
       "  All-in-one platform for E-Commerce   , E-Commerce admin , E-Store Creating  and managing your online e-store with ease. e-store provides API to develop your own e-commerce site or integrate with other services.",
     image: [
       "/projects/p-3/e-store.png",
-      "/projects/p-3/e-store.png",
-      "/projects/p-3/e-store.png",
+      "/projects/p-3/estore-bill.png",
+      "/projects/p-3/estore-cat.png",
+      "/projects/p-3/estore-create.png",
+      "/projects/p-3/estore-api.png",
     ],
     imagedark: [
       "/projects/p-3/e-store-dark.png",
