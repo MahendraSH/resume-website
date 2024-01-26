@@ -44,14 +44,14 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 <Carousel
                   className={cn(
                     "  rounded-md   ",
-                    project.imagedark && " hidden"
+                    project.imagedark && " block dark:hidden"
                   )}
                   opts={{
                     loop: true,
                   }}
                   plugins={[
                     Autoplay({
-                      delay: 2000,
+                      delay: 3500,
                     }),
                   ]}
                 >
@@ -70,6 +70,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                             src={img}
                             alt={project.name}
                             fill
+                            sizes="100%"
                             className="       border-2 border-primary   rounded"
                           />
                         </Link>
@@ -79,17 +80,14 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 </Carousel>
                 {project.imagedark && (
                   <Carousel
-                    className={cn(
-                      "  rounded-md ",
-                      project.imagedark?.length === 0 && " hidden dark:flex"
-                    )}
+                    className={cn("  rounded-md hidden dark:flex ")}
                     opts={{
                       align: "center",
                       loop: true,
                     }}
                     plugins={[
                       Autoplay({
-                        delay: 2500,
+                        delay: 3500,
                       }),
                     ]}
                   >
@@ -108,6 +106,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                               src={img}
                               alt={project.name}
                               fill
+                              sizes="100%"
                               className="       border-2  border-primary rounded"
                             />
                           </Link>
@@ -121,14 +120,14 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 <Carousel
                   className={cn(
                     "  rounded-md   ",
-                    project.imagedark && " hidden "
+                    project.imagedark && " flex dark:hidden "
                   )}
                   opts={{
                     loop: true,
                   }}
                   plugins={[
                     Autoplay({
-                      delay: 2500,
+                      delay: 3500,
                     }),
                   ]}
                 >
@@ -152,7 +151,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 {project.imagedark && (
                   <Carousel
                     className={cn(
-                      "  rounded-md ",
+                      "  rounded-md  hidden dark:flex",
                       project.imagedark?.length === 0 && " hidden dark:flex"
                     )}
                     opts={{
@@ -161,7 +160,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                     }}
                     plugins={[
                       Autoplay({
-                        delay: 2500,
+                        delay: 3500,
                       }),
                     ]}
                   >
