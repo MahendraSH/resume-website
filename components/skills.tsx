@@ -13,6 +13,9 @@ const skills = [
   "git & github",
   "SQL",
   "tailwindcss",
+  "typeScript",
+  "MUI",
+  "Redux",
   "Nextjs",
   "prisma",
 ];
