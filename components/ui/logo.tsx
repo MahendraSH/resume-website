@@ -4,19 +4,17 @@ import { FC } from "react";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
 
-interface LogoProps { }
+interface LogoProps {}
 
 const Logo: FC<LogoProps> = ({}) => {
   const sidebar = false;
   return (
     <Button
-     
-        variant={sidebar ? "default" : "ghost"}
-        size={"lg"}
-        className={cn(
-          "   normal-case text-xl  shadow-none w-full justify-start px-0 mx-0",
-          !sidebar && "bg-background hover:bg-background"
-        )}
+      variant={sidebar ? "default" : "shadow"}
+      size={"lg"}
+      className={cn(
+        "   normal-case text-xl  shadow-none w-full justify-start px-0 mx-0",
+      )}
     >
       <Link href={"/"} className=" flex justify-center items-center">
         <Image
@@ -35,7 +33,7 @@ const Logo: FC<LogoProps> = ({}) => {
         />
         Mahendra S H
       </Link>
-    </ Button>
+    </Button>
   );
 };
 

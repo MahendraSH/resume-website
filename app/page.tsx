@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Strengths from "@/components/strengths";
+import { Card, CardContent } from "@/components/ui/card";
 import { FC } from "react";
 
 interface MainPageProps {}
@@ -9,21 +10,15 @@ interface MainPageProps {}
 const MainPage: FC<MainPageProps> = ({}) => {
   return (
     <>
-      <main>
+      <main className="bggrad">
         <Hero />
-        <div
-          className="hero min-h-screen"
-          // style={{
-          //   backgroundImage:
-          //     "url(images-dark.avif)",
-          // }}
-        >
-          <div className="hero-content  flex flex-col  m-auto">
+        <Card className="bggrad">
+          <CardContent className="  flex flex-col  m-auto">
             <Skills />
             <Strengths />
             <Projects />
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </main>
     </>
   );

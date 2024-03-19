@@ -16,15 +16,15 @@ const Navbar: FC<NavbarProps> = ({}) => {
     <>
       <div
         className={cn(
-          "navbar z-40 fixed top-0    text-sm m-0 p-0 pr-4   bg-background   ",
-          scrolled && " border-b shadow-md shadow-muted-foreground"
+          "navbar z-40 fixed top-0    text-sm m-0 p-0 pr-4 bg-background",
+          scrolled && " border-b shadow-md shadow-muted-foreground",
         )}
       >
         <div className="flex-1">
           <Logo />
         </div>
         <div className="hidden md:flex">
-          <div className="menu menu-horizontal px-2  space-x-4 lg:space-x-5   ">
+          <div className="flex flex-1 px-2  space-x-4 lg:space-x-5   ">
             <NavLinks isSidbar={false} />
             <ModeToggle />
           </div>

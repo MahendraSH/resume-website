@@ -72,10 +72,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-tl from-background via-secondary/80 to-background/95 text-foreground;
   }
   .bggrad {
-    @apply bg-gradient-to-br  from-bg-background/90 via-bg-background to-bg-background/95;
+    @apply bg-gradient-to-tl from-background via-secondary/80 to-background/95;
   }
 }
 
