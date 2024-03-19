@@ -4,8 +4,9 @@ import { Separator } from "@/components/ui/separator";
 import SocailLinks from "./ui/socail-links";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { LucideDownload } from "lucide-react";
+import { LucideDownload, MoveRight } from "lucide-react";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 interface HeroProps {}
 const words = [
   {
@@ -156,12 +157,24 @@ const Hero: FC<HeroProps> = ({}) => {
 
               <Separator />
 
-              <div className="flex flex-col gap-4 lg:pr-3 lg:mr-4 text-start lg:min-w-[800px] min-w-full min-h-[200px] ">
+              <div className="flex flex-col gap-4 lg:pr-3 lg:mr-4 text-start lg:min-w-[450px]  min-w-full min-h-[200px] ">
                 <TypewriterEffect
-                  className="text-lg md:text-xl lg:text-2xl font-normal"
+                  className="text-lg md:text-xl lg:text-xl font-normal"
                   words={words}
                 />
               </div>
+              <Card className=" m-0 ">
+                <CardHeader className="m-0 p-2">
+                  <CardTitle className="text-xl flex justify-center items-center gap-x-3">
+                    <span className="md:flex justify-center items-center gap-x-3 hidden">
+                      {" "}
+                      I am currently working as{" "}
+                      <MoveRight className="w-5 h-5" />{" "}
+                    </span>
+                    React Intern at Merav Infotech
+                  </CardTitle>
+                </CardHeader>
+              </Card>
               <div className="card-actions  md:mt-3 pt-4  ">
                 <SocailLinks />
                 <Link

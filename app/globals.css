@@ -74,6 +74,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  .bggrad {
+    @apply bg-gradient-to-br  from-bg-background/90 via-bg-background to-bg-background/95;
+  }
 }
 
 /* added  by mahendra sh  */
@@ -83,8 +86,6 @@ body,
   height: 100%;
   scroll-behavior: smooth;
 }
-
-
 
 /*
 html::-webkit-scrollbar {
@@ -123,7 +124,6 @@ html {
 .dark ::-webkit-scrollbar-thumb:hover {
   background: hsl(240, 6%, 51%);
 }
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: hsl(214, 3%, 41%);
-
 }
