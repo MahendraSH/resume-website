@@ -1,9 +1,6 @@
 "use client";
 
 import { FC } from "react";
-import { Button } from "./ui/button";
-import Link from "next/link";
-import { XIcon } from "lucide-react";
 import NavItem from "./ui/nav-item";
 
 interface NavLinksProps {
@@ -21,24 +18,17 @@ const NavRoutes = [
     label: "Skills",
   },
   {
-    href: "/#strengths",
-    label: "Strengths",
+    href: "/#experience",
+    label: "Experience",
   },
-
-  // {
-  //   href: "/#edu",
-  //   label: "education",
-  // },
-
+  {
+    href: "/#education",
+    label: "Education",
+  },
   {
     href: "/#projects",
     label: "Projects",
   },
-  // {
-  //   href: "/blogs",
-  //   label: "Blogs",
-  // },
-
   {
     href: "/contact",
     label: "Contact",
