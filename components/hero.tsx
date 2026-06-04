@@ -100,7 +100,7 @@ const Hero: FC<HeroProps> = ({}) => {
                 <Card className="m-0 border-primary/20 bg-secondary/35">
                   <CardHeader className="m-0 p-3">
                     <CardTitle className="text-base md:text-lg flex flex-wrap justify-center items-center gap-x-2">
-                      <span className="text-primary font-bold">Open to New Opportunities</span>
+                      <span className="text-green-500 font-bold">Open to New Opportunities</span>
                       <span className="text-muted-foreground">|</span>
                       <span>Specialist Programmer (ex-Infosys)</span>
                     </CardTitle>
