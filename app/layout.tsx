@@ -65,6 +65,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
+          <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
+            <div className="absolute top-[10%] left-[5%] w-[40vw] h-[40vw] rounded-full bg-primary/8 blur-[120px] dark:bg-primary/5" />
+            <div className="absolute bottom-[10%] right-[5%] w-[40vw] h-[40vw] rounded-full bg-purple-500/8 blur-[120px] dark:bg-purple-500/5" />
+          </div>
           {children}
 
           <Footer />

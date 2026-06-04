@@ -14,11 +14,11 @@ const skillCategories = [
   },
   {
     category: "Frontend Technologies",
-    skills: ["JavaScript", "React.js", "Next.js", "Tailwind CSS"]
+    skills: ["JavaScript", "React.js", "Next.js", "Tailwind CSS","Shadcn UI", "TypeScript"]
   },
   {
     category: "Databases",
-    skills: ["PostgreSQL"]
+    skills: ["PostgreSQL", "MySQL", "MongoDB"]
   },
   {
     category: "Methodologies & Practices",
@@ -29,7 +29,7 @@ const skillCategories = [
 const Skills: FC<SkillsProps> = ({}) => {
   return (
     <div id="skills" className=" pt-12 ">
-      <div className="card w-full h-full shadow shadow-muted-foreground ">
+      <div className="card w-full h-full glass-panel">
         <div className="card-body">
           <h2 className=" text-3xl font-medium "> Tech Skills </h2>
           <Separator />
@@ -38,7 +38,7 @@ const Skills: FC<SkillsProps> = ({}) => {
             {skillCategories.map((cat) => (
               <div 
                 key={cat.category} 
-                className="p-4 rounded-xl border border-primary/10 bg-card/50 backdrop-blur-sm flex flex-col justify-start hover:border-primary/30 transition-all duration-300"
+                className="p-4 rounded-xl border border-primary/10 bg-card/30 backdrop-blur-sm flex flex-col justify-start hover:border-primary/25 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <h3 className="font-semibold text-base mb-3 text-primary">
                   {cat.category}

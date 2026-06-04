@@ -90,4 +90,4 @@ export const projects: Project[] = [
       "/projects/p-2/art-gal-users.png",
     ],
   },
-].sort((a, b) => b.id - a.id); // Sort in descending order to show newest/highest ID first
+].sort((a, b) => a.id - b.id); // Sort in ascending order to show Cargo Readiness first

@@ -27,7 +27,7 @@ interface ProjectsProps {}
 const Projects: FC<ProjectsProps> = ({}) => {
   return (
     <div id="projects" className=" mt-8 lg:max-w-full sm:max-w-screen-sm">
-      <div className="  w-full h-full   shadow  rounded-md  shadow-muted-foreground ">
+      <div className="  w-full h-full  glass-panel rounded-md ">
         <div className=" m-5   flex flex-col gap-2    ">
           <h2 className="  text-3xl font-medium  mt-5 "> Projects </h2>
           <Separator />
@@ -38,7 +38,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
               <Card
                 className={cn(
                   " lg:flex  justify-center items-center   lg:gap-x-10  sm:gap-2 p-4 lg:p-6 ",
-                  index % 2 && "lg:flex-row-reverse"
+                  index % 2 && "lg:flex-row-reverse",
                 )}
                 key={project.name}
               >
@@ -49,7 +49,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                       <Carousel
                         className={cn(
                           "  rounded-md   ",
-                          project.imagedark && " block dark:hidden"
+                          project.imagedark && " block dark:hidden",
                         )}
                         opts={{
                           loop: true,
@@ -125,7 +125,9 @@ const Projects: FC<ProjectsProps> = ({}) => {
                     <div className="w-full h-full rounded-xl bg-gradient-to-br from-slate-900 via-purple-900 to-slate-950 flex flex-col items-center justify-center border-2 border-primary/30 p-6 text-center text-white">
                       <TerminalIcon className="w-12 h-12 mb-2 text-primary" />
                       <div className="font-bold text-lg">{project.name}</div>
-                      <div className="text-xs text-slate-400 mt-1">Full-Stack Application</div>
+                      <div className="text-xs text-slate-400 mt-1">
+                        Full-Stack Application
+                      </div>
                     </div>
                   )}
                 </div>
@@ -137,7 +139,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                       <Carousel
                         className={cn(
                           "  rounded-md   ",
-                          project.imagedark && " flex dark:hidden "
+                          project.imagedark && " flex dark:hidden ",
                         )}
                         opts={{
                           loop: true,
@@ -169,7 +171,8 @@ const Projects: FC<ProjectsProps> = ({}) => {
                         <Carousel
                           className={cn(
                             "  rounded-md  hidden dark:flex",
-                            project.imagedark?.length === 0 && " hidden dark:flex"
+                            project.imagedark?.length === 0 &&
+                              " hidden dark:flex",
                           )}
                           opts={{
                             align: "center",
@@ -204,7 +207,9 @@ const Projects: FC<ProjectsProps> = ({}) => {
                     <div className="w-full h-[220px] rounded-xl bg-gradient-to-br from-slate-900 via-purple-900 to-slate-950 flex flex-col items-center justify-center border-2 border-primary/30 p-6 text-center text-white">
                       <TerminalIcon className="w-12 h-12 mb-2 text-primary" />
                       <div className="font-bold text-lg">{project.name}</div>
-                      <div className="text-xs text-slate-400 mt-1">Full-Stack Application</div>
+                      <div className="text-xs text-slate-400 mt-1">
+                        Full-Stack Application
+                      </div>
                     </div>
                   )}
                 </div>
@@ -215,7 +220,9 @@ const Projects: FC<ProjectsProps> = ({}) => {
                       <CardTitle className="text-2xl">{project.name}</CardTitle>
                     </CardHeader>
                     <CardContent className="p-0 flex flex-col space-y-4">
-                      <p className="text-sm text-muted-foreground">{project.description}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {project.description}
+                      </p>
 
                       {project.bullets && project.bullets.length > 0 && (
                         <ul className="list-disc pl-5 space-y-1 text-xs text-muted-foreground/90">
@@ -239,7 +246,8 @@ const Projects: FC<ProjectsProps> = ({}) => {
                       {project.userName && project.password && (
                         <div className="pt-2">
                           <code className=" bg-muted text-muted-foreground p-2 rounded text-xs block w-fit">
-                            UserName : {project.userName} & Password : {project.password}
+                            UserName : {project.userName} & Password :{" "}
+                            {project.password}
                           </code>
                         </div>
                       )}
@@ -248,18 +256,23 @@ const Projects: FC<ProjectsProps> = ({}) => {
                   <CardFooter
                     className={cn(
                       "p-0 mt-6 flex justify-between items-center",
-                      index % 2 === 0 && " flex-row-reverse "
+                      index % 2 === 0 && " flex-row-reverse ",
                     )}
                   >
-                    <p className=" dark:text-slate-500 text-slate-600 text-sm font-medium">
-                      Duration: {project.duration}
-                    </p>
                     <div className={cn("flex gap-4 text-xl")}>
-                      <Link href={project.sourceCode} target="_blank" className="hover:text-primary transition-colors">
+                      <Link
+                        href={project.sourceCode}
+                        target="_blank"
+                        className="hover:text-primary transition-colors"
+                      >
                         <Code2Icon className="w-5 h-5" />
                       </Link>
                       {project.liveUrl && (
-                        <Link href={project.liveUrl} target="_blank" className="hover:text-primary transition-colors">
+                        <Link
+                          href={project.liveUrl}
+                          target="_blank"
+                          className="hover:text-primary transition-colors"
+                        >
                           <LinkIcon className="w-5 h-5" />
                         </Link>
                       )}

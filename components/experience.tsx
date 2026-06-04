@@ -30,7 +30,7 @@ const experiences = [
 const Experience: FC<ExperienceProps> = ({}) => {
   return (
     <div id="experience" className=" pt-12 ">
-      <div className="card w-full h-full shadow shadow-muted-foreground ">
+      <div className="card w-full h-full glass-panel">
         <div className="card-body">
           <h2 className=" text-3xl font-medium "> Work Experience </h2>
           <Separator />
