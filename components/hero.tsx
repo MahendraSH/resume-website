@@ -82,7 +82,17 @@ const Hero: FC<HeroProps> = ({}) => {
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-4 leading-relaxed text-left">
-                  Experienced Specialist Programmer with over 1 year and 10 months in developing and maintaining scalable full-stack applications using React, Next.js, and Spring Boot. Proficient in designing REST APIs and robust microservices architecture for modular system design. Skilled in optimizing backend processes, enhancing application efficiency and responsiveness. Expertise in Agile development environments, collaborating with cross-functional teams for timely delivery. Strong foundation in Computer Science and Engineering (B.Tech). Demonstrated ability to build intuitive dashboards, SaaS platforms, and Enterprise Applications.
+                  Experienced Specialist Programmer with over nearly 2 years in
+                  developing and maintaining scalable full-stack applications
+                  using React, Next.js, and Spring Boot. Proficient in designing
+                  REST APIs and robust microservices architecture for modular
+                  system design. Skilled in optimizing backend processes,
+                  enhancing application efficiency and responsiveness. Expertise
+                  in Agile development environments, collaborating with
+                  cross-functional teams for timely delivery. Strong foundation
+                  in Computer Science and Engineering (B.Tech). Demonstrated
+                  ability to build intuitive dashboards, SaaS platforms, and
+                  Enterprise Applications.
                 </p>
               </div>
 
@@ -90,12 +100,9 @@ const Hero: FC<HeroProps> = ({}) => {
                 <Card className="m-0 border-primary/20 bg-secondary/35">
                   <CardHeader className="m-0 p-3">
                     <CardTitle className="text-base md:text-lg flex flex-wrap justify-center items-center gap-x-2">
-                      <span className="hidden md:inline">I am currently working as</span>
-                      <span className="inline md:hidden">Currently:</span>
-                      <MoveRight className="w-4 h-4 hidden md:inline" />
-                      <span className="text-primary font-bold">Specialist Programmer</span>
-                      <span>at</span>
-                      <span className="text-primary font-bold">Infosys</span>
+                      <span className="text-primary font-bold">Open to New Opportunities</span>
+                      <span className="text-muted-foreground">|</span>
+                      <span>Specialist Programmer (ex-Infosys)</span>
                     </CardTitle>
                   </CardHeader>
                 </Card>

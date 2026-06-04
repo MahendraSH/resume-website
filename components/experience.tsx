@@ -8,7 +8,7 @@ const experiences = [
   {
     role: "Specialist Programmer",
     company: "Infosys",
-    duration: "Jul 2024 – Present",
+    duration: "Jul 2024 – Jun 2026",
     bullets: [
       "Developed and maintained scalable full-stack applications using Spring Boot and React, enhancing application efficiency and user experience.",
       "Designed and implemented REST APIs, contributing to a robust microservices architecture for modular system design.",
