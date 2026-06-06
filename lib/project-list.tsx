@@ -156,4 +156,13 @@ export const projects: Project[] = [
     liveUrl: "https://tools-json-all.vercel.app/",
     category: "Tools",
   },
+  {
+    id: 10,
+    name: "Tools - MD-a (Markdown Editor)",
+    description: "A local-first, high-performance Markdown editing, converting, and diagramming studio.",
+    labels: ["Astro", "Tailwind CSS", "TypeScript", "Vercel"],
+    duration: "",
+    liveUrl: "https://tools-md-a.vercel.app/",
+    category: "Tools",
+  },
 ].sort((a, b) => a.id - b.id); // Sort in ascending order to show Cargo Readiness first
