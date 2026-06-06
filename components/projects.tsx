@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useState } from "react";
 import { projects } from "@/lib/project-list";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
@@ -24,7 +24,51 @@ import { Separator } from "./ui/separator";
 
 interface ProjectsProps {}
 
+const getCategoryBadge = (category: string) => {
+  switch (category) {
+    case "Enterprise Application":
+      return (
+        <span className="text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-500 border border-blue-500/20 px-2.5 py-1 rounded-full">
+          Enterprise App (Infosys)
+        </span>
+      );
+    case "Freelance Client Project":
+      return (
+        <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+          Freelance Project
+        </span>
+      );
+    case "Community Tool":
+      return (
+        <span className="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-500 border border-indigo-500/20 px-2.5 py-1 rounded-full">
+          Community Tool
+        </span>
+      );
+    case "Personal Project":
+    default:
+      return (
+        <span className="text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-500 border border-amber-500/20 px-2.5 py-1 rounded-full">
+          Personal Project
+        </span>
+      );
+  }
+};
+
 const Projects: FC<ProjectsProps> = ({}) => {
+  const [activeTab, setActiveTab] = useState<string>("All");
+
+  const categories = [
+    { label: "All", value: "All" },
+    { label: "Enterprise Apps", value: "Enterprise Application" },
+    { label: "Freelance Work", value: "Freelance Client Project" },
+    { label: "Community Tools", value: "Community Tool" },
+    { label: "Personal Projects", value: "Personal Project" },
+  ];
+
+  const filteredProjects = projects.filter(
+    (project) => activeTab === "All" || project.category === activeTab
+  );
+
   return (
     <div id="projects" className=" mt-8 lg:max-w-full sm:max-w-screen-sm">
       <div className="  w-full h-full  glass-panel rounded-md ">
@@ -32,7 +76,24 @@ const Projects: FC<ProjectsProps> = ({}) => {
           <h2 className="  text-3xl font-medium  mt-5 "> Projects </h2>
           <Separator />
 
-          {projects.map((project, index) => {
+          <div className="flex flex-wrap gap-2 my-4">
+            {categories.map((cat) => (
+              <button
+                key={cat.value}
+                onClick={() => setActiveTab(cat.value)}
+                className={cn(
+                  "px-3.5 py-1.5 text-xs font-semibold rounded-full border transition-all duration-200",
+                  activeTab === cat.value
+                    ? "bg-primary text-primary-foreground border-primary shadow-sm"
+                    : "bg-secondary/40 text-muted-foreground border-border hover:bg-secondary/80 hover:text-foreground"
+                )}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          {filteredProjects.map((project, index) => {
             const hasImages = project.image && project.image.length > 0;
             return (
               <Card
@@ -68,8 +129,11 @@ const Projects: FC<ProjectsProps> = ({}) => {
                             >
                               <Link
                                 target="_blank"
-                                href={project.liveUrl ?? project.sourceCode}
-                                className="relative w-full  aspect-video lg:border-2 border-slate-700 rounded-xl"
+                                href={project.liveUrl ?? project.sourceCode ?? "#"}
+                                className={cn(
+                                  "relative w-full  aspect-video lg:border-2 border-slate-700 rounded-xl",
+                                  !(project.liveUrl || project.sourceCode) && "pointer-events-none"
+                                )}
                               >
                                 <Image
                                   src={img}
@@ -104,8 +168,11 @@ const Projects: FC<ProjectsProps> = ({}) => {
                               >
                                 <Link
                                   target="_blank"
-                                  href={project.liveUrl ?? project.sourceCode}
-                                  className=" relative w-full   aspect-video lg:border-2 border-slate-700 rounded-xl"
+                                  href={project.liveUrl ?? project.sourceCode ?? "#"}
+                                  className={cn(
+                                    " relative w-full   aspect-video lg:border-2 border-slate-700 rounded-xl",
+                                    !(project.liveUrl || project.sourceCode) && "pointer-events-none"
+                                  )}
                                 >
                                   <Image
                                     src={img}
@@ -216,8 +283,9 @@ const Projects: FC<ProjectsProps> = ({}) => {
 
                 <div className=" lg:w-7/12 flex flex-col justify-between">
                   <div>
-                    <CardHeader className="p-0 mb-3">
-                      <CardTitle className="text-2xl">{project.name}</CardTitle>
+                    <CardHeader className="p-0 mb-3 flex flex-col items-start gap-1">
+                      {getCategoryBadge(project.category)}
+                      <CardTitle className="text-2xl mt-1">{project.name}</CardTitle>
                     </CardHeader>
                     <CardContent className="p-0 flex flex-col space-y-4">
                       <p className="text-sm text-muted-foreground">
@@ -260,13 +328,15 @@ const Projects: FC<ProjectsProps> = ({}) => {
                     )}
                   >
                     <div className={cn("flex gap-4 text-xl")}>
-                      <Link
-                        href={project.sourceCode}
-                        target="_blank"
-                        className="hover:text-primary transition-colors"
-                      >
-                        <Code2Icon className="w-5 h-5" />
-                      </Link>
+                      {project.sourceCode && (
+                        <Link
+                          href={project.sourceCode}
+                          target="_blank"
+                          className="hover:text-primary transition-colors"
+                        >
+                          <Code2Icon className="w-5 h-5" />
+                        </Link>
+                      )}
                       {project.liveUrl && (
                         <Link
                           href={project.liveUrl}
