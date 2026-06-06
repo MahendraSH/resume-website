@@ -44,6 +44,12 @@ const getCategoryBadge = (category: string) => {
           Community Tool
         </span>
       );
+    case "Tools":
+      return (
+        <span className="text-[10px] font-bold uppercase tracking-wider bg-violet-500/10 text-violet-500 border border-violet-500/20 px-2.5 py-1 rounded-full">
+          Tools
+        </span>
+      );
     case "Personal Project":
     default:
       return (
@@ -63,6 +69,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
     { label: "Freelance Work", value: "Freelance Client Project" },
     { label: "Community Tools", value: "Community Tool" },
     { label: "Personal Projects", value: "Personal Project" },
+    { label: "Tools", value: "Tools" },
   ];
 
   const filteredProjects = projects.filter(

@@ -138,4 +138,22 @@ export const projects: Project[] = [
     ],
     category: "Personal Project",
   },
+  {
+    id: 8,
+    name: "Tools - Logo Name Generator",
+    description: "A handy tool to generate logo-style name cards and branding assets instantly.",
+    labels: ["Astro", "Tailwind CSS", "TypeScript", "Vercel"],
+    duration: "",
+    liveUrl: "https://tools-logoname.vercel.app/",
+    category: "Tools",
+  },
+  {
+    id: 9,
+    name: "Tools - JSON All",
+    description: "A comprehensive JSON utility tool for formatting, validating, and transforming JSON data.",
+    labels: ["Astro", "Tailwind CSS", "TypeScript", "Vercel"],
+    duration: "",
+    liveUrl: "https://tools-json-all.vercel.app/",
+    category: "Tools",
+  },
 ].sort((a, b) => a.id - b.id); // Sort in ascending order to show Cargo Readiness first
