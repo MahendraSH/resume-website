@@ -27,7 +27,7 @@ const SocailLinks: FC<SocailLinksProps> = ({}) => {
         <LinkedInLogoIcon className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
       </Link>
       <Link
-        href="https://www.upwork.com/freelancers/~YOUR_UPWORK_ID"
+        href="https://www.upwork.com/freelancers/~015e4bc8c81692a6f2"
         target="_blank"
         rel="noopener noreferrer"
         className="kbd bg-primary-foreground rounded-md p-1 h-7 flex items-center justify-center"
