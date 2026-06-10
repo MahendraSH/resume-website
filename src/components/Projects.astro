@@ -1,0 +1,281 @@
+---
+import { PROJECTS } from '../config';
+---
+
+<section id="projects" class="w-full py-12">
+  <div class="glass-panel p-6 md:p-10 rounded-2xl space-y-6">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold font-sans text-zinc-50 tracking-tight">Projects</h2>
+      <p class="text-xs md:text-sm text-zinc-450 mt-1">
+        Featured works, enterprise contributions, freelance contracts, and developer tools.
+      </p>
+    </div>
+
+    <!-- Separator Line -->
+    <div class="h-[1px] w-full bg-zinc-850"></div>
+
+    <!-- Category Tabs -->
+    <div class="flex flex-wrap gap-2 py-2">
+      <button
+        type="button"
+        data-filter="All"
+        class="filter-btn px-4 py-1.5 text-xs font-semibold rounded-full border transition-all duration-200 cursor-pointer bg-blue-600 text-white border-blue-600 shadow-sm"
+      >
+        All
+      </button>
+      <button
+        type="button"
+        data-filter="Enterprise Application"
+        class="filter-btn px-4 py-1.5 text-xs font-semibold rounded-full border transition-all duration-200 cursor-pointer bg-zinc-900 text-zinc-400 border-zinc-850 hover:bg-zinc-850 hover:text-zinc-200"
+      >
+        Enterprise Apps
+      </button>
+      <button
+        type="button"
+        data-filter="Freelance Client Project"
+        class="filter-btn px-4 py-1.5 text-xs font-semibold rounded-full border transition-all duration-200 cursor-pointer bg-zinc-900 text-zinc-400 border-zinc-850 hover:bg-zinc-850 hover:text-zinc-200"
+      >
+        Freelance Work
+      </button>
+      <button
+        type="button"
+        data-filter="Community Tool"
+        class="filter-btn px-4 py-1.5 text-xs font-semibold rounded-full border transition-all duration-200 cursor-pointer bg-zinc-900 text-zinc-400 border-zinc-850 hover:bg-zinc-850 hover:text-zinc-200"
+      >
+        Community Tools
+      </button>
+      <button
+        type="button"
+        data-filter="Personal Project"
+        class="filter-btn px-4 py-1.5 text-xs font-semibold rounded-full border transition-all duration-200 cursor-pointer bg-zinc-900 text-zinc-400 border-zinc-850 hover:bg-zinc-850 hover:text-zinc-200"
+      >
+        Personal Projects
+      </button>
+    </div>
+
+    <!-- Projects List -->
+    <div class="space-y-8 mt-4">
+      {PROJECTS.filter(project => project.category !== 'Tools').map((project, index) => {
+        const hasImages = project.image && project.image.length > 0;
+        return (
+          <div
+            id={`project-${project.id}`}
+            data-category={project.category}
+            class="project-card border border-zinc-850 bg-zinc-900/10 p-5 md:p-6 rounded-2xl flex flex-col lg:flex-row gap-6 items-center justify-between transition-all duration-300 hover:border-zinc-800"
+          >
+            <!-- Project Preview (Image Carousel or Gradient Placeholder) -->
+            <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-xl border border-zinc-850 relative bg-zinc-950 flex items-center justify-center">
+              {hasImages ? (
+                <div class="w-full h-full flex overflow-x-auto snap-x snap-mandatory scrollbar-none scroll-smooth">
+                  {project.image.map((img) => (
+                    <div class="w-full h-full shrink-0 snap-center flex items-center justify-center p-2">
+                      <img
+                        src={img}
+                        alt={project.name}
+                        class="w-full h-full object-contain rounded border border-zinc-850"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div class={`w-full h-full bg-gradient-to-br ${project.themeGradient || 'from-zinc-900 via-indigo-950/45 to-zinc-950'} flex flex-col items-center justify-center p-6 text-center relative`}>
+                  <div class="absolute inset-0 bg-grid-dots opacity-10"></div>
+                  {project.logo && (
+                    <div class={`p-3.5 rounded-2xl border border-zinc-850 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100`}>
+                      <div class="w-7 h-7 flex items-center justify-center">
+                        <Fragment set:html={project.logo} />
+                      </div>
+                    </div>
+                  )}
+                  <div class="font-bold text-sm text-zinc-200 z-10">{project.name}</div>
+                  <div class="text-[9px] text-zinc-500 font-mono mt-1.5 uppercase tracking-wider z-10">
+                    {project.category}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <!-- Project Meta Details -->
+            <div class="flex-1 flex flex-col justify-between w-full h-full min-h-[200px]">
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <!-- Category Badge -->
+                  {project.category === 'Enterprise Application' && (
+                    <span class="inline-flex text-[9px] font-mono font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2 py-0.5 rounded">
+                      Enterprise App (Infosys)
+                    </span>
+                  )}
+                  {project.category === 'Freelance Client Project' && (
+                    <span class="inline-flex text-[9px] font-mono font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded">
+                      Freelance Project
+                    </span>
+                  )}
+                  {project.category === 'Community Tool' && (
+                    <span class="inline-flex text-[9px] font-mono font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-0.5 rounded">
+                      Community Tool
+                    </span>
+                  )}
+                  {project.category === 'Tools' && (
+                    <span class="inline-flex text-[9px] font-mono font-bold uppercase tracking-wider bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded">
+                      Tools
+                    </span>
+                  )}
+                  {project.category === 'Personal Project' && (
+                    <span class="inline-flex text-[9px] font-mono font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded">
+                      Personal Project
+                    </span>
+                  )}
+
+                  <div class="flex items-center gap-2.5">
+                    {project.logo && (
+                      <div class={`p-1.5 rounded-lg border border-zinc-850 bg-zinc-950/60 ${project.themeColor || 'text-blue-500'} w-7 h-7 flex items-center justify-center shrink-0`}>
+                        <Fragment set:html={project.logo} />
+                      </div>
+                    )}
+                    <h3 class="text-xl font-bold text-zinc-100">{project.name}</h3>
+                  </div>
+                </div>
+
+                <p class="text-xs md:text-sm text-zinc-400 leading-relaxed font-sans">
+                  {project.description}
+                </p>
+
+                {project.bullets && project.bullets.length > 0 && (
+                  <ul class="list-disc pl-5 space-y-1.5 text-[11px] md:text-xs text-zinc-450 leading-relaxed">
+                    {project.bullets.map((bullet) => (
+                      <li>{bullet}</li>
+                    ))}
+                  </ul>
+                )}
+
+                <!-- Tech labels -->
+                <div class="flex flex-wrap gap-1.5 pt-2">
+                  {project.labels.map((lbl) => (
+                    <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-zinc-900 border border-zinc-850 text-zinc-400">
+                      {lbl}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Demo Credentials */}
+                {project.userName && project.password && (
+                  <div class="pt-1">
+                    <code class="bg-zinc-950 text-zinc-450 border border-zinc-850 py-1.5 px-3 rounded text-[10px] font-mono block w-fit">
+                      User: {project.userName} | Pass: {project.password}
+                    </code>
+                  </div>
+                )}
+              </div>
+
+              <!-- Links footer -->
+              <div class="flex items-center gap-4 mt-6 pt-4 border-t border-zinc-850/50">
+                {project.sourceCode && (
+                  <a
+                    href={project.sourceCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-zinc-550 hover:text-zinc-200 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                  >
+                    <!-- Code icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6" />
+                      <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                    <span>Code</span>
+                  </a>
+                )}
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-zinc-550 hover:text-zinc-200 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                  >
+                    <!-- Link icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                    </svg>
+                    <span>Live Demo</span>
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Miscellaneous works footer banner -->
+    <div class="h-[1px] w-full bg-zinc-850 mt-8"></div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 md:p-6 bg-zinc-900/20 border border-zinc-850 rounded-2xl mt-4 font-sans">
+      <div class="space-y-1 text-center sm:text-left">
+        <h4 class="text-sm font-bold text-zinc-200">Looking for smaller utilities and side experiments?</h4>
+        <p class="text-xs text-zinc-500">Explore interactive brand creators, JSON tree query sandboxes, and Markdown converters.</p>
+      </div>
+      <a
+        href="/miscellaneous"
+        class="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2 text-xs font-semibold rounded-full border border-zinc-800 bg-zinc-900 text-zinc-300 hover:text-zinc-100 hover:border-zinc-750 hover:bg-zinc-850 transition-all duration-200 shadow-md group cursor-pointer font-mono"
+      >
+        <span>View Miscellaneous Works</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-500 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CSS scrollbar hiding -->
+<style>
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .bg-grid-dots {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+</style>
+
+<script>
+  function setupFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Reset styles for all buttons
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+          b.classList.add('bg-zinc-900', 'text-zinc-400', 'border-zinc-850', 'hover:bg-zinc-850', 'hover:text-zinc-200');
+        });
+
+        // Add active style to clicked button
+        btn.classList.remove('bg-zinc-900', 'text-zinc-400', 'border-zinc-850', 'hover:bg-zinc-850', 'hover:text-zinc-200');
+        btn.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+
+        const filterVal = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (filterVal === 'All' || cardCat === filterVal) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
+  // Initial load
+  setupFilters();
+  
+  // Re-setup filters on Astro page navigation swap
+  document.addEventListener('astro:after-swap', setupFilters);
+</script>

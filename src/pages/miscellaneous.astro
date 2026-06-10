@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { PROJECTS, APP_CONFIG } from '../config';
+
+const tools = PROJECTS.filter(project => project.category === 'Tools');
+---
+
+<Layout title={`Miscellaneous Works | ${APP_CONFIG.name}`}>
+  <Navbar />
+
+  <main class="w-full max-w-5xl mx-auto px-4 md:px-8 py-16 md:py-24 space-y-12">
+    <!-- Page Header -->
+    <div class="text-center space-y-4 max-w-2xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono tracking-wider text-blue-400 uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+        <span>Side Experiments</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-50 leading-tight">
+        Miscellaneous Works
+      </h1>
+      <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
+        A premium collection of high-performance developer tools, visual model generators, and document utilities, designed to run 100% client-side for absolute privacy.
+      </p>
+    </div>
+
+    <!-- Separator Line -->
+    <div class="h-[1px] w-full bg-zinc-850"></div>
+
+    <!-- Tools List -->
+    <div class="space-y-8 mt-12">
+      {tools.map((project) => (
+        <div
+          id={`project-${project.id}`}
+          class="project-card border border-zinc-850 bg-zinc-900/10 p-5 md:p-6 rounded-2xl flex flex-col lg:flex-row gap-6 items-center justify-between transition-all duration-300 hover:border-zinc-800"
+        >
+          <!-- Project Preview (Themed Custom Gradient & Logo) -->
+          <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-xl border border-zinc-850 relative bg-zinc-950 flex items-center justify-center">
+            <div class={`w-full h-full bg-gradient-to-br ${project.themeGradient || 'from-zinc-900 via-indigo-950/45 to-zinc-950'} flex flex-col items-center justify-center p-6 text-center relative`}>
+              <!-- Grid Lines -->
+              <div class="absolute inset-0 bg-grid-dots opacity-20"></div>
+              {project.logo && (
+                <div class={`p-3.5 rounded-2xl border border-zinc-850 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100`}>
+                  <div class="w-7 h-7 flex items-center justify-center">
+                    <Fragment set:html={project.logo} />
+                  </div>
+                </div>
+              )}
+              <div class="font-bold text-sm text-zinc-200 z-10 font-sans tracking-wide">{project.name}</div>
+              <div class="text-[9px] text-zinc-500 font-mono mt-1.5 uppercase tracking-widest z-10">
+                {project.category}
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Meta Details -->
+          <div class="flex-1 flex flex-col justify-between w-full h-full min-h-[200px]">
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <span class="inline-flex text-[9px] font-mono font-bold uppercase tracking-wider bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded">
+                  Developer Utility
+                </span>
+                <div class="flex items-center gap-2.5">
+                  {project.logo && (
+                    <div class={`p-1.5 rounded-lg border border-zinc-850 bg-zinc-950/60 ${project.themeColor || 'text-blue-500'} w-7 h-7 flex items-center justify-center shrink-0`}>
+                      <Fragment set:html={project.logo} />
+                    </div>
+                  )}
+                  <h3 class="text-xl font-bold text-zinc-100">{project.name}</h3>
+                </div>
+              </div>
+
+              <p class="text-xs md:text-sm text-zinc-400 leading-relaxed font-sans">
+                {project.description}
+              </p>
+
+              {project.bullets && project.bullets.length > 0 && (
+                <ul class="list-disc pl-5 space-y-1.5 text-[11px] md:text-xs text-zinc-450 leading-relaxed">
+                  {project.bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              )}
+
+              <!-- Tech labels -->
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                {project.labels.map((lbl) => (
+                  <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-zinc-900 border border-zinc-850 text-zinc-400">
+                    {lbl}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Links footer -->
+            <div class="flex items-center gap-4 mt-6 pt-4 border-t border-zinc-850/50">
+              {project.sourceCode && (
+                <a
+                  href={project.sourceCode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-zinc-550 hover:text-zinc-200 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                  <span>Code</span>
+                </a>
+              )}
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-zinc-550 hover:text-zinc-200 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                  </svg>
+                  <span>Live Demo</span>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

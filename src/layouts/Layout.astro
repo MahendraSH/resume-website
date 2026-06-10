@@ -1,0 +1,91 @@
+---
+import '../styles/global.css';
+import { APP_CONFIG } from '../config';
+import CommandPalette from '../components/CommandPalette.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  schema?: Record<string, any>;
+}
+
+const { 
+  title = `${APP_CONFIG.name} | Portfolio & Resume`, 
+  description = APP_CONFIG.description,
+  schema
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || APP_CONFIG.domain).toString();
+const ogImageURL = new URL('/og-dark.png', Astro.site || APP_CONFIG.domain).toString();
+
+// Default structured data schema for Person / Portfolio SEO
+const defaultSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": APP_CONFIG.author.name,
+    "jobTitle": "Specialist Programmer",
+    "url": APP_CONFIG.domain,
+    "sameAs": [
+      APP_CONFIG.socials.github,
+      APP_CONFIG.socials.linkedin
+    ]
+  }
+};
+
+const jsonLd = schema || defaultSchema;
+---
+
+<!doctype html>
+<html lang="en" class="dark bg-zinc-950 text-zinc-50">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/logo.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" href="/logo-dark.png" media="(prefers-color-scheme: light)" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Search Engine Crawling instructions -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Mahendra S H, Specialist Programmer, Fullstack Developer, React, Next.js, ServiceNow SDK, TypeScript" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:site_name" content="Mahendra S H" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageURL} />
+    <meta property="twitter:site" content="@mahendrash" />
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="min-h-screen bg-zinc-950 font-sans antialiased text-zinc-50 selection:bg-blue-500 selection:text-white flex flex-col">
+    <!-- Global Background Dot Grid -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-zinc-950">
+      <!-- Light Gray Dot Grid with a smooth mask fading down the page -->
+      <div class="absolute inset-0 bg-grid-dots-light-gray opacity-100" style="mask-image: radial-gradient(circle at 50% 30%, black 30%, transparent 90%); -webkit-mask-image: radial-gradient(circle at 50% 30%, black 30%, transparent 90%);"></div>
+    </div>
+
+    <slot />
+    <CommandPalette />
+  </body>
+</html>
