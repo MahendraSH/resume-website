@@ -2,25 +2,39 @@
 import { APP_CONFIG } from '../config';
 ---
 
-<section id="about" class="relative w-full min-h-[90vh] py-16 md:py-24 flex items-center justify-center px-4 md:px-8 overflow-hidden bg-grid-dots shrink-0">
-  <!-- Ambient glows inside Hero -->
-  <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-500/10 blur-[120px] pointer-events-none -z-10 animate-drift-slow"></div>
-  <div class="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] rounded-full bg-purple-600/5 blur-[150px] pointer-events-none -z-10 animate-drift-reverse"></div>
+<section id="about" class="relative w-full min-h-[90vh] py-16 md:py-24 flex items-center justify-center px-4 md:px-8 overflow-hidden bg-transparent shrink-0">
+  <!-- Fine Layout Structural Lines for Blueprint Aesthetic -->
+  <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent -z-15 opacity-60"></div>
+  <div class="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent -z-15 opacity-60"></div>
+  <div class="absolute inset-y-0 left-1/4 w-[1px] bg-gradient-to-b from-transparent via-zinc-900 to-transparent -z-15 hidden lg:block opacity-40"></div>
+  <div class="absolute inset-y-0 right-1/4 w-[1px] bg-gradient-to-b from-transparent via-zinc-900 to-transparent -z-15 hidden lg:block opacity-40"></div>
+
+  <!-- Corner System Accents -->
+  <div class="absolute top-8 left-8 text-zinc-700 font-mono text-[9px] tracking-widest pointer-events-none select-none hidden lg:block -z-10">
+    SYS.INIT // 0x7E1B
+  </div>
+  <div class="absolute bottom-8 right-8 text-zinc-700 font-mono text-[9px] tracking-widest pointer-events-none select-none hidden lg:block -z-10">
+    LATENCY // 0.05ms
+  </div>
 
   <div class="max-w-6xl w-full mx-auto z-10 relative">
     <div class="glass-panel p-6 md:p-12 rounded-3xl flex flex-col lg:flex-row items-center gap-10 md:gap-12">
       
       <!-- Profile Image Container with Bobbing & Liquid Morphing Wave Animations -->
       <div class="relative shrink-0 flex items-center justify-center profile-container">
-        <!-- Outer Glowing Ring -->
-        <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/30 to-purple-600/30 blur-xl wavy-profile-image -z-10 scale-105 opacity-80"></div>
-        
-        <div class="w-64 h-64 md:w-80 md:h-80 overflow-hidden border border-zinc-800 bg-zinc-900 wavy-profile-image flex items-center justify-center p-1.5 shadow-2xl">
-          <img
-            src="https://github.com/MahendraSH.png"
-            alt="Mahendra S H"
-            class="w-full h-full object-cover wavy-profile-image"
-          />
+        <!-- Neon Spinning border container -->
+        <div class="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden wavy-profile-image shadow-2xl flex items-center justify-center -z-0">
+          <!-- The rotating gradient background -->
+          <div class="absolute inset-0 bg-[conic-gradient(from_0deg,#22d3ee,#3b82f6,#d946ef,#22d3ee)] animate-spin-frame -z-10"></div>
+          
+          <!-- Inner Dark Shield -->
+          <div class="absolute inset-[3px] bg-zinc-950 wavy-profile-image flex items-center justify-center p-1.5 overflow-hidden">
+            <img
+              src="https://github.com/MahendraSH.png"
+              alt="Mahendra S H"
+              class="w-full h-full object-cover wavy-profile-image"
+            />
+          </div>
         </div>
       </div>
 
@@ -60,6 +74,14 @@ import { APP_CONFIG } from '../config';
           </div>
         </div>
 
+        <!-- Contact/Email Info -->
+        <div class="flex items-center justify-center lg:justify-start gap-2 text-xs font-mono text-zinc-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <a href={`mailto:${APP_CONFIG.author.email}`} class="hover:text-blue-400 transition-colors">{APP_CONFIG.author.email}</a>
+        </div>
+
         <!-- Social Icons & Download CTA -->
         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
           <!-- Social Link Group -->
@@ -95,6 +117,15 @@ import { APP_CONFIG } from '../config';
             >
               <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="w-4.5 h-4.5" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.543-2.548V3.56H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-.354c.511 1.365 1.251 2.946 2.222 4.486l-1.637 7.692h2.825l1.197-5.636c.99.637 2.115 1.009 3.39 1.009 3.037 0 5.51-2.435 5.51-5.51-.001-3.075-2.473-5.51-5.51-5.51z" />
+              </svg>
+            </a>
+            <a
+              href={`mailto:${APP_CONFIG.author.email}`}
+              class="w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition"
+              title="Gmail"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
               </svg>
             </a>
           </div>
@@ -146,12 +177,27 @@ import { APP_CONFIG } from '../config';
     }
   }
 
+  /* Spin animation for border gradient */
+  @keyframes spinFrame {
+    0% {
+      transform: rotate(0deg) scale(1.5);
+    }
+    100% {
+      transform: rotate(360deg) scale(1.5);
+    }
+  }
+
   .profile-container {
     animation: floatAnimation 6s ease-in-out infinite;
   }
 
   .wavy-profile-image {
     animation: waveAnimation 8s ease-in-out infinite;
+  }
+
+  /* Rotating neon gradient effect */
+  .animate-spin-frame {
+    animation: spinFrame 6s linear infinite;
   }
 </style>
 

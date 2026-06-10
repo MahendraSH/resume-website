@@ -29,6 +29,10 @@
 
 /* Custom UI Polish to Match Vercel's Aesthetic */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
     background-color: var(--color-zinc-950);
     color: var(--color-zinc-50);
@@ -76,6 +80,11 @@
 .bg-grid-dots-light {
   background-size: 16px 16px;
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+.bg-grid-dots-light-gray {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, rgba(228, 228, 231, 0.20) 1.3px, transparent 1.3px);
 }
 
 /* Styling for Rich Text Content Pages (privacy, terms, cookie policy) */

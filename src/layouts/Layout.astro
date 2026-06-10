@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { APP_CONFIG } from '../config';
+import CommandPalette from '../components/CommandPalette.astro';
 
 interface Props {
   title?: string;
@@ -78,12 +79,13 @@ const jsonLd = schema || defaultSchema;
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body class="min-h-screen bg-zinc-950 font-sans antialiased text-zinc-50 selection:bg-blue-500 selection:text-white flex flex-col">
-    <!-- Ambient Radial Glows -->
-    <div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
-      <div class="absolute top-[10%] left-[5%] w-[45vw] h-[45vw] rounded-full bg-blue-500/8 blur-[120px] dark:bg-blue-500/5"></div>
-      <div class="absolute bottom-[10%] right-[5%] w-[45vw] h-[45vw] rounded-full bg-purple-500/8 blur-[120px] dark:bg-purple-500/5"></div>
+    <!-- Global Background Dot Grid -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-zinc-950">
+      <!-- Light Gray Dot Grid with a smooth mask fading down the page -->
+      <div class="absolute inset-0 bg-grid-dots-light-gray opacity-100" style="mask-image: radial-gradient(circle at 50% 30%, black 30%, transparent 90%); -webkit-mask-image: radial-gradient(circle at 50% 30%, black 30%, transparent 90%);"></div>
     </div>
 
     <slot />
+    <CommandPalette />
   </body>
 </html>
