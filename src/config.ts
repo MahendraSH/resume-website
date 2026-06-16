@@ -35,7 +35,7 @@ export const APP_CONFIG: AppConfig = {
   author: {
     name: "Mahendra S H",
     url: "https://mahendrash.vercel.app",
-    email: "mahendrash@gmail.com",
+    email: "mahendrashongunti@gmail.com",
     phone: "+91-7892041114",
     github: "https://github.com/MahendraSH",
     linkedin: "https://linkedin.com/in/mahendra-s-h-14a74721a",
