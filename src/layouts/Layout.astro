@@ -29,8 +29,10 @@ const defaultSchema = {
     "url": APP_CONFIG.domain,
     "sameAs": [
       APP_CONFIG.socials.github,
-      APP_CONFIG.socials.linkedin
-    ]
+      APP_CONFIG.socials.linkedin,
+      APP_CONFIG.socials.twitter,
+      APP_CONFIG.socials.medium
+    ].filter(Boolean)
   }
 };
 

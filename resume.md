@@ -2,7 +2,7 @@
 
 **Specialist Programmer**  
 Hyderabad, India | +91-7892041114 | mahendrashongunti@gmail.com | mahendrash.vercel.app  
-[LinkedIn](https://linkedin.com/in/mahendra-s-h-14a74721a) | [GitHub](https://github.com/MahendraSH)
+[LinkedIn](https://linkedin.com/in/mahendra-s-h-14a74721a) | [GitHub](https://github.com/MahendraSH) | [Medium](https://medium.com/@maahi2001sh) | [X (Twitter)](https://x.com/mahendrashon)
 
 ---
 

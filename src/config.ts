@@ -19,11 +19,15 @@ export interface AppConfig {
     github: string;
     linkedin: string;
     upwork: string;
+    medium?: string;
+    twitter?: string;
   };
   socials: {
     github: string;
     linkedin: string;
     upwork: string;
+    medium?: string;
+    twitter?: string;
   };
 }
 
@@ -39,12 +43,16 @@ export const APP_CONFIG: AppConfig = {
     phone: "+91-7892041114",
     github: "https://github.com/MahendraSH",
     linkedin: "https://linkedin.com/in/mahendra-s-h-14a74721a",
-    upwork: "https://www.upwork.com/freelancers/~015e4bc8c81692a6f2"
+    upwork: "https://www.upwork.com/freelancers/~015e4bc8c81692a6f2",
+    medium: "https://medium.com/@maahi2001sh",
+    twitter: "https://x.com/mahendrashon"
   },
   socials: {
     github: "https://github.com/MahendraSH/",
     linkedin: "https://www.linkedin.com/in/mahendra-s-h-14a74721a/",
-    upwork: "https://www.upwork.com/freelancers/~015e4bc8c81692a6f2"
+    upwork: "https://www.upwork.com/freelancers/~015e4bc8c81692a6f2",
+    medium: "https://medium.com/@maahi2001sh",
+    twitter: "https://x.com/mahendrashon"
   }
 };
 
@@ -172,7 +180,7 @@ export const PROJECTS: Project[] = [
     ],
     labels: ["Astro", "React.js", "TypeScript", "TanStack Table v8", "Shadcn UI", "Swagger / OpenAPI"],
     duration: "14 Days",
-    liveUrl: "https://table-gen-three.vercel.app/",
+    liveUrl: "https://tools-table-gen.vercel.app/",
     category: "Community Tool",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M3 3h18v18H3z"></path><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M9 3v18"></path><path d="M15 3v18"></path></svg>`,
     themeColor: "text-indigo-400 border-indigo-500/20 bg-indigo-500/10",
@@ -190,7 +198,7 @@ export const PROJECTS: Project[] = [
     ],
     labels: ["Astro", "React.js", "TypeScript", "Tailwind CSS", "React Hook Form", "Zod", "Shadcn UI", "Swagger / OpenAPI"],
     duration: "14 Days",
-    liveUrl: "https://form-gen-sable.vercel.app/",
+    liveUrl: "https://tools-form-gen.vercel.app/",
     category: "Community Tool",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="13" y2="17"></line></svg>`,
     themeColor: "text-violet-400 border-violet-500/20 bg-violet-500/10",

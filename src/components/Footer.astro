@@ -33,6 +33,28 @@ const currentYear = new Date().getFullYear();
       >
         LinkedIn
       </a>
+      {APP_CONFIG.socials.twitter && (
+        <a 
+          href={APP_CONFIG.socials.twitter} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="text-zinc-500 hover:text-zinc-300 transition"
+          title="X (Twitter)"
+        >
+          X
+        </a>
+      )}
+      {APP_CONFIG.socials.medium && (
+        <a 
+          href={APP_CONFIG.socials.medium} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="text-zinc-500 hover:text-zinc-300 transition"
+          title="Medium"
+        >
+          Medium
+        </a>
+      )}
       <a 
         href={APP_CONFIG.socials.upwork} 
         target="_blank" 

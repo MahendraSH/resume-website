@@ -276,6 +276,48 @@ import { PROJECTS, APP_CONFIG } from '../config';
           <span class="text-[9px] font-mono text-zinc-500">External</span>
         </button>
 
+        {APP_CONFIG.socials.twitter && (
+          <button
+            type="button"
+            class="command-item w-full flex items-center justify-between px-4 py-2 text-left text-zinc-350 hover:bg-zinc-800/50 hover:text-zinc-100 transition-colors duration-100 outline-none cursor-pointer focus:bg-zinc-800/50 focus:text-zinc-100 select-none"
+            data-search="twitter x profile account social post microblog"
+            data-action="url"
+            data-target={APP_CONFIG.socials.twitter}
+          >
+            <div class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-zinc-500 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <div class="flex flex-col">
+                <span class="text-xs font-medium">X / Twitter Profile</span>
+                <span class="text-[10px] text-zinc-500 font-sans">Open x.com/mahendrashon</span>
+              </div>
+            </div>
+            <span class="text-[9px] font-mono text-zinc-500">External</span>
+          </button>
+        )}
+
+        {APP_CONFIG.socials.medium && (
+          <button
+            type="button"
+            class="command-item w-full flex items-center justify-between px-4 py-2 text-left text-zinc-350 hover:bg-zinc-800/50 hover:text-zinc-100 transition-colors duration-100 outline-none cursor-pointer focus:bg-zinc-800/50 focus:text-zinc-100 select-none"
+            data-search="medium blog article write post reading publication"
+            data-action="url"
+            data-target={APP_CONFIG.socials.medium}
+          >
+            <div class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-zinc-500 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zm3.04 0c0 3.25-.33 5.9-0.73 5.9-.4 0-.73-2.65-.73-5.9s.33-5.9.73-5.9c.4 0 .73 2.65.73 5.9z"/>
+              </svg>
+              <div class="flex flex-col">
+                <span class="text-xs font-medium">Medium Blog</span>
+                <span class="text-[10px] text-zinc-500 font-sans">Read articles on medium.com/@maahi2001sh</span>
+              </div>
+            </div>
+            <span class="text-[9px] font-mono text-zinc-500">External</span>
+          </button>
+        )}
+
         <button
           type="button"
           class="command-item w-full flex items-center justify-between px-4 py-2 text-left text-zinc-350 hover:bg-zinc-800/50 hover:text-zinc-100 transition-colors duration-100 outline-none cursor-pointer focus:bg-zinc-800/50 focus:text-zinc-100 select-none"

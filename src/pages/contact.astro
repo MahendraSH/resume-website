@@ -94,6 +94,48 @@ import { APP_CONFIG } from '../config';
         </div>
       </a>
 
+      <!-- X / Twitter Card -->
+      {APP_CONFIG.socials.twitter && (
+        <a 
+          href={APP_CONFIG.socials.twitter} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="group glass-panel p-6 rounded-2xl flex items-center gap-5 hover:bg-zinc-900/40 hover:border-blue-500/30 hover:scale-[1.02] transition-all duration-300"
+        >
+          <div class="p-3.5 bg-blue-500/10 rounded-xl text-blue-400 group-hover:bg-blue-500/20 group-hover:text-blue-300 transition-colors">
+            <!-- X Icon -->
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <div class="text-left space-y-1">
+            <div class="text-[10px] text-zinc-500 uppercase tracking-widest font-mono font-bold">X / Twitter</div>
+            <div class="text-sm font-semibold text-zinc-200 group-hover:text-zinc-50 transition-colors">@mahendrashon</div>
+          </div>
+        </a>
+      )}
+
+      <!-- Medium Card -->
+      {APP_CONFIG.socials.medium && (
+        <a 
+          href={APP_CONFIG.socials.medium} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="group glass-panel p-6 rounded-2xl flex items-center gap-5 hover:bg-zinc-900/40 hover:border-blue-500/30 hover:scale-[1.02] transition-all duration-300"
+        >
+          <div class="p-3.5 bg-blue-500/10 rounded-xl text-blue-400 group-hover:bg-blue-500/20 group-hover:text-blue-300 transition-colors">
+            <!-- Medium Icon -->
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zm3.04 0c0 3.25-.33 5.9-0.73 5.9-.4 0-.73-2.65-.73-5.9s.33-5.9.73-5.9c.4 0 .73 2.65.73 5.9z"/>
+            </svg>
+          </div>
+          <div class="text-left space-y-1">
+            <div class="text-[10px] text-zinc-500 uppercase tracking-widest font-mono font-bold">Medium</div>
+            <div class="text-sm font-semibold text-zinc-200 group-hover:text-zinc-50 transition-colors">@maahi2001sh</div>
+          </div>
+        </a>
+      )}
+
       <!-- Location Card (spanning 2 columns on larger screens) -->
       <div 
         class="glass-panel p-6 rounded-2xl flex items-center gap-5 md:col-span-2"
