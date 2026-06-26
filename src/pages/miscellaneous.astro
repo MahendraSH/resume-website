@@ -5,19 +5,33 @@ import Footer from '../components/Footer.astro';
 import { PROJECTS, APP_CONFIG } from '../config';
 
 const tools = PROJECTS.filter(project => project.category === 'Tools');
+
+const miscDescription = "Explore interactive developer tools, design laboratories, and utility experiments built by Mahendra S H, featuring code scaffolders for Shadcn UI Forms and TanStack Tables.";
+
+const miscSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": `Miscellaneous Works | ${APP_CONFIG.name}`,
+  "description": miscDescription,
+  "url": `${APP_CONFIG.domain}/miscellaneous/`
+};
 ---
 
-<Layout title={`Miscellaneous Works | ${APP_CONFIG.name}`}>
+<Layout 
+  title={`Miscellaneous Works | ${APP_CONFIG.name}`}
+  description={miscDescription}
+  schema={miscSchema}
+>
   <Navbar />
 
-  <main class="w-full max-w-5xl mx-auto px-4 md:px-8 py-16 md:py-24 space-y-12">
+  <main class="w-full max-w-7xl 2xl:max-w-[90rem] mx-auto px-4 md:px-8 2xl:px-12 py-16 md:py-24 space-y-12">
     <!-- Page Header -->
     <div class="text-center space-y-4 max-w-2xl mx-auto">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono tracking-wider text-blue-400 uppercase">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono tracking-wider text-blue-400 uppercase">
         <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
         <span>Side Experiments</span>
       </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-50 leading-tight">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-b from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent tracking-tight leading-none">
         Miscellaneous Works
       </h1>
       <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
@@ -26,22 +40,22 @@ const tools = PROJECTS.filter(project => project.category === 'Tools');
     </div>
 
     <!-- Separator Line -->
-    <div class="h-[1px] w-full bg-zinc-850"></div>
+    <div class="h-[1px] w-full bg-zinc-850/60"></div>
 
     <!-- Tools List -->
     <div class="space-y-8 mt-12">
       {tools.map((project) => (
         <div
           id={`project-${project.id}`}
-          class="project-card border border-zinc-850 bg-zinc-900/10 p-5 md:p-6 rounded-2xl flex flex-col lg:flex-row gap-6 items-center justify-between transition-all duration-300 hover:border-zinc-800"
+          class="project-card border border-zinc-850/60 bg-zinc-900/5 p-5 md:p-6 rounded-3xl flex flex-col lg:flex-row gap-6 items-center justify-between transition-all duration-500 hover:border-zinc-800 hover:bg-zinc-900/20 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] group/project"
         >
           <!-- Project Preview (Themed Custom Gradient & Logo) -->
-          <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-xl border border-zinc-850 relative bg-zinc-950 flex items-center justify-center">
-            <div class={`w-full h-full bg-gradient-to-br ${project.themeGradient || 'from-zinc-900 via-indigo-950/45 to-zinc-950'} flex flex-col items-center justify-center p-6 text-center relative`}>
+          <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-2xl border border-zinc-850/80 relative bg-zinc-950 flex items-center justify-center shadow-lg group-hover/project:border-zinc-700/85 transition-all duration-500">
+            <div class={`w-full h-full bg-gradient-to-br ${project.themeGradient || 'from-zinc-900 via-indigo-950/45 to-zinc-950'} flex flex-col items-center justify-center p-6 text-center relative transition-transform duration-700 group-hover/project:scale-105`}>
               <!-- Grid Lines -->
               <div class="absolute inset-0 bg-grid-dots opacity-20"></div>
               {project.logo && (
-                <div class={`p-3.5 rounded-2xl border border-zinc-850 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100`}>
+                <div class={`p-3.5 rounded-2xl border border-zinc-850/60 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100`}>
                   <div class="w-7 h-7 flex items-center justify-center">
                     <Fragment set:html={project.logo} />
                   </div>
@@ -55,7 +69,7 @@ const tools = PROJECTS.filter(project => project.category === 'Tools');
           </div>
 
           <!-- Project Meta Details -->
-          <div class="flex-1 flex flex-col justify-between w-full h-full min-h-[200px]">
+          <div class="flex-1 flex flex-col justify-between w-full h-full min-h-[220px]">
             <div class="space-y-4">
               <div class="space-y-2">
                 <span class="inline-flex text-[9px] font-mono font-bold uppercase tracking-wider bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded">
@@ -63,11 +77,11 @@ const tools = PROJECTS.filter(project => project.category === 'Tools');
                 </span>
                 <div class="flex items-center gap-2.5">
                   {project.logo && (
-                    <div class={`p-1.5 rounded-lg border border-zinc-850 bg-zinc-950/60 ${project.themeColor || 'text-blue-500'} w-7 h-7 flex items-center justify-center shrink-0`}>
+                    <div class={`p-1.5 rounded-lg border border-zinc-850/60 bg-zinc-950/60 ${project.themeColor || 'text-blue-500'} w-7 h-7 flex items-center justify-center shrink-0`}>
                       <Fragment set:html={project.logo} />
                     </div>
                   )}
-                  <h3 class="text-xl font-bold text-zinc-100">{project.name}</h3>
+                  <h3 class="text-xl font-bold text-zinc-150 group-hover/project:text-zinc-50 group-hover/project:translate-x-0.5 transition-all duration-300">{project.name}</h3>
                 </div>
               </div>
 
@@ -76,9 +90,9 @@ const tools = PROJECTS.filter(project => project.category === 'Tools');
               </p>
 
               {project.bullets && project.bullets.length > 0 && (
-                <ul class="list-disc pl-5 space-y-1.5 text-[11px] md:text-xs text-zinc-450 leading-relaxed">
+                <ul class="list-disc pl-5 space-y-1.5 text-[11px] md:text-xs text-zinc-450 leading-relaxed font-sans">
                   {project.bullets.map((bullet) => (
-                    <li>{bullet}</li>
+                    <li class="marker:text-blue-500/40">{bullet}</li>
                   ))}
                 </ul>
               )}
@@ -86,7 +100,7 @@ const tools = PROJECTS.filter(project => project.category === 'Tools');
               <!-- Tech labels -->
               <div class="flex flex-wrap gap-1.5 pt-2">
                 {project.labels.map((lbl) => (
-                  <span class="px-2 py-0.5 text-[10px] font-mono rounded bg-zinc-900 border border-zinc-850 text-zinc-400">
+                  <span class="px-2.5 py-1 text-[10px] font-mono rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-450 hover:text-zinc-200 transition-colors duration-250">
                     {lbl}
                   </span>
                 ))}
@@ -94,15 +108,15 @@ const tools = PROJECTS.filter(project => project.category === 'Tools');
             </div>
 
             <!-- Links footer -->
-            <div class="flex items-center gap-4 mt-6 pt-4 border-t border-zinc-850/50">
+            <div class="flex items-center gap-4 mt-6 pt-4 border-t border-zinc-850/40">
               {project.sourceCode && (
                 <a
                   href={project.sourceCode}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-zinc-550 hover:text-zinc-200 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                  class="text-zinc-500 hover:text-zinc-200 transition-colors flex items-center gap-1.5 text-xs font-mono group/btn"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover/btn:-translate-y-0.5 transition-transform duration-350">
                     <polyline points="16 18 22 12 16 6" />
                     <polyline points="8 6 2 12 8 18" />
                   </svg>
@@ -114,9 +128,9 @@ const tools = PROJECTS.filter(project => project.category === 'Tools');
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-zinc-550 hover:text-zinc-200 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                  class="text-zinc-500 hover:text-zinc-200 transition-colors flex items-center gap-1.5 text-xs font-mono group/btn"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover/btn:rotate-45 transition-transform duration-300">
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
                   </svg>

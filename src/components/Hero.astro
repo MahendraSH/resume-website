@@ -17,22 +17,24 @@ import { APP_CONFIG } from '../config';
     LATENCY // 0.05ms
   </div>
 
-  <div class="max-w-6xl w-full mx-auto z-10 relative">
-    <div class="glass-panel p-6 md:p-12 rounded-3xl flex flex-col lg:flex-row items-center gap-10 md:gap-12">
+  <div class="max-w-7xl 2xl:max-w-[90rem] w-full mx-auto z-10 relative">
+    <div class="premium-card p-6 md:p-12 rounded-3xl flex flex-col lg:flex-row items-center gap-10 md:gap-16">
       
-      <!-- Profile Image Container with Bobbing & Liquid Morphing Wave Animations -->
-      <div class="relative shrink-0 flex items-center justify-center profile-container">
-        <!-- Neon Spinning border container -->
-        <div class="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden wavy-profile-image shadow-2xl flex items-center justify-center -z-0">
-          <!-- The rotating gradient background -->
-          <div class="absolute inset-0 bg-[conic-gradient(from_0deg,#22d3ee,#3b82f6,#d946ef,#22d3ee)] animate-spin-frame -z-10"></div>
-          
-          <!-- Inner Dark Shield -->
-          <div class="absolute inset-[3px] bg-zinc-950 wavy-profile-image flex items-center justify-center p-1.5 overflow-hidden">
+      <!-- Profile Image Container with Gentle Floating & Ambient Backplate Glow -->
+      <div class="relative shrink-0 flex items-center justify-center profile-container group">
+        <!-- Ambient Glowing Backplate -->
+        <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-xl group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 -z-10"></div>
+        
+        <!-- Outer Interactive Ring -->
+        <div class="relative w-60 h-60 md:w-72 md:h-72 rounded-2xl p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-pink-500 transition-all duration-500 shadow-2xl">
+          <div class="w-full h-full rounded-[14px] overflow-hidden bg-zinc-950 p-2 flex items-center justify-center relative">
+            <!-- Subtle Grid in Image Background -->
+            <div class="absolute inset-0 bg-grid-dots opacity-20 z-0"></div>
             <img
               src="https://github.com/MahendraSH.png"
               alt="Mahendra S H"
-              class="w-full h-full object-cover wavy-profile-image"
+              class="w-full h-full object-cover rounded-lg z-10 filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-[1.01]"
+              loading="eager"
             />
           </div>
         </div>
@@ -41,56 +43,90 @@ import { APP_CONFIG } from '../config';
       <!-- Hero Content -->
       <div class="flex-1 space-y-6 text-center lg:text-left">
         <div class="space-y-3">
-          <!-- Open to Opportunities badge -->
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-850 text-[10px] font-mono tracking-wider text-emerald-400 uppercase w-fit">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
-            <span>Open to Opportunities</span>
+          <!-- Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+            <!-- Open to Opportunities badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-mono tracking-wider text-emerald-400 uppercase w-fit shadow-[0_0_15px_rgba(16,185,129,0.05)] hover:bg-emerald-500/15 transition-all duration-300">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span>Open to Opportunities</span>
+            </div>
+
+            <!-- Remote Only badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono tracking-wider text-blue-400 uppercase w-fit shadow-[0_0_15px_rgba(59,130,246,0.05)] hover:bg-blue-500/15 transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+              <span>Open for Remote Jobs</span>
+            </div>
           </div>
 
-          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-50 leading-tight">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-none bg-gradient-to-b from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent">
             Mahendra S H
           </h1>
           
-          <div class="h-8 md:h-10 text-lg md:text-xl font-mono text-zinc-350 flex justify-center lg:justify-start items-center">
+          <div class="h-8 md:h-10 text-lg md:text-xl font-mono text-zinc-300 flex justify-center lg:justify-start items-center">
             <span>I am a&nbsp;</span>
-            <span id="typewriter" class="text-blue-400 font-bold border-r-2 border-blue-400 pr-1 min-h-[1.5em] flex items-center"></span>
+            <span id="typewriter" class="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent font-extrabold border-r-2 border-blue-400/80 pr-1 min-h-[1.5em] flex items-center"></span>
           </div>
         </div>
 
         <p class="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-          Full-Stack Developer with nearly 2 years of experience designing, developing, and maintaining high-performance, scalable web applications from concept to deployment. Proficient in architecting modular backend services, database design/optimization, and implementing automated batch processing pipelines, as well as building highly responsive, interactive user interfaces.
+          Remote-Ready Full-Stack Engineer with nearly 2 years of experience designing, developing, and maintaining high-performance, scalable web applications and distributed backend services. Expert in Java/Spring Boot, React, and ServiceNow SDK, with a strong background in asynchronous remote-first collaboration.
         </p>
 
         <!-- Current Role Summary Details Card -->
-        <div class="p-4 rounded-xl border border-zinc-850 bg-zinc-900/50 max-w-xl mx-auto lg:mx-0 flex flex-col sm:flex-row items-center gap-4">
-          <div class="text-center sm:text-left space-y-1">
-            <div class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Previous Role</div>
-            <div class="text-sm font-semibold text-zinc-100">Specialist Programmer (ex-Infosys)</div>
+        <div class="p-4 rounded-2xl border border-zinc-850 bg-zinc-900/20 backdrop-blur-sm max-w-xl mx-auto lg:mx-0 grid grid-cols-2 gap-4 relative overflow-hidden group hover:border-zinc-800/80 transition-all duration-300">
+          <!-- Linear gradient subtle highlight on hover -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="space-y-1 pl-2">
+            <div class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500/70"></span>
+              <span>Previous Role</span>
+            </div>
+            <div class="text-xs md:text-sm font-semibold text-zinc-200">Specialist Programmer</div>
+            <div class="text-[10px] text-zinc-500 font-mono">Infosys (Remote-Flexible)</div>
           </div>
-          <div class="hidden sm:block text-zinc-800">|</div>
-          <div class="text-center sm:text-left space-y-1">
-            <div class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Experience</div>
-            <div class="text-sm font-semibold text-zinc-100">2 Years Full-Stack</div>
+          <div class="space-y-1 border-l border-zinc-850/60 pl-6">
+            <div class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-500/70"></span>
+              <span>Availability</span>
+            </div>
+            <div class="text-xs md:text-sm font-semibold text-zinc-200">Remote Only</div>
+            <div class="text-[10px] text-zinc-500 font-mono">Open for Remote Jobs</div>
           </div>
         </div>
 
-        <!-- Contact/Email Info -->
-        <div class="flex items-center justify-center lg:justify-start gap-2 text-xs font-mono text-zinc-400">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          <a href={`mailto:${APP_CONFIG.author.email}`} class="hover:text-blue-400 transition-colors">{APP_CONFIG.author.email}</a>
+        <!-- Contact/Email & Location Info -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-x-5 gap-y-2.5">
+          <!-- Email -->
+          <div class="flex items-center gap-2 text-xs font-mono text-zinc-450 hover:text-zinc-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href={`mailto:${APP_CONFIG.author.email}`} class="hover:underline">{APP_CONFIG.author.email}</a>
+          </div>
+          <!-- Location -->
+          <div class="flex items-center gap-2 text-xs font-mono text-zinc-450">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>Karnataka, India (Open for Remote Jobs)</span>
+          </div>
         </div>
 
         <!-- Social Icons & Download CTA -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-2">
           <!-- Social Link Group -->
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2.5">
             <a
               href={APP_CONFIG.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition"
+              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
               title="GitHub"
             >
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -101,7 +137,7 @@ import { APP_CONFIG } from '../config';
               href={APP_CONFIG.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition"
+              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
               title="LinkedIn"
             >
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -113,7 +149,7 @@ import { APP_CONFIG } from '../config';
                 href={APP_CONFIG.socials.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition"
+                class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
                 title="X (formerly Twitter)"
               >
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -126,7 +162,7 @@ import { APP_CONFIG } from '../config';
                 href={APP_CONFIG.socials.medium}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition"
+                class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
                 title="Medium"
               >
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -138,34 +174,37 @@ import { APP_CONFIG } from '../config';
               href={APP_CONFIG.socials.upwork}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition"
+              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
               title="Upwork"
             >
               <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="w-4.5 h-4.5" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.543-2.548V3.56H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-.354c.511 1.365 1.251 2.946 2.222 4.486l-1.637 7.692h2.825l1.197-5.636c.99.637 2.115 1.009 3.39 1.009 3.037 0 5.51-2.435 5.51-5.51-.001-3.075-2.473-5.51-5.51-5.51z" />
               </svg>
             </a>
+          </div>
+
+          <div class="flex items-center gap-3 w-full sm:w-auto">
             <a
-              href={`mailto:${APP_CONFIG.author.email}`}
-              class="w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition"
-              title="Gmail"
+              href="/mahendra_sh_resume.pdf"
+              download="mahendra_sh_resume.pdf"
+              class="flex-1 sm:flex-initial relative group px-5 py-2.5 rounded-xl bg-gradient-to-r from-zinc-100 to-white text-zinc-950 text-xs font-bold font-mono transition shadow-[0_4px_20px_rgba(255,255,255,0.06)] hover:shadow-[0_4px_30px_rgba(59,130,246,0.2)] hover:scale-[1.02] active:scale-[0.98] duration-300 cursor-pointer flex items-center justify-center gap-2"
             >
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+              <span>Get Resume PDF</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-zinc-950 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </a>
+            <a
+              href="/contact"
+              class="flex-1 sm:flex-initial relative group px-5 py-2.5 rounded-xl bg-zinc-950 hover:bg-zinc-900 text-zinc-200 hover:text-white text-xs font-bold font-mono transition border border-zinc-800 hover:border-zinc-700 hover:scale-[1.02] active:scale-[0.98] duration-300 cursor-pointer flex items-center justify-center gap-2"
+            >
+              <span>Let's Connect</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-zinc-400 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
               </svg>
             </a>
           </div>
-
-          <a
-            href="/mahendra_sh_resume.pdf"
-            download="mahendra_sh_resume.pdf"
-            class="px-5 py-2.5 rounded-xl bg-zinc-50 hover:bg-zinc-200 text-zinc-950 text-xs font-bold font-mono transition border border-zinc-200 shadow-md hover:scale-[1.01] cursor-pointer flex items-center gap-2"
-          >
-            <span>Get Resume PDF</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-          </a>
         </div>
       </div>
 
@@ -184,52 +223,14 @@ import { APP_CONFIG } from '../config';
     }
   }
 
-  /* Wavy Liquid Border Animation */
-  @keyframes waveAnimation {
-    0% {
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    25% {
-      border-radius: 40% 60% 50% 40% / 40% 40% 50% 60%;
-    }
-    50% {
-      border-radius: 30% 60% 70% 40% / 50% 60% 30%;
-    }
-    75% {
-      border-radius: 50% 30% 40% 60% / 30% 70% 60% 50%;
-    }
-    100% {
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-  }
-
-  /* Spin animation for border gradient */
-  @keyframes spinFrame {
-    0% {
-      transform: rotate(0deg) scale(1.5);
-    }
-    100% {
-      transform: rotate(360deg) scale(1.5);
-    }
-  }
-
   .profile-container {
     animation: floatAnimation 6s ease-in-out infinite;
-  }
-
-  .wavy-profile-image {
-    animation: waveAnimation 8s ease-in-out infinite;
-  }
-
-  /* Rotating neon gradient effect */
-  .animate-spin-frame {
-    animation: spinFrame 6s linear infinite;
   }
 </style>
 
 <script>
   function runTypewriter() {
-    const words = ["Full-Stack Developer", "Specialist Programmer", "Backend Engineer"];
+    const words = ["Remote-Ready Engineer", "Full-Stack Developer", "Specialist Programmer"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

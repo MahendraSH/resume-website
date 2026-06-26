@@ -1,17 +1,17 @@
 # Mahendra S H
 
-**Full-Stack Developer**  
-Hyderabad, India | +91-7892041114 | mahendrashongunti@gmail.com | mahendrash.vercel.app  
+**Full-Stack Engineer (Remote-Ready)**  
+Karnataka, India (Open to Global Remote / Timezone Flexible) | +91-7892041114 | mahendrashongunti@gmail.com | mahendrash.vercel.app  
 [LinkedIn](https://linkedin.com/in/mahendra-s-h-14a74721a) | [GitHub](https://github.com/MahendraSH)
 
 ---
 
 ## Professional Summary
 
-* **Full-Stack Developer** with nearly 2 years of experience designing, developing, and maintaining high-performance, scalable web applications from concept to deployment.
-* **Backend & Microservices**: Proficient in architecting modular backend services, database design/optimization, and implementing automated, high-throughput batch processing pipelines.
-* **Frontend & UI/UX**: Skilled in building highly responsive, interactive user interfaces with modern frontend frameworks, client dashboards, and custom reusable components.
-* **Database & Integration**: Strong experience in working with relational and NoSQL databases, RESTful API integrations, event-driven queue orchestration, and cloud media delivery.
+* **Remote-Ready Full-Stack Engineer** with nearly 2 years of professional experience designing, developing, and maintaining scalable web applications and high-throughput backend systems in distributed environments.
+* **Autonomy & Collaboration**: Strong record of working in remote-first and hybrid teams; highly self-motivated with excellent written communication, asynchronous coordination (Git, Jira, Slack), and comprehensive technical documentation.
+* **Backend & Systems**: Proficient in Java/Spring Boot, Node.js/Express, database design (PostgreSQL, MySQL), event-driven microservices (AWS SQS, Camunda), and automated high-throughput pipelines (Spring Batch).
+* **Frontend & UI/UX**: Experienced in building highly interactive, responsive user interfaces with React.js, Next.js, and Astro, utilizing Tailwind CSS, TypeScript, and modern state-management libraries.
 
 ---
 
@@ -27,20 +27,20 @@ Hyderabad, India | +91-7892041114 | mahendrashongunti@gmail.com | mahendrash.ver
 
 ## Work Experience
 
-### Infosys — Specialist Programmer
-**Jul 2024 – Jun 2026 | Hyderabad, India (Hybrid)**
-* **Cargo Readiness (CMA-CGM Project)**: Architected and engineered a microservices backend using Java 21 and Spring Boot to handle event-driven container readiness assessment workflows.
-* Integrated AWS SQS queues and Camunda BPM for event-driven orchestration, reducing manual verification overhead by 35%.
-* Employed Spring Batch to automate high-throughput end-date verification and backend checks, processing 50k+ active bookings daily.
-* Developed a responsive React frontend dashboard utilizing React Query and React Table, improving officer decision-making efficiency.
-* Optimized database queries in PostgreSQL to reduce API response times by 20% and enhance overall system throughput.
-* Participated in regular code reviews, promoting clean code standards and Git best practices across the development team.
+### Infosys — Software Engineer (Specialist Programmer)
+**Jul 2024 – Jun 2026 | Hyderabad, India (Hybrid / Remote-Flexible)**
+* **Cargo Readiness (CMA-CGM Project)**: Architected and engineered an event-driven container assessment microservices backend using Java 21, Spring Boot, and PostgreSQL.
+* Integrated AWS SQS queues and Camunda BPM for reliable workflow orchestration, reducing manual verification overhead by 35% for global operations.
+* Automated daily end-date validations by writing Spring Batch jobs, handling 50k+ active booking checks concurrently with optimized transactional boundaries.
+* Designed a real-time React dashboard with TanStack Query and TanStack Table, boosting administrative decision-making speeds.
+* Optimized PostgreSQL database indexing and query layouts, reducing API response latency by 20%.
+* Championed **asynchronous collaboration** and remote handoffs; maintained detailed technical documentation, API specifications, and led PR code reviews on GitHub.
 
-### Merav Infotech — Software Engineering Intern
-**Feb 2024 – May 2024 | Mysore, India (Remote)**
-* Spearheaded frontend feature development and designed reusable UI components using React.js and modern JavaScript (ES6+).
-* Collaborated with senior engineers to integrate RESTful API endpoints, reducing initial page load times by 15% via lazy loading and code-splitting.
-* Participated in Agile sprint planning and daily standups to ensure timely delivery of software features.
+### Merav Infotech — Software Engineering Intern (Remote)
+**Feb 2024 – May 2024 | Karnataka, India (Remote-First)**
+* Engineered reusable React.js UI modules and streamlined state management for a remote-first development team.
+* Collaborated asynchronously to integrate RESTful endpoints, cutting initial page load times by 15% via route-level code splitting and image optimizations.
+* Utilized Git, Slack, and Jira to participate in async daily standups and sprint planning, demonstrating high autonomy and reliable task estimation.
 
 ---
 

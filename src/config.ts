@@ -34,8 +34,8 @@ export interface AppConfig {
 export const APP_CONFIG: AppConfig = {
   name: "Mahendra S H",
   domain: "https://mahendrash.vercel.app",
-  tagline: "Full-Stack Developer building scalable web applications",
-  description: "Portfolio Site of Mahendra, a FullStack Developer showcasing his projects and experiences",
+  tagline: "Remote-Ready Full-Stack Engineer specializing in Spring Boot, React, and ServiceNow",
+  description: "Portfolio Site of Mahendra S H, a Remote-Ready Full-Stack Engineer showcasing his backend and frontend projects.",
   author: {
     name: "Mahendra S H",
     url: "https://mahendrash.vercel.app",
@@ -81,26 +81,26 @@ export const SKILL_CATEGORIES = [
 
 export const EXPERIENCES = [
   {
-    role: "Specialist Programmer",
+    role: "Software Engineer (Specialist Programmer)",
     company: "Infosys",
     duration: "Jul 2024 – Jun 2026",
     bullets: [
-      "Cargo Readiness (CMA-CGM Project): Architected and engineered a microservices backend using Java 21 and Spring Boot to handle event-driven container readiness assessment workflows.",
-      "Integrated AWS SQS queues and Camunda BPM for event-driven orchestration, reducing manual verification overhead by 35%.",
-      "Employed Spring Batch to automate high-throughput end-date verification and backend checks, processing 50k+ active bookings daily.",
-      "Developed a responsive React frontend dashboard utilizing React Query and React Table, improving officer decision-making efficiency.",
-      "Optimized database queries in PostgreSQL to reduce API response times by 20% and enhance overall system throughput.",
-      "Participated in regular code reviews, promoting clean code standards and Git best practices across the development team."
+      "Cargo Readiness (CMA-CGM Project): Architected and engineered an event-driven container readiness assessment microservices backend using Java 21, Spring Boot, and PostgreSQL.",
+      "Integrated AWS SQS queues and Camunda BPM for reliable workflow orchestration, reducing manual verification overhead by 35% for global operations.",
+      "Automated daily end-date validations by writing Spring Batch jobs, handling 50k+ active booking checks concurrently with optimized transactional boundaries.",
+      "Designed a real-time React dashboard with TanStack Query and TanStack Table, boosting administrative decision-making speeds.",
+      "Optimized PostgreSQL database indexing and query layouts, reducing API response latency by 20%.",
+      "Championed asynchronous collaboration and remote handoffs; maintained detailed technical documentation, API specifications, and led PR code reviews on GitHub."
     ]
   },
   {
-    role: "Software Engineering Intern",
+    role: "Software Engineering Intern (Remote)",
     company: "Merav Infotech",
     duration: "Feb 2024 – May 2024",
     bullets: [
-      "Spearheaded frontend feature development and designed reusable UI components using React.js and modern JavaScript (ES6+).",
-      "Collaborated with senior engineers to integrate RESTful API endpoints, reducing initial page load times by 15% via lazy loading and code-splitting.",
-      "Participated in Agile sprint planning and daily standups to ensure timely delivery of software features."
+      "Engineered reusable React.js UI modules and streamlined state management for a remote-first development team.",
+      "Collaborated asynchronously to integrate RESTful endpoints, cutting initial page load times by 15% via route-level code splitting and image optimizations.",
+      "Utilized Git, Slack, and Jira to participate in async daily standups and sprint planning, demonstrating high autonomy and reliable task estimation."
     ]
   }
 ];

@@ -3,12 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { APP_CONFIG } from '../config';
+
+const pageNotFoundDescription = "Error 404 - The page you are looking for does not exist on Mahendra S H's developer portfolio.";
 ---
 
-<Layout title={`404: Page Not Found | ${APP_CONFIG.name}`}>
+<Layout 
+  title={`404: Page Not Found | ${APP_CONFIG.name}`}
+  description={pageNotFoundDescription}
+  robots="noindex, follow"
+>
   <Navbar />
 
-  <main class="w-full max-w-4xl mx-auto px-4 md:px-8 py-20 md:py-32 flex flex-col items-center justify-center relative overflow-hidden min-h-[calc(100vh-13.5rem)]">
+  <main class="w-full max-w-6xl 2xl:max-w-[80rem] mx-auto px-4 md:px-8 2xl:px-12 py-20 md:py-32 flex flex-col items-center justify-center relative overflow-hidden min-h-[calc(100vh-13.5rem)]">
     
     <!-- Floating Blur Glow Elements -->
     <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl -z-10 animate-drift-slow pointer-events-none"></div>

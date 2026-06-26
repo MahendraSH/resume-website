@@ -1,39 +1,64 @@
 ---
 import { SKILL_CATEGORIES } from '../config';
 ---
-
+ 
 <section id="skills" class="w-full py-12">
-  <div class="glass-panel p-6 md:p-10 rounded-2xl space-y-6">
+  <div class="premium-card p-6 md:p-10 rounded-3xl space-y-6">
     <div>
-      <h2 class="text-2xl md:text-3xl font-bold font-sans text-zinc-50 tracking-tight">Tech Skills</h2>
-      <p class="text-xs md:text-sm text-zinc-450 mt-1">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">Tech Skills</h2>
+      <p class="text-xs md:text-sm text-zinc-400 mt-1">
         Technologies, frameworks, databases, and tools I've worked with.
       </p>
     </div>
-
+ 
     <!-- Separator Line -->
-    <div class="h-[1px] w-full bg-zinc-850"></div>
-
+    <div class="h-[1px] w-full bg-zinc-850/60"></div>
+ 
     <!-- Skills Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {SKILL_CATEGORIES.map((cat) => (
-        <div 
-          class="p-5 rounded-xl border border-zinc-850 bg-zinc-900/30 hover:bg-zinc-900/50 hover:border-zinc-800 transition-all duration-300 shadow-sm flex flex-col justify-start group"
-        >
-          <h3 class="font-bold text-sm text-blue-400 uppercase font-mono tracking-wide mb-4 transition-colors group-hover:text-blue-300">
-            {cat.category}
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            {cat.skills.map((skill) => (
-              <kbd 
-                class="px-2.5 py-1 text-[11px] font-semibold rounded bg-zinc-900 text-zinc-300 border border-zinc-850 hover:border-zinc-700 hover:text-zinc-100 transition-colors duration-200"
-              >
-                {skill}
-              </kbd>
-            ))}
+      {SKILL_CATEGORIES.map((cat, idx) => {
+        // Choose a subtle indicator color based on category index
+        const colors = [
+          'text-cyan-400 group-hover:text-cyan-300',
+          'text-purple-400 group-hover:text-purple-300',
+          'text-emerald-400 group-hover:text-emerald-300',
+          'text-blue-400 group-hover:text-blue-300',
+          'text-amber-400 group-hover:text-amber-300',
+          'text-pink-400 group-hover:text-pink-300'
+        ];
+        const glowColors = [
+          'group-hover:border-cyan-500/20 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.02)]',
+          'group-hover:border-purple-500/20 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.02)]',
+          'group-hover:border-emerald-500/20 group-hover:shadow-[0_0_20px_rgba(52,211,153,0.02)]',
+          'group-hover:border-blue-500/20 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.02)]',
+          'group-hover:border-amber-500/20 group-hover:shadow-[0_0_20px_rgba(251,191,36,0.02)]',
+          'group-hover:border-pink-500/20 group-hover:shadow-[0_0_20px_rgba(244,63,94,0.02)]'
+        ];
+        const activeColor = colors[idx % colors.length];
+        const activeGlow = glowColors[idx % glowColors.length];
+
+        return (
+          <div 
+            class={`p-5 rounded-2xl border border-zinc-850/60 bg-zinc-900/10 hover:bg-zinc-900/30 transition-all duration-300 flex flex-col justify-start group relative overflow-hidden ${activeGlow}`}
+          >
+            <!-- Top corner glow flash on hover -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <h3 class={`font-bold text-[11px] uppercase font-mono tracking-widest mb-4 transition-colors ${activeColor}`}>
+              {cat.category}
+            </h3>
+            <div class="flex flex-wrap gap-2 z-10">
+              {cat.skills.map((skill) => (
+                <span 
+                  class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900/80 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-default select-none shadow-sm"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   </div>
 </section>
