@@ -295,11 +295,11 @@ export const PROJECTS: Project[] = [
   {
     id: 10,
     name: "logoname",
-    description: "Designed and built a developer-first, constraint-based vector brand identity generator that restricts styling options to guarantee perfectly proportioned, accessible layouts.",
+    description: "Vercel-zinc-themed client-side vector generator. Restricts style selections to curated high-contrast bounds to ensure perfect proportions.",
     bullets: [
       "Restricts brand design choices via constraint-based vector layouts (Horizontal, Vertical, Icon-Only) to guarantee visual accessibility and proportion.",
-      "Features real-time parameter tweaking including customizable grid overlays, typography styling, color vibes (Tech, Pro, Play), and element gaps.",
-      "Includes 1-click loading of premium design presets (Zenith AI, NovaPay, HexaCrypt) with resolution-independent SVG vector file downloads."
+      "Features custom backgrounds (animated mesh/radial gradients, textures), searchable icon library (150K+ SVGs), and URL sharing.",
+      "Supports 1-click loading of premium design presets with resolution-independent SVG vector file downloads."
     ],
     labels: ["Astro", "Tailwind CSS", "TypeScript", "SVG Engine", "Branding Customizer", "Client-Side Processing", "Vercel"],
     duration: "14 Days",
@@ -311,8 +311,8 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 11,
-    name: "Json-a",
-    description: "Developed a high-performance, developer-first JSON workspace to format, tree-parse, filter, diff, query, plot, and compile JSON structures 100% locally in the browser.",
+    name: "json-all",
+    description: "A fast client-side panel to format, query using jq/JSONPath, search object paths, and convert JSON payloads to C++, Rust, TypeScript, Java, YAML, Excel, and OpenAPI specifications.",
     bullets: [
       "Features an interactive collapsible node tree view and path finder to extract full dotted or bracket coordinates instantly.",
       "Compiles JSON schemas into 11 programming language targets, including TypeScript interfaces, Go/Rust tags, Java POJOs, and Python classes.",
@@ -329,17 +329,16 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 12,
-    name: "MD-a",
-    description: "Built a local-first, high-performance Markdown editing, converting, and diagramming studio running entirely client-side for maximum writing privacy.",
+    name: "md-a",
+    description: "Split-screen live preview parser with support for Mermaid diagrams, MathJax syntax, and PDF/HTML exports.",
     bullets: [
       "Split-pane layout featuring sync-scrolling, gutter line index numbers, formatting shortcut bar, and live compiled HTML5 preview.",
       "Integrates Mermaid.js diagramming to dynamically compile and render text-based charts, mindmaps, and flowcharts directly to SVGs.",
       "Built-in wizards including a drag-and-drop table grid generator, YAML frontmatter builder, and link/asset health checker.",
       "Features an automated HTML/rich-text to Markdown converter with exports to LaTeX, standalone HTML, clean plain text, and print-ready PDF."
     ],
-    labels: ["Astro", "Tailwind CSS", "TypeScript", "Mermaid.js", "Markdown Compiler", "LaTeX Exporter", "Local-First / PWA", "Vercel"],
+    labels: ["Astro", "Tailwind CSS", "TypeScript", "Mermaid.js", "Markdown Compiler", "LaTeX Exporter", "Local-First / PWA"],
     duration: "25 Days",
-    liveUrl: "https://tools-md-a.vercel.app/",
     category: "Tools",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>`,
     themeColor: "text-purple-400 border-purple-500/20 bg-purple-500/10",
@@ -347,13 +346,13 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 13,
-    name: "pg-spring-db",
-    description: "Created an interactive visual ERD database designer, schema linter, and full-stack Spring Boot CRUD REST API scaffolding engine.",
+    name: "design-db-to-crud",
+    description: "Visual PostgreSQL schema designer with live database structure relationships. Features a built-in schema linter to find missing keys or circular dependencies, and compiles tables directly into JPA Entities, repositories, services, and REST controllers.",
     bullets: [
-      "Enables developers to visually design PostgreSQL database tables, configure keys, check constraints, and link relations on an interactive canvas.",
+      "Enables developers to visually design PostgreSQL database tables, configure keys, check constraints, and link relations on an interactive ERD canvas.",
       "Features a schema linter that scores design health and flags naming convention violations, circular references, or missing indices.",
       "Instantly generates a complete, downloadable Spring Boot application zip containing JPA entities, MapStruct DTOs, JPA repositories, and CRUD controllers.",
-      "Supports direct SQL DDL script imports to visually render existing schemas, along with automatic generation of Flyway and Liquibase migrations."
+      "Supports direct SQL DDL script imports to visually render existing schemas, along with Flyway/Liquibase migration script generation."
     ],
     labels: ["Astro", "Tailwind CSS", "TypeScript", "PostgreSQL", "Spring Boot", "JPA / Hibernate", "ERD Designer", "Linter", "Vercel"],
     duration: "30 Days",
@@ -362,5 +361,39 @@ export const PROJECTS: Project[] = [
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>`,
     themeColor: "text-emerald-400 border-emerald-500/20 bg-emerald-500/10",
     themeGradient: "from-zinc-900 via-emerald-950/40 to-zinc-950"
+  },
+  {
+    id: 14,
+    name: "color-a",
+    description: "Real-time palette generators, OKLCH/HSL color space controls, WCAG contrast score trackers, and design token generators.",
+    bullets: [
+      "Features multi-space color palette generation supporting OKLCH, HSL, RGB, and Hex parameters natively.",
+      "Tracks real-time WCAG contrast scores for text-background pairings to ensure high readability and visual accessibility.",
+      "Generates exportable CSS variables and JSON design tokens ready for Tailwind CSS and general styling frameworks."
+    ],
+    labels: ["Astro", "Tailwind CSS", "TypeScript", "OKLCH / HSL", "WCAG Contrast", "Token Generator", "Vercel"],
+    duration: "14 Days",
+    liveUrl: "https://tools-color-a.vercel.app/",
+    category: "Tools",
+    logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.5 17.5 3 12 3C6.5 3 2 7.5 2 13C2 18.5 6.5 22 12 22Z"></path><circle cx="7.5" cy="10.5" r="1.5"></circle><circle cx="11.5" cy="7.5" r="1.5"></circle><circle cx="16.5" cy="10.5" r="1.5"></circle></svg>`,
+    themeColor: "text-rose-400 border-rose-500/20 bg-rose-500/10",
+    themeGradient: "from-zinc-900 via-rose-950/40 to-zinc-950"
+  },
+  {
+    id: 15,
+    name: "regex-data-extract-a",
+    description: "Web-based matcher with PCRE2 compliance, greedy group selectors, visual match backtracking trackers, and CSV/JSON output generation.",
+    bullets: [
+      "Implements client-side regular expression matching conforming to PCRE2 pattern matching guidelines.",
+      "Highlights capturing groups with greedy group selector controls and details visual match backtracking steps.",
+      "Generates formatted CSV/JSON output files from matched text patterns for easy local data scraping."
+    ],
+    labels: ["Astro", "TypeScript", "PCRE2 Matcher", "Backtracking", "CSV/JSON Export", "Vercel"],
+    duration: "10 Days",
+    liveUrl: "https://tools-regex-a.vercel.app/",
+    category: "Tools",
+    logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line><line x1="11" y1="8" x2="11" y2="14"></line></svg>`,
+    themeColor: "text-cyan-400 border-cyan-500/20 bg-cyan-500/10",
+    themeGradient: "from-zinc-900 via-cyan-950/40 to-zinc-950"
   },
 ].sort((a, b) => a.id - b.id);
