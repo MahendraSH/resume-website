@@ -1,27 +1,27 @@
 # Mahendra S H
 
-**Specialist Programmer**  
+**Full-Stack Developer**  
 Hyderabad, India | +91-7892041114 | mahendrashongunti@gmail.com | mahendrash.vercel.app  
-[LinkedIn](https://linkedin.com/in/mahendra-s-h-14a74721a) | [GitHub](https://github.com/MahendraSH) | [Medium](https://medium.com/@maahi2001sh) | [X (Twitter)](https://x.com/mahendrashon)
+[LinkedIn](https://linkedin.com/in/mahendra-s-h-14a74721a) | [GitHub](https://github.com/MahendraSH)
 
 ---
 
 ## Professional Summary
 
-* **Specialist Programmer** with 2 years of experience designing, developing, and maintaining high-performance, scalable full-stack applications from concept to deployment.
-* **ServiceNow Pro-Code**: Strong expertise in advanced ServiceNow custom application development using the ServiceNow SDK and TypeScript to build complex workflow automations.
-* **Backend & Microservices**: Proficient in architecting modular backend services, database optimization, and implementing automated, high-throughput batch jobs.
-* **Frontend & UI/UX**: Skilled in building responsive, interactive user interfaces with modern frontend frameworks to deliver high-quality, user-centric platforms.
+* **Full-Stack Developer** with nearly 2 years of experience designing, developing, and maintaining high-performance, scalable web applications from concept to deployment.
+* **Backend & Microservices**: Proficient in architecting modular backend services, database design/optimization, and implementing automated, high-throughput batch processing pipelines.
+* **Frontend & UI/UX**: Skilled in building highly responsive, interactive user interfaces with modern frontend frameworks, client dashboards, and custom reusable components.
+* **Database & Integration**: Strong experience in working with relational and NoSQL databases, RESTful API integrations, event-driven queue orchestration, and cloud media delivery.
 
 ---
 
 ## Technical Skills
 
 * **Languages**: Java, JavaScript, TypeScript, SQL, HTML/CSS
-* **Frameworks & Libs**: React.js, Next.js, Spring Boot, Spring Batch, Astro, Express.js, Tailwind CSS, Shadcn UI
+* **Frameworks & Libs**: React.js, Next.js, Spring Boot, Spring Batch, Astro, Express.js, Recharts, TanStack Table
 * **Enterprise Platforms**: ServiceNow (SDK, GlideRecord, Business Rules, Client Scripts, Script Includes, Workflows)
 * **Databases & ORM**: PostgreSQL, MySQL, MongoDB, Prisma
-* **Tools & DevOps**: AWS SQS, Camunda BPM, Git, GitHub, RESTful APIs, JWT, Cloudinary
+* **Tools & DevOps**: AWS SQS, Camunda BPM, Git, GitHub, RESTful APIs, JWT, Cloudinary, Tailwind CSS, Shadcn UI
 
 ---
 
@@ -52,6 +52,18 @@ Hyderabad, India | +91-7892041114 | mahendrashongunti@gmail.com | mahendrash.ver
 * Configured custom ServiceNow tables and programmed GlideRecord-based Business Rules, Client Scripts, and Script Includes to automate validations.
 * Orchestrated approval workflows with auto-provisioning logic and group routing, reducing access grant overhead by 40%.
 
+### E-Commerce Platform (E-Store)
+* **Tech Stack**: Next.js, React, Tailwind CSS, Shadcn UI, Prisma ORM, MySQL
+* Built a full-stack e-commerce solution with admin capabilities for managing products, catalog categorization, and processing customer orders.
+* Designed scalable REST APIs to support custom storefronts and seamless integration with payment gateway services.
+* Configured database schemas using Prisma ORM with MySQL to ensure query scalability and high transaction reliability.
+
+### SpendOptima
+* **Tech Stack**: Next.js, React, Tailwind CSS, Recharts, TypeScript
+* Built a premium personal finance tracking and expense optimization dashboard featuring clean budget analytics.
+* Designed responsive client dashboards with interactive statistics using Recharts, allowing users to analyze spending habits.
+* Structured modular frontend templates optimized for fast loading times and robust SEO search visibility.
+
 ### SaaS Form Builder Platform
 * **Tech Stack**: Next.js, React, Node.js, Express, PostgreSQL
 * Built a full-stack, no-code SaaS form builder allowing users to create and customize dynamic forms via an intuitive drag-and-drop interface.
@@ -62,11 +74,6 @@ Hyderabad, India | +91-7892041114 | mahendrashongunti@gmail.com | mahendrash.ver
 * **Tech Stack**: Astro, React, TypeScript, TanStack Table v8, Shadcn UI
 * Published an open-source developer tool that scaffolds fully-typed TanStack Table v8 columns and Shadcn UI components from JSON or OpenAPI/Swagger specs.
 * Designed an intuitive schema generator that automatically infers types, reducing boilerplate table setup time by 80% for developers.
-
-### MERN Gallery & Blog Platform
-* **Tech Stack**: MongoDB, Express, React, Node.js, Redux, JWT, Cloudinary
-* Built a full-stack blogging and media platform with secure JWT user authentication and role-based access control.
-* Connected Cloudinary API for high-performance image uploads and storage optimization, handling 5,000+ monthly active readers.
 
 ---
 

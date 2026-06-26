@@ -34,7 +34,7 @@ export interface AppConfig {
 export const APP_CONFIG: AppConfig = {
   name: "Mahendra S H",
   domain: "https://mahendrash.vercel.app",
-  tagline: "Specialist Programmer building scalable full-stack web applications",
+  tagline: "Full-Stack Developer building scalable web applications",
   description: "Portfolio Site of Mahendra, a FullStack Developer showcasing his projects and experiences",
   author: {
     name: "Mahendra S H",
@@ -268,20 +268,6 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://estore-ms.vercel.app/",
     userName: "estore_123",
     password: "estore_123",
-    image: [
-      "/projects/p-3/e-store.png",
-      "/projects/p-3/estore-bill.png",
-      "/projects/p-3/estore-cat.png",
-      "/projects/p-3/estore-create.png",
-      "/projects/p-3/estore-api.png",
-    ],
-    imagedark: [
-      "/projects/p-3/e-store-dark.png",
-      "/projects/p-3/estore-bill-dark.png",
-      "/projects/p-3/estore-cat-dark.png",
-      "/projects/p-3/estore-create-dark.png",
-      "/projects/p-3/estore-api-dark.png",
-    ],
     category: "Personal Project",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`,
     themeColor: "text-amber-400 border-amber-500/20 bg-amber-500/10",
@@ -301,12 +287,6 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://art-gal.vercel.app/",
     userName: "demoadmin@gmail.com",
     password: "demoadmin@gmail.com",
-    image: [
-      "/projects/p-2/art-gal.png",
-      "/projects/p-2/art-gal-gallery.png",
-      "/projects/p-2/art-gal-create.png",
-      "/projects/p-2/art-gal-users.png",
-    ],
     category: "Personal Project",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><path d="M12 6V12L16 14"></path></svg>`,
     themeColor: "text-pink-400 border-pink-500/20 bg-pink-500/10",
