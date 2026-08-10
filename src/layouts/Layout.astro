@@ -20,42 +20,71 @@ const {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || APP_CONFIG.domain).toString();
 const ogImageURL = new URL('/og-dark.png', Astro.site || APP_CONFIG.domain).toString();
 
-// Default structured data schema for Person / Portfolio SEO (Rich Schema Graph)
+// Rich Schema Graph for Person, ProfilePage, and Skills SEO
 const defaultSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "name": APP_CONFIG.author.name,
-    "alternateName": "Mahendra Shongunti",
-    "jobTitle": "Full-Stack Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Infosys"
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": `${APP_CONFIG.domain}/#profilepage`,
+      "url": canonicalURL,
+      "name": `${APP_CONFIG.name} | Java Cloud Full-Stack Engineer`,
+      "description": APP_CONFIG.description,
+      "mainEntity": {
+        "@id": `${APP_CONFIG.domain}/#person`
+      }
     },
-    "description": APP_CONFIG.description,
-    "url": APP_CONFIG.domain,
-    "image": "https://github.com/MahendraSH.png",
-    "email": APP_CONFIG.author.email,
-    "telephone": APP_CONFIG.author.phone,
-    "sameAs": [
-      APP_CONFIG.socials.github,
-      APP_CONFIG.socials.linkedin,
-      APP_CONFIG.socials.twitter,
-      APP_CONFIG.socials.medium,
-      APP_CONFIG.socials.upwork
-    ].filter(Boolean),
-    "knowsAbout": [
-      "Full-Stack Development",
-      "Java",
-      "Spring Boot",
-      "React.js",
-      "TypeScript",
-      "ServiceNow SDK",
-      "PostgreSQL",
-      "Next.js"
-    ]
-  }
+    {
+      "@type": "Person",
+      "@id": `${APP_CONFIG.domain}/#person`,
+      "name": APP_CONFIG.author.name,
+      "alternateName": ["Mahendra Shongunti", "Mahendra S H"],
+      "jobTitle": "Java Cloud Full-Stack Engineer (Specialist Programmer)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Infosys",
+        "url": "https://www.infosys.com"
+      },
+      "description": APP_CONFIG.description,
+      "url": APP_CONFIG.domain,
+      "image": "https://github.com/MahendraSH.png",
+      "email": APP_CONFIG.author.email,
+      "telephone": APP_CONFIG.author.phone,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressCountry": "India"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "National Institute of Engineering (NIE)"
+      },
+      "sameAs": [
+        APP_CONFIG.socials.github,
+        APP_CONFIG.socials.linkedin,
+        APP_CONFIG.socials.twitter,
+        APP_CONFIG.socials.medium,
+        APP_CONFIG.socials.upwork
+      ].filter(Boolean),
+      "knowsAbout": [
+        "Java 21",
+        "Spring Boot",
+        "Microservices Architecture",
+        "AWS (EC2, S3, SQS)",
+        "Spring Batch",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Camunda BPM",
+        "RESTful APIs",
+        "OpenAPI",
+        "Docker",
+        "JUnit & Mockito",
+        "Next.js",
+        "Tailwind CSS"
+      ]
+    }
+  ]
 };
 
 const jsonLd = schema || defaultSchema;
@@ -80,7 +109,8 @@ const jsonLd = schema || defaultSchema;
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Mahendra S H, Specialist Programmer, Fullstack Developer, React, Next.js, ServiceNow SDK, TypeScript" />
+    <meta name="author" content="Mahendra S H" />
+    <meta name="keywords" content="Mahendra S H, Java Cloud Full-Stack Engineer, Specialist Programmer, Java 21, Spring Boot, Microservices, AWS SQS, AWS S3, Spring Batch, React, TanStack Table, PostgreSQL, Docker, Camunda BPM, OpenAPI, Next.js, Hyderabad, Full Stack Developer" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -88,7 +118,7 @@ const jsonLd = schema || defaultSchema;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
-    <meta property="og:site_name" content="Mahendra S H" />
+    <meta property="og:site_name" content="Mahendra S H | Portfolio" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
@@ -97,7 +127,7 @@ const jsonLd = schema || defaultSchema;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImageURL} />
-    <meta property="twitter:site" content="@mahendrash" />
+    <meta property="twitter:site" content="@mahendrashon" />
 
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

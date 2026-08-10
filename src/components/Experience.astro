@@ -34,7 +34,7 @@ import { EXPERIENCES } from '../config';
                   {exp.role}
                 </h3>
                 <p class="text-sm font-semibold text-blue-400/90 font-mono mt-0.5">
-                  {exp.company}
+                  {exp.company} {exp.location && <span class="text-zinc-500 font-normal font-sans">| {exp.location}</span>}
                 </p>
               </div>
               

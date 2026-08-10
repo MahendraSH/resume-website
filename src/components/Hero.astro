@@ -74,7 +74,7 @@ import { APP_CONFIG } from '../config';
         </div>
 
         <p class="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-          Remote-Ready Full-Stack Engineer with nearly 2 years of experience designing, developing, and maintaining high-performance, scalable web applications and distributed backend services. Expert in Java/Spring Boot, React, and ServiceNow SDK, with a strong background in asynchronous remote-first collaboration.
+          Java Cloud Full-Stack Engineer (Specialist Programmer) with over 2 years of experience architecting high-throughput event-driven microservices and responsive SaaS applications using <strong class="text-zinc-200">Java 21, Spring Boot, React, and AWS</strong>.
         </p>
 
         <!-- Current Role Summary Details Card -->
@@ -84,18 +84,18 @@ import { APP_CONFIG } from '../config';
           <div class="space-y-1 pl-2">
             <div class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-blue-500/70"></span>
-              <span>Previous Role</span>
+              <span>Current Role</span>
             </div>
             <div class="text-xs md:text-sm font-semibold text-zinc-200">Specialist Programmer</div>
-            <div class="text-[10px] text-zinc-500 font-mono">Infosys (Remote-Flexible)</div>
+            <div class="text-[10px] text-zinc-500 font-mono">Infosys (Hyderabad, Hybrid)</div>
           </div>
           <div class="space-y-1 border-l border-zinc-850/60 pl-6">
             <div class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-purple-500/70"></span>
-              <span>Availability</span>
+              <span>Core Stack</span>
             </div>
-            <div class="text-xs md:text-sm font-semibold text-zinc-200">Remote Only</div>
-            <div class="text-[10px] text-zinc-500 font-mono">Open for Remote Jobs</div>
+            <div class="text-xs md:text-sm font-semibold text-zinc-200">Java 21 • Spring Boot • AWS</div>
+            <div class="text-[10px] text-zinc-500 font-mono">React • React Query • Docker</div>
           </div>
         </div>
 
@@ -114,7 +114,7 @@ import { APP_CONFIG } from '../config';
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span>Karnataka, India (Open for Remote Jobs)</span>
+            <span>{APP_CONFIG.author.location}</span>
           </div>
         </div>
 
@@ -185,13 +185,14 @@ import { APP_CONFIG } from '../config';
 
           <div class="flex items-center gap-3 w-full sm:w-auto">
             <a
-              href="/mahendra_sh_resume.pdf"
-              download="mahendra_sh_resume.pdf"
+              href="/mahendra_sh_fullstack_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               class="flex-1 sm:flex-initial relative group px-5 py-2.5 rounded-xl bg-gradient-to-r from-zinc-100 to-white text-zinc-950 text-xs font-bold font-mono transition shadow-[0_4px_20px_rgba(255,255,255,0.06)] hover:shadow-[0_4px_30px_rgba(59,130,246,0.2)] hover:scale-[1.02] active:scale-[0.98] duration-300 cursor-pointer flex items-center justify-center gap-2"
             >
-              <span>Get Resume PDF</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-zinc-950 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              <span>View Resume PDF</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-zinc-950 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
             <a
@@ -230,7 +231,7 @@ import { APP_CONFIG } from '../config';
 
 <script>
   function runTypewriter() {
-    const words = ["Remote-Ready Engineer", "Full-Stack Developer", "Specialist Programmer"];
+    const words = ["Java Cloud Full-Stack Engineer", "Specialist Programmer", "Microservices & Cloud Architect"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
