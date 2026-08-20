@@ -154,7 +154,8 @@ export const PROJECTS: Project[] = [
     category: "Enterprise Application",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><!-- Infosys stylized Blue 'I' and 'f' --><path d="M4 6h3M5.5 6v12M4 18h3" stroke="#007cc3" stroke-width="2.2"></path><path d="M9 18V9a2 2 0 0 1 2-2h1M9 12h3" stroke="#007cc3" stroke-width="2"></path><!-- Code icon </> on the right --><path d="M14 14.5l-2-2.5 2-2.5M18 9.5l2 2.5-2 2.5" stroke="currentColor" stroke-width="1.8"></path><line x1="16.5" y1="8.5" x2="15.5" y2="15.5" stroke="currentColor" stroke-width="1.8"></line></svg>`,
     themeColor: "text-blue-400 border-blue-500/20 bg-blue-500/10",
-    themeGradient: "from-zinc-900 via-blue-950/40 to-zinc-950"
+    themeGradient: "from-zinc-900 via-blue-950/40 to-zinc-950",
+    image: ["/images/cargo_readiness.jpg"]
   },
   {
     id: 2,
@@ -174,7 +175,8 @@ export const PROJECTS: Project[] = [
     category: "Personal Project",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`,
     themeColor: "text-amber-400 border-amber-500/20 bg-amber-500/10",
-    themeGradient: "from-zinc-900 via-amber-950/40 to-zinc-950"
+    themeGradient: "from-zinc-900 via-amber-950/40 to-zinc-950",
+    image: ["/images/estore.jpg"]
   },
   {
     id: 3,
@@ -191,7 +193,8 @@ export const PROJECTS: Project[] = [
     category: "Freelance Client Project",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`,
     themeColor: "text-teal-400 border-teal-500/20 bg-teal-500/10",
-    themeGradient: "from-zinc-900 via-teal-950/40 to-zinc-950"
+    themeGradient: "from-zinc-900 via-teal-950/40 to-zinc-950",
+    image: ["/images/spend_optima.jpg"]
   },
   {
     id: 4,
@@ -256,7 +259,8 @@ export const PROJECTS: Project[] = [
     category: "Freelance Client Project",
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M20.38 3.46L16 6.14V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3.14L3.62 3.46a1 1 0 0 0-1.4 1.25l4 9.17A1 1 0 0 0 7.14 14H8v7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7h.86a1 1 0 0 0 .92-.58l4-9.17a1 1 0 0 0-1.4-1.25z"></path></svg>`,
     themeColor: "text-rose-400 border-rose-500/20 bg-rose-500/10",
-    themeGradient: "from-zinc-900 via-rose-950/40 to-zinc-950"
+    themeGradient: "from-zinc-900 via-rose-950/40 to-zinc-950",
+    image: ["/images/shirt_ai.jpg"]
   },
   {
     id: 8,

@@ -37,6 +37,7 @@
 - *Java Cloud Full-Stack Engineer* (Specialist Programmer) with over 2 years of experience architecting high-throughput microservices and responsive SaaS applications using *Java 21, Spring Boot, React, and AWS*.
 - *Backend & Cloud*: Proven track record in event-driven microservices, AWS cloud infrastructure (*EC2, S3, SQS*), automated batch processing (*Spring Batch*), and RESTful API / OpenAPI management.
 - *Testing & Quality*: Expertise in test automation frameworks (*JUnit, Mockito*), conducting code reviews, Root Cause Analysis (RCA), and adhering to CI/CD quality gates and Docker containerization.
+- *Job Preferences*: Open to Remote and Hybrid roles. Preferred Locations: Bengaluru, Hyderabad, Pune, India.
 
 == Technical Skills
 - *Languages & Specs*: Java (21), JavaScript (ES6+), TypeScript, SQL, OpenAPI, RESTful APIs, HTML5/CSS3

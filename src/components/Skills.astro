@@ -1,5 +1,47 @@
 ---
 import { SKILL_CATEGORIES } from '../config';
+
+const SKILL_ICONS: Record<string, string> = {
+  java: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M6 11a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V5H6v6Z"/><path d="M15 7h1a1.5 1.5 0 0 1 1.5 1.5v0A1.5 1.5 0 0 1 16 10h-1"/><path d="M5 15h11a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3Z"/><path d="M8 2c0 .8-.5 1.5-.5 1.5M11 2c0 .8-.5 1.5-.5 1.5"/></svg>`,
+  js: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M15 9h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M15 15v-6"/></svg>`,
+  ts: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M10 9H8v6"/><path d="M9 9h3"/><path d="M16 15v-6h2"/><path d="M15 9h2"/></svg>`,
+  db: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>`,
+  api: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M16 18h6M2 6h6M12 2v20M12 12H2M22 12H12"/></svg>`,
+  web: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
+  spring: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M12 2C6.5 2 2 6.5 2 12c0 3 1.5 5.5 4 7l2-5c0-1.5.5-3 1.5-4.5S11.5 6.5 13 6c1 .5 2 1.5 2 3s-1 3-3 4.5-3.5 2.5-4 4.5l2 4c2.5-.5 4.5-2 6-4 2.5-3.5 2-8-2-12.5C15 2.5 13.5 2 12 2z"/></svg>`,
+  workflow: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M10 6.5h4M10 17.5h4M6.5 10v4M17.5 10v4"/></svg>`,
+  aws: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M17.5 19A4.5 4.5 0 0 0 17 10h-1.25a7 7 0 1 0-11.75 3.5M17.5 19H9a4 4 0 0 1 0-8h1.25"/></svg>`,
+  react: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(150 12 12)"/><circle cx="12" cy="12" r="1"/></svg>`,
+  next: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><circle cx="12" cy="12" r="10"/><path d="M12 7v10M8 12h8"/></svg>`,
+  tailwind: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4Z"/></svg>`,
+  ui: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>`,
+  docker: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect x="5" y="3" width="14" height="14" rx="2"/><path d="M5 9h14M5 14h14M9 3v14M14 3v14"/></svg>`,
+  test: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
+  git: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 15V9a4 4 0 0 0-4-4H9M6 9v6"/></svg>`,
+  agile: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>`
+};
+
+function getSkillIcon(skill: string): string {
+  const name = skill.toLowerCase();
+  if (name.includes('java (')) return 'java';
+  if (name.includes('javascript')) return 'js';
+  if (name.includes('typescript')) return 'ts';
+  if (name.includes('sql') || name.includes('postgres') || name.includes('mysql') || name.includes('mongo') || name.includes('db')) return 'db';
+  if (name.includes('openapi') || name.includes('restful') || name.includes('api')) return 'api';
+  if (name.includes('html') || name.includes('css')) return 'web';
+  if (name.includes('spring')) return 'spring';
+  if (name.includes('microservices') || name.includes('camunda')) return 'workflow';
+  if (name.includes('aws')) return 'aws';
+  if (name.includes('react') || name.includes('redux') || name.includes('query')) return 'react';
+  if (name.includes('next.js')) return 'next';
+  if (name.includes('tailwind')) return 'tailwind';
+  if (name.includes('shadcn') || name.includes('tanstack') || name.includes('prisma')) return 'ui';
+  if (name.includes('docker')) return 'docker';
+  if (name.includes('ci/cd') || name.includes('test') || name.includes('junit') || name.includes('mockito') || name.includes('rca')) return 'test';
+  if (name.includes('git')) return 'git';
+  if (name.includes('agile') || name.includes('scrum')) return 'agile';
+  return 'default';
+}
 ---
  
 <section id="skills" class="w-full py-12">
@@ -17,7 +59,7 @@ import { SKILL_CATEGORIES } from '../config';
     <!-- Skills Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {SKILL_CATEGORIES.map((cat, idx) => {
-        // Choose a subtle indicator color based on category index
+        // Choose a indicator color based on category index
         const colors = [
           'text-cyan-400 group-hover:text-cyan-300',
           'text-purple-400 group-hover:text-purple-300',
@@ -48,13 +90,21 @@ import { SKILL_CATEGORIES } from '../config';
               {cat.category}
             </h3>
             <div class="flex flex-wrap gap-2 z-10">
-              {cat.skills.map((skill) => (
-                <span 
-                  class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900/80 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-default select-none shadow-sm"
-                >
-                  {skill}
-                </span>
-              ))}
+              {cat.skills.map((skill) => {
+                const iconType = getSkillIcon(skill);
+                return (
+                  <span 
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900/80 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-default select-none shadow-sm group/tag"
+                  >
+                    {iconType !== 'default' && (
+                      <span class="shrink-0 text-zinc-500 group-hover/tag:text-zinc-300 transition-colors">
+                        <Fragment set:html={SKILL_ICONS[iconType]} />
+                      </span>
+                    )}
+                    <span>{skill}</span>
+                  </span>
+                );
+              })}
             </div>
           </div>
         );
