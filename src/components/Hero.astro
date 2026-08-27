@@ -2,7 +2,7 @@
 import { APP_CONFIG } from '../config';
 ---
 
-<section id="about" class="relative w-full min-h-[92vh] py-16 md:py-24 flex items-center justify-center px-4 md:px-8 overflow-hidden bg-transparent shrink-0">
+<section id="about" class="relative w-full min-h-[92vh] py-12 md:py-24 flex items-center justify-center px-4 md:px-8 overflow-hidden bg-transparent shrink-0">
   <!-- Fine Layout Structural Lines for Blueprint Aesthetic -->
   <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent -z-15 opacity-60"></div>
   <div class="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent -z-15 opacity-60"></div>
@@ -69,101 +69,87 @@ import { APP_CONFIG } from '../config';
     </svg>
   </div>
 
-  <!-- Database / Postgres (Bottom Center-Left Area) -->
-  <div class="absolute bottom-[28%] left-[5%] z-10 p-2.5 rounded-xl border border-blue-500/10 bg-zinc-950/40 text-blue-400/30 shadow-[0_0_15px_rgba(59,130,246,0.02)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-blue-400 hover:border-blue-500/30 hover:opacity-100 opacity-30 animate-float-icon-1 hidden xl:flex select-none pointer-events-auto cursor-pointer" title="Databases">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-      <ellipse cx="12" cy="5" rx="9" ry="3"/>
-      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-      <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
-    </svg>
-  </div>
-
-  <!-- Terminal CLI (Top Center-Left Area) -->
-  <div class="absolute top-[28%] left-[7%] z-10 p-2.5 rounded-xl border border-teal-500/10 bg-zinc-950/40 text-teal-400/30 shadow-[0_0_15px_rgba(20,184,166,0.02)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-teal-400 hover:border-teal-500/30 hover:opacity-100 opacity-30 animate-float-icon-3 hidden xl:flex select-none pointer-events-auto cursor-pointer" title="CLI Terminal">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-      <polyline points="4 17 10 11 4 5"/>
-      <line x1="12" y1="19" x2="20" y2="19"/>
-    </svg>
-  </div>
-
   <div class="max-w-7xl 2xl:max-w-[90rem] w-full mx-auto z-10 relative">
-    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
       
       <!-- Left Column: Content Details & Highlights -->
-      <div class="flex-1 space-y-8 text-center lg:text-left animate-fade-in">
-        <div class="space-y-4">
+      <div class="flex-1 space-y-6 text-center lg:text-left">
+        
+        <!-- Centered Profile Image (Mobile Only) -->
+        <div class="flex lg:hidden justify-center mb-4">
+          <div class="relative w-24 h-24 rounded-full p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 shadow-xl">
+            <div class="w-full h-full rounded-full overflow-hidden bg-zinc-950 p-1 flex items-center justify-center relative">
+              <img
+                src="https://github.com/MahendraSH.png"
+                alt="Mahendra S H"
+                class="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-500"
+                loading="eager"
+              />
+              <!-- Online status dot -->
+              <span class="absolute bottom-1 right-1 flex h-3 w-3 z-20">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 border border-zinc-950"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-3">
           <!-- Badges -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
             <!-- Open to Opportunities badge -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-mono tracking-wider text-emerald-400 uppercase w-fit shadow-[0_0_15px_rgba(16,185,129,0.05)] hover:bg-emerald-500/15 transition-all duration-300">
-              <span class="relative flex h-2 w-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[9px] sm:text-[10px] font-mono tracking-wider text-emerald-400 uppercase w-fit shadow-[0_0_15px_rgba(16,185,129,0.05)]">
+              <span class="relative flex h-1.5 w-1.5">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
               </span>
               <span>Open to Opportunities</span>
             </div>
 
-            <!-- Remote / Hybrid Jobs badge with preferences tooltip -->
-            <div class="relative group inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono tracking-wider text-blue-400 uppercase w-fit shadow-[0_0_15px_rgba(59,130,246,0.05)] hover:bg-blue-500/15 transition-all duration-300 cursor-help">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <!-- Remote / Hybrid Jobs badge -->
+            <div class="relative group inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[9px] sm:text-[10px] font-mono tracking-wider text-blue-400 uppercase w-fit shadow-[0_0_15px_rgba(59,130,246,0.05)] cursor-help">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
               <span>Remote / Hybrid</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400/80 group-hover:text-blue-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-
-              <!-- Preferences Tooltip -->
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-zinc-950 border border-zinc-850 text-zinc-300 text-[11px] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 normal-case tracking-normal">
-                <div class="font-bold text-zinc-150 mb-1.5 border-b border-zinc-850 pb-1 flex items-center gap-1.5">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                  </svg>
-                  <span>Job Preferences</span>
-                </div>
-                <div class="space-y-1">
-                  <div><span class="text-zinc-500 font-semibold">Locations:</span> Bengaluru, Hyderabad, Pune, India</div>
-                  <div><span class="text-zinc-500 font-semibold">Work Mode:</span> Hybrid / Remote</div>
-                </div>
-              </div>
             </div>
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-none bg-gradient-to-b from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent">
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none bg-gradient-to-b from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent">
             Mahendra S H
           </h1>
           
-          <div class="h-8 md:h-10 text-lg md:text-xl font-mono text-zinc-300 flex justify-center lg:justify-start items-center">
+          <div class="h-8 md:h-10 text-base sm:text-lg md:text-xl font-mono text-zinc-300 flex justify-center lg:justify-start items-center">
             <span>I architect&nbsp;</span>
             <span id="typewriter" class="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent font-extrabold border-r-2 pr-1 min-h-[1.5em] flex items-center typewriter-cursor"></span>
           </div>
         </div>
 
-        <p class="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans">
-          Java Cloud Full-Stack Engineer / Specialist Programmer with 3+ years of enterprise experience building robust backend microservices, event-driven queues, and responsive SaaS dashboards using <strong class="text-zinc-200">Java 21, Spring Boot, React, and AWS</strong>.
+        <p class="text-zinc-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto lg:mx-0 font-sans">
+          Java Cloud Engineer specializing in high-throughput backend microservices, event-driven queues, and responsive SaaS dashboards with <strong class="text-zinc-200">Java 21, Spring Boot, React, and AWS</strong>.
         </p>
 
-        <!-- 3 Glass Stat Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0 pt-2">
+        <!-- 3 Glass Stat Cards Grid (Optimized for Mobile Row) -->
+        <div class="grid grid-cols-3 gap-2.5 max-w-xl mx-auto lg:mx-0 pt-2">
           <!-- Card 1: Experience -->
-          <div class="glass-panel p-4 rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
-            <div class="text-xl font-black text-blue-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">3+ Years</div>
-            <div class="text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Enterprise Dev</div>
-            <div class="text-[9px] text-zinc-550 mt-0.5">Specialist Programmer (Infosys)</div>
+          <div class="glass-panel p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
+            <div class="text-sm sm:text-lg md:text-xl font-black text-blue-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">3+ Years</div>
+            <div class="text-[8px] sm:text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Enterprise Dev</div>
+            <div class="hidden sm:block text-[9px] text-zinc-550 mt-0.5">Specialist Programmer (Infosys)</div>
           </div>
 
           <!-- Card 2: Scale -->
-          <div class="glass-panel p-4 rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
-            <div class="text-xl font-black text-emerald-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">50k+ Daily</div>
-            <div class="text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Bookings Processed</div>
-            <div class="text-[9px] text-zinc-550 mt-0.5">Automated Spring Batch checks</div>
+          <div class="glass-panel p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
+            <div class="text-sm sm:text-lg md:text-xl font-black text-emerald-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">50k+ Daily</div>
+            <div class="text-[8px] sm:text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Bookings</div>
+            <div class="hidden sm:block text-[9px] text-zinc-550 mt-0.5">Automated Spring Batch checks</div>
           </div>
 
           <!-- Card 3: Stack -->
-          <div class="glass-panel p-4 rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
-            <div class="text-xl font-black text-purple-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">Java 21</div>
-            <div class="text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Spring & AWS</div>
-            <div class="text-[9px] text-zinc-550 mt-0.5">REST APIs & Event Streams</div>
+          <div class="glass-panel p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
+            <div class="text-sm sm:text-lg md:text-xl font-black text-purple-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">Java 21</div>
+            <div class="text-[8px] sm:text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Spring & AWS</div>
+            <div class="hidden sm:block text-[9px] text-zinc-550 mt-0.5">REST APIs & Kafka messaging</div>
           </div>
         </div>
 
@@ -187,9 +173,9 @@ import { APP_CONFIG } from '../config';
         </div>
 
         <!-- Social Icons & CTAs -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-1">
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1">
           <!-- Social Link Group -->
-          <div class="flex items-center gap-2.5 shrink-0">
+          <div class="flex items-center gap-2 shrink-0">
             <a
               href={APP_CONFIG.socials.github}
               target="_blank"
@@ -225,19 +211,6 @@ import { APP_CONFIG } from '../config';
                 </svg>
               </a>
             )}
-            {APP_CONFIG.socials.medium && (
-              <a
-                href={APP_CONFIG.socials.medium}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm hover:scale-105 active:scale-95 duration-200"
-                title="Medium"
-              >
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zm3.04 0c0 3.25-.33 5.9-0.73 5.9-.4 0-.73-2.65-.73-5.9s.33-5.9.73-5.9c.4 0 .73 2.65.73 5.9z"/>
-                </svg>
-              </a>
-            )}
             <a
               href={APP_CONFIG.socials.upwork}
               target="_blank"
@@ -256,18 +229,18 @@ import { APP_CONFIG } from '../config';
               href="/mahendra_sh_fullstack_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex-1 sm:flex-initial relative group px-5 py-2.5 rounded-xl bg-gradient-to-r from-zinc-100 to-white text-zinc-950 text-xs font-bold font-mono transition shadow-[0_4px_20px_rgba(255,255,255,0.06)] hover:shadow-[0_4px_30px_rgba(59,130,246,0.2)] hover:scale-[1.02] active:scale-[0.98] duration-300 cursor-pointer flex items-center justify-center gap-2"
+              class="flex-1 sm:flex-initial relative group px-4 py-2.5 rounded-xl bg-gradient-to-r from-zinc-100 to-white text-zinc-950 text-xs font-bold font-mono transition shadow-[0_4px_20px_rgba(255,255,255,0.06)] hover:shadow-[0_4px_30px_rgba(59,130,246,0.2)] hover:scale-[1.02] active:scale-[0.98] duration-300 cursor-pointer flex items-center justify-center gap-2"
             >
-              <span>View Resume PDF</span>
+              <span>Resume PDF</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-zinc-950 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
             <a
               href="/contact"
-              class="flex-1 sm:flex-initial relative group px-5 py-2.5 rounded-xl bg-zinc-950 hover:bg-zinc-900 text-zinc-200 hover:text-white text-xs font-bold font-mono transition border border-zinc-800 hover:border-zinc-700 hover:scale-[1.02] active:scale-[0.98] duration-300 cursor-pointer flex items-center justify-center gap-2"
+              class="flex-1 sm:flex-initial relative group px-4 py-2.5 rounded-xl bg-zinc-950 hover:bg-zinc-900 text-zinc-200 hover:text-white text-xs font-bold font-mono transition border border-zinc-800 hover:border-zinc-700 hover:scale-[1.02] active:scale-[0.98] duration-300 cursor-pointer flex items-center justify-center gap-2"
             >
-              <span>Let's Connect</span>
+              <span>Connect</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-zinc-400 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -278,7 +251,7 @@ import { APP_CONFIG } from '../config';
       </div>
 
       <!-- Right Column: Interactive Code Terminal & Framed Profile Image -->
-      <div class="w-full lg:w-5/12 max-w-lg lg:max-w-none shrink-0 flex flex-col gap-6 relative mt-6 lg:mt-0 pt-4 md:pt-6">
+      <div class="w-full lg:w-5/12 max-w-lg lg:max-w-none shrink-0 flex flex-col gap-6 relative mt-4 lg:mt-0 pt-2 lg:pt-6">
         <div class="relative w-full">
           <!-- Glowing backplate behind the terminal window -->
           <div class="absolute -inset-2.5 rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-70 blur-2xl pointer-events-none -z-10 animate-pulse-slow"></div>
@@ -301,30 +274,30 @@ import { APP_CONFIG } from '../config';
               <button 
                 type="button" 
                 data-tab="profile" 
-                class="terminal-tab px-4.5 py-2.5 border-r border-b-2 border-r-zinc-900 border-b-blue-500 bg-zinc-900/60 text-zinc-100 font-bold transition-all cursor-pointer outline-none"
+                class="terminal-tab px-3.5 sm:px-4.5 py-2 sm:py-2.5 border-r border-b-2 border-r-zinc-900 border-b-blue-500 bg-zinc-900/60 text-zinc-100 font-bold transition-all cursor-pointer outline-none"
               >
                 Profile.java
               </button>
               <button 
                 type="button" 
                 data-tab="logs" 
-                class="terminal-tab px-4.5 py-2.5 border-r border-r-zinc-900 border-b-2 border-b-transparent text-zinc-500 hover:text-zinc-305 transition-all cursor-pointer outline-none"
+                class="terminal-tab px-3.5 sm:px-4.5 py-2 sm:py-2.5 border-r border-r-zinc-900 border-b-2 border-b-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer outline-none"
               >
                 microservice.log
               </button>
               <button 
                 type="button" 
                 data-tab="contact" 
-                class="terminal-tab px-4.5 py-2.5 border-r border-r-zinc-900 border-b-2 border-b-transparent text-zinc-500 hover:text-zinc-305 transition-all cursor-pointer outline-none"
+                class="terminal-tab px-3.5 sm:px-4.5 py-2 sm:py-2.5 border-r border-r-zinc-900 border-b-2 border-b-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer outline-none"
               >
                 contact.json
               </button>
             </div>
             
             <!-- Terminal Text Content Box -->
-            <div class="relative min-h-[230px]">
+            <div class="relative min-h-[220px]">
               <!-- Tab 1: Profile.java -->
-              <pre id="content-profile" class="terminal-content p-5 text-[11px] md:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none">
+              <pre id="content-profile" class="terminal-content p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none">
 <span class="text-purple-400">public class</span> <span class="text-blue-400">Developer</span> &#123;
     <span class="text-purple-400">private String</span> name = <span class="text-green-300">"Mahendra S H"</span>;
     <span class="text-purple-400">private String</span> role = <span class="text-green-300">"Specialist Programmer"</span>;
@@ -332,7 +305,7 @@ import { APP_CONFIG } from '../config';
     <span class="text-purple-400">private int</span> experienceYrs = <span class="text-amber-300">3</span>;
     <span class="text-purple-400">private String[]</span> stack = &#123;
         <span class="text-green-300">"Java 21"</span>, <span class="text-green-300">"Spring Boot"</span>,
-        <span class="text-green-300">"AWS"</span>, <span class="text-green-300">"React"</span>, <span class="text-green-300">"PostgreSQL"</span>
+        <span class="text-green-300">"AWS"</span>, <span class="text-green-300">"React"</span>
     &#125;;
     <span class="text-purple-400">private boolean</span> openToOpportunities = <span class="text-amber-300">true</span>;
 
@@ -342,7 +315,7 @@ import { APP_CONFIG } from '../config';
 &#125;</pre>
 
               <!-- Tab 2: microservice.log -->
-              <pre id="content-logs" class="terminal-content p-5 text-[11px] md:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none hidden">
+              <pre id="content-logs" class="terminal-content p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none hidden">
 <span class="text-zinc-550">$ tail -f cma-cgm-cargo-readiness.log</span>
 <span class="text-blue-400">[INFO]</span> Kafka Consumer initiated on topic: container.ready
 <span class="text-blue-400">[INFO]</span> Spring Batch Job 'VerificationJob' launched
@@ -353,20 +326,19 @@ import { APP_CONFIG } from '../config';
 <span class="text-emerald-400">[SUCCESS]</span> Job finished: 0 errors, status complete!</pre>
 
               <!-- Tab 3: contact.json -->
-              <pre id="content-contact" class="terminal-content p-5 text-[11px] md:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none hidden">
+              <pre id="content-contact" class="terminal-content p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none hidden">
 &#123;
     <span class="text-purple-400">"email"</span>: <span class="text-green-300">"mahendrashongunti@gmail.com"</span>,
     <span class="text-purple-400">"phone"</span>: <span class="text-green-300">"+91-7892041114"</span>,
     <span class="text-purple-400">"location"</span>: <span class="text-green-300">"Hyderabad, India"</span>,
-    <span class="text-purple-400">"github"</span>: <span class="text-green-300">"github.com/MahendraSH"</span>,
-    <span class="text-purple-400">"linkedin"</span>: <span class="text-green-300">"linkedin.com/in/mahendra-s-h"</span>,
-    <span class="text-purple-400">"status"</span>: <span class="text-green-300">"Open to Hybrid / Remote roles"</span>
+    <span class="text-purple-450">"github"</span>: <span class="text-green-300">"github.com/MahendraSH"</span>,
+    <span class="text-purple-455">"status"</span>: <span class="text-green-300">"Open to Hybrid / Remote roles"</span>
 &#125;</pre>
             </div>
           </div>
           
-          <!-- Profile Badge overlapping the terminal top-right corner -->
-          <div class="absolute -top-7 -right-3.5 z-30 select-none group/avatar">
+          <!-- Profile Badge overlapping the terminal top-right corner - Desktop Only -->
+          <div class="absolute -top-7 -right-3.5 z-30 select-none group/avatar hidden lg:block">
             <div class="relative w-18 h-18 md:w-22 md:h-22 rounded-2xl p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 group-hover/avatar:from-blue-500 group-hover/avatar:via-purple-500 group-hover/avatar:to-pink-500 transition-all duration-500 shadow-2xl">
               <div class="w-full h-full rounded-[14px] overflow-hidden bg-zinc-950 p-1 flex items-center justify-center relative">
                 <!-- Grid Overlay inside image -->
