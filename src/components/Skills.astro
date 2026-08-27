@@ -42,15 +42,39 @@ function getSkillIcon(skill: string): string {
   if (name.includes('agile') || name.includes('scrum')) return 'agile';
   return 'default';
 }
+const tagHoverStyles = [
+  'hover:text-cyan-300 hover:border-cyan-500/30 hover:shadow-[0_0_12px_rgba(6,182,212,0.12)]',
+  'hover:text-purple-300 hover:border-purple-500/30 hover:shadow-[0_0_12px_rgba(168,85,247,0.12)]',
+  'hover:text-emerald-300 hover:border-emerald-500/30 hover:shadow-[0_0_12px_rgba(16,185,129,0.12)]',
+  'hover:text-blue-300 hover:border-blue-500/30 hover:shadow-[0_0_12px_rgba(59,130,246,0.12)]',
+  'hover:text-amber-300 hover:border-amber-500/30 hover:shadow-[0_0_12px_rgba(245,158,11,0.12)]',
+  'hover:text-pink-300 hover:border-pink-500/30 hover:shadow-[0_0_12px_rgba(236,72,153,0.12)]',
+  'hover:text-cyan-300 hover:border-cyan-500/30 hover:shadow-[0_0_12px_rgba(6,182,212,0.12)]'
+];
 ---
  
 <section id="skills" class="w-full py-12">
   <div class="premium-card p-6 md:p-10 rounded-3xl space-y-6">
-    <div>
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">Tech Skills</h2>
-      <p class="text-xs md:text-sm text-zinc-400 mt-1">
-        Technologies, frameworks, databases, and tools I've worked with.
-      </p>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">Tech Skills</h2>
+        <p class="text-xs md:text-sm text-zinc-400 mt-1">
+          Technologies, frameworks, databases, and tools I've worked with.
+        </p>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="flex items-center gap-2 max-w-xs w-full sm:w-64 bg-zinc-950/60 border border-zinc-850/60 rounded-xl px-3 py-1.5 focus-within:border-zinc-700/80 transition-all duration-300 shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input 
+          type="text" 
+          id="skills-search" 
+          placeholder="Filter skills..." 
+          class="w-full bg-transparent text-xs text-zinc-300 outline-none placeholder:text-zinc-500"
+        />
+      </div>
     </div>
  
     <!-- Separator Line -->
@@ -78,10 +102,11 @@ function getSkillIcon(skill: string): string {
         ];
         const activeColor = colors[idx % colors.length];
         const activeGlow = glowColors[idx % glowColors.length];
+        const activeTagHover = tagHoverStyles[idx % tagHoverStyles.length];
 
         return (
           <div 
-            class={`p-5 rounded-2xl border border-zinc-850/60 bg-zinc-900/10 hover:bg-zinc-900/30 transition-all duration-300 flex flex-col justify-start group relative overflow-hidden ${activeGlow}`}
+            class={`skills-category-card p-5 rounded-2xl border border-zinc-850/60 bg-zinc-900/10 hover:bg-zinc-900/30 transition-all duration-300 flex flex-col justify-start group relative overflow-hidden ${activeGlow}`}
           >
             <!-- Top corner glow flash on hover -->
             <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -94,10 +119,10 @@ function getSkillIcon(skill: string): string {
                 const iconType = getSkillIcon(skill);
                 return (
                   <span 
-                    class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900/80 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-default select-none shadow-sm group/tag"
+                    class={`skill-tag inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900/80 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-default select-none shadow-sm group/tag ${activeTagHover}`}
                   >
                     {iconType !== 'default' && (
-                      <span class="shrink-0 text-zinc-500 group-hover/tag:text-zinc-300 transition-colors">
+                      <span class="shrink-0 text-zinc-500 group-hover/tag:text-[currentColor] transition-colors">
                         <Fragment set:html={SKILL_ICONS[iconType]} />
                       </span>
                     )}
@@ -112,3 +137,45 @@ function getSkillIcon(skill: string): string {
     </div>
   </div>
 </section>
+
+<script>
+  function setupSkillsSearch() {
+    const searchInput = document.getElementById('skills-search') as HTMLInputElement | null;
+    const categories = document.querySelectorAll('.skills-category-card');
+
+    if (!searchInput) return;
+
+    searchInput.addEventListener('input', (e) => {
+      const val = (e.target as HTMLInputElement).value.toLowerCase().trim();
+      
+      categories.forEach(cat => {
+        const tags = cat.querySelectorAll('.skill-tag');
+        let visibleTagsCount = 0;
+        
+        tags.forEach(tag => {
+          const text = tag.textContent?.toLowerCase() || '';
+          if (text.includes(val)) {
+            tag.classList.remove('hidden', 'flex');
+            tag.classList.add('inline-flex');
+            visibleTagsCount++;
+          } else {
+            tag.classList.remove('inline-flex', 'flex');
+            tag.classList.add('hidden');
+          }
+        });
+        
+        if (visibleTagsCount > 0 || val === '') {
+          cat.classList.remove('hidden');
+        } else {
+          cat.classList.add('hidden');
+        }
+      });
+    });
+  }
+
+  // Initial load
+  setupSkillsSearch();
+  
+  // Re-run search setup on Astro page navigation swap
+  document.addEventListener('astro:after-swap', setupSkillsSearch);
+</script>

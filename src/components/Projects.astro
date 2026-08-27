@@ -31,7 +31,7 @@ const hoverShadows: Record<string, string> = {
       <button
         type="button"
         data-filter="All"
-        class="filter-btn px-4.5 py-2 text-[10px] font-mono font-bold uppercase tracking-wider rounded-xl border transition-all duration-300 cursor-pointer bg-blue-600 text-white border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+        class="filter-btn px-4.5 py-2 text-[10px] font-mono font-bold uppercase tracking-wider rounded-xl border transition-all duration-300 cursor-pointer bg-zinc-100 text-zinc-950 border-zinc-100 shadow-[0_0_20px_rgba(255,255,255,0.05)] scale-[1.02]"
       >
         All
       </button>
@@ -83,10 +83,10 @@ const hoverShadows: Record<string, string> = {
           <div
             id={`project-${project.id}`}
             data-category={project.category}
-            class={`project-card border border-zinc-850/60 bg-zinc-900/5 p-5 md:p-6 rounded-3xl flex flex-col lg:flex-row gap-6 items-center justify-between transition-all duration-500 hover:bg-zinc-900/20 group/project ${shadowClass}`}
+            class={`project-card relative border border-zinc-850/50 bg-zinc-900/10 p-5 md:p-6 rounded-3xl flex flex-col lg:flex-row gap-6 items-center justify-between transition-all duration-500 hover:bg-zinc-900/30 hover:border-zinc-700/80 group/project shadow-xl hover:scale-[1.005] ${shadowClass}`}
           >
             <!-- Project Preview (Image Carousel or Gradient Showcase) -->
-            <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-2xl border border-zinc-850/80 relative bg-zinc-950 flex items-center justify-center shadow-lg group-hover/project:border-zinc-700/85 transition-all duration-500">
+            <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-2xl border border-zinc-850/80 relative bg-zinc-950 flex items-center justify-center shadow-lg group-hover/project:border-zinc-700/85 group-hover/project:shadow-2xl transition-all duration-500">
               {hasImages ? (
                 <div class="w-full h-full flex overflow-x-auto snap-x snap-mandatory scrollbar-none scroll-smooth">
                   {project.image.map((img) => (
@@ -94,7 +94,7 @@ const hoverShadows: Record<string, string> = {
                       <img
                         src={img}
                         alt={project.name}
-                        class="w-full h-full object-contain rounded-xl border border-zinc-850/80"
+                        class="w-full h-full object-contain rounded-xl border border-zinc-850/80 group-hover/project:scale-[1.02] transition-transform duration-500"
                         loading="lazy"
                       />
                     </div>
@@ -104,7 +104,7 @@ const hoverShadows: Record<string, string> = {
                 <div class={`w-full h-full bg-gradient-to-br ${project.themeGradient || 'from-zinc-900 via-indigo-950/45 to-zinc-950'} flex flex-col items-center justify-center p-6 text-center relative transition-transform duration-700 group-hover/project:scale-105`}>
                   <div class="absolute inset-0 bg-grid-dots opacity-10"></div>
                   {project.logo && (
-                    <div class={`p-3.5 rounded-2xl border border-zinc-850/60 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100`}>
+                    <div class={`p-3.5 rounded-2xl border border-zinc-850/60 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100 group-hover/project:scale-105 group-hover/project:border-zinc-750 transition-all duration-500`}>
                       <div class="w-7 h-7 flex items-center justify-center">
                         <Fragment set:html={project.logo} />
                       </div>
@@ -174,7 +174,7 @@ const hoverShadows: Record<string, string> = {
                 <!-- Tech labels -->
                 <div class="flex flex-wrap gap-1.5 pt-2">
                   {project.labels.map((lbl) => (
-                    <span class="px-2.5 py-1 text-[10px] font-mono rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-450 hover:text-zinc-200 transition-colors duration-250">
+                    <span class="px-2.5 py-1 text-[10px] font-mono rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-450 group-hover/project:border-zinc-800 group-hover/project:text-zinc-350 hover:!text-white hover:!border-zinc-550 transition-all duration-300">
                       {lbl}
                     </span>
                   ))}
@@ -274,13 +274,13 @@ const hoverShadows: Record<string, string> = {
       btn.addEventListener('click', () => {
         // Reset styles for all buttons
         filterButtons.forEach(b => {
-          b.classList.remove('bg-blue-600', 'text-white', 'border-blue-500', 'shadow-[0_0_15px_rgba(59,130,246,0.2)]');
+          b.classList.remove('bg-zinc-100', 'text-zinc-950', 'border-zinc-100', 'shadow-[0_0_20px_rgba(255,255,255,0.05)]', 'scale-[1.02]');
           b.classList.add('bg-zinc-900/40', 'text-zinc-400', 'border-zinc-850/60', 'hover:bg-zinc-900', 'hover:text-zinc-200');
         });
 
         // Add active style to clicked button
         btn.classList.remove('bg-zinc-900/40', 'text-zinc-400', 'border-zinc-850/60', 'hover:bg-zinc-900', 'hover:text-zinc-200');
-        btn.classList.add('bg-blue-600', 'text-white', 'border-blue-500', 'shadow-[0_0_15px_rgba(59,130,246,0.2)]');
+        btn.classList.add('bg-zinc-100', 'text-zinc-950', 'border-zinc-100', 'shadow-[0_0_20px_rgba(255,255,255,0.05)]', 'scale-[1.02]');
 
         const filterVal = btn.getAttribute('data-filter');
 
