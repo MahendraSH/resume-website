@@ -2,12 +2,12 @@
 import { APP_CONFIG } from '../config';
 ---
 
-<section id="about" class="relative w-full min-h-[90vh] py-16 md:py-24 flex items-center justify-center px-4 md:px-8 overflow-hidden bg-transparent shrink-0">
+<section id="about" class="relative w-full min-h-[92vh] py-16 md:py-24 flex items-center justify-center px-4 md:px-8 overflow-hidden bg-transparent shrink-0">
   <!-- Fine Layout Structural Lines for Blueprint Aesthetic -->
   <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent -z-15 opacity-60"></div>
   <div class="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent -z-15 opacity-60"></div>
-  <div class="absolute inset-y-0 left-1/4 w-[1px] bg-gradient-to-b from-transparent via-zinc-900 to-transparent -z-15 hidden lg:block opacity-40"></div>
-  <div class="absolute inset-y-0 right-1/4 w-[1px] bg-gradient-to-b from-transparent via-zinc-900 to-transparent -z-15 hidden lg:block opacity-40"></div>
+  <div class="absolute inset-y-0 left-1/4 w-[1px] bg-gradient-to-b from-transparent via-zinc-900 to-transparent -z-15 hidden lg:block opacity-45"></div>
+  <div class="absolute inset-y-0 right-1/4 w-[1px] bg-gradient-to-b from-transparent via-zinc-900 to-transparent -z-15 hidden lg:block opacity-45"></div>
 
   <!-- Corner System Accents -->
   <div class="absolute top-8 left-8 text-zinc-700 font-mono text-[9px] tracking-widest pointer-events-none select-none hidden lg:block -z-10">
@@ -87,31 +87,11 @@ import { APP_CONFIG } from '../config';
   </div>
 
   <div class="max-w-7xl 2xl:max-w-[90rem] w-full mx-auto z-10 relative">
-    <div class="premium-card p-6 md:p-12 rounded-3xl flex flex-col lg:flex-row items-center gap-10 md:gap-16">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
       
-      <!-- Profile Image Container with Gentle Floating & Ambient Backplate Glow -->
-      <div class="relative shrink-0 flex items-center justify-center profile-container group">
-        <!-- Ambient Glowing Backplate -->
-        <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-xl group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 -z-10"></div>
-        
-        <!-- Outer Interactive Ring -->
-        <div class="relative w-60 h-60 md:w-72 md:h-72 rounded-2xl p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-pink-500 transition-all duration-500 shadow-2xl">
-          <div class="w-full h-full rounded-[14px] overflow-hidden bg-zinc-950 p-2 flex items-center justify-center relative">
-            <!-- Subtle Grid in Image Background -->
-            <div class="absolute inset-0 bg-grid-dots opacity-20 z-0"></div>
-            <img
-              src="https://github.com/MahendraSH.png"
-              alt="Mahendra S H"
-              class="w-full h-full object-cover rounded-lg z-10 filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-[1.01]"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero Content -->
-      <div class="flex-1 space-y-6 text-center lg:text-left">
-        <div class="space-y-3">
+      <!-- Left Column: Content Details & Highlights -->
+      <div class="flex-1 space-y-8 text-center lg:text-left animate-fade-in">
+        <div class="space-y-4">
           <!-- Badges -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
             <!-- Open to Opportunities badge -->
@@ -128,7 +108,7 @@ import { APP_CONFIG } from '../config';
               <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
-              <span>Open to Remote / Hybrid Jobs</span>
+              <span>Remote / Hybrid</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400/80 group-hover:text-blue-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -154,39 +134,41 @@ import { APP_CONFIG } from '../config';
           </h1>
           
           <div class="h-8 md:h-10 text-lg md:text-xl font-mono text-zinc-300 flex justify-center lg:justify-start items-center">
-            <span>I am a&nbsp;</span>
+            <span>I architect&nbsp;</span>
             <span id="typewriter" class="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent font-extrabold border-r-2 pr-1 min-h-[1.5em] flex items-center typewriter-cursor"></span>
           </div>
         </div>
 
-        <p class="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-          Java Cloud Full-Stack Engineer / Specialist Programmer with 3+ years of enterprise software experience, plus hands-on full-stack development, using <strong class="text-zinc-200">Java 21, Spring Boot, React, microservices, REST APIs, PostgreSQL, and AWS</strong>.
+        <p class="text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans">
+          Java Cloud Full-Stack Engineer / Specialist Programmer with 3+ years of enterprise experience building robust backend microservices, event-driven queues, and responsive SaaS dashboards using <strong class="text-zinc-200">Java 21, Spring Boot, React, and AWS</strong>.
         </p>
 
-        <!-- Current Role Summary Details Card -->
-        <div class="p-4 rounded-2xl border border-zinc-850 bg-zinc-900/20 backdrop-blur-sm max-w-xl mx-auto lg:mx-0 grid grid-cols-2 gap-4 relative overflow-hidden group hover:border-zinc-800/80 transition-all duration-300">
-          <!-- Linear gradient subtle highlight on hover -->
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="space-y-1 pl-2">
-            <div class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-500/70"></span>
-              <span>Current Role</span>
-            </div>
-            <div class="text-xs md:text-sm font-semibold text-zinc-200">Specialist Programmer</div>
-            <div class="text-[10px] text-zinc-500 font-mono">Infosys (Hyderabad, Hybrid)</div>
+        <!-- 3 Glass Stat Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0 pt-2">
+          <!-- Card 1: Experience -->
+          <div class="glass-panel p-4 rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
+            <div class="text-xl font-black text-blue-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">3+ Years</div>
+            <div class="text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Enterprise Dev</div>
+            <div class="text-[9px] text-zinc-550 mt-0.5">Specialist Programmer (Infosys)</div>
           </div>
-          <div class="space-y-1 border-l border-zinc-850/60 pl-6">
-            <div class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-purple-500/70"></span>
-              <span>Core Stack</span>
-            </div>
-            <div class="text-xs md:text-sm font-semibold text-zinc-200">Java 21 • Spring Boot • AWS</div>
-            <div class="text-[10px] text-zinc-500 font-mono">React • React Query • Docker</div>
+
+          <!-- Card 2: Scale -->
+          <div class="glass-panel p-4 rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
+            <div class="text-xl font-black text-emerald-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">50k+ Daily</div>
+            <div class="text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Bookings Processed</div>
+            <div class="text-[9px] text-zinc-550 mt-0.5">Automated Spring Batch checks</div>
+          </div>
+
+          <!-- Card 3: Stack -->
+          <div class="glass-panel p-4 rounded-2xl border border-zinc-900 bg-zinc-900/10 flex flex-col items-center lg:items-start text-center lg:text-left group/card hover:border-zinc-800/80 transition-all duration-300">
+            <div class="text-xl font-black text-purple-400 group-hover/card:scale-105 transition-transform duration-300 font-mono">Java 21</div>
+            <div class="text-[10px] text-zinc-350 font-bold uppercase mt-1 font-mono tracking-wider">Spring & AWS</div>
+            <div class="text-[9px] text-zinc-550 mt-0.5">REST APIs & Event Streams</div>
           </div>
         </div>
 
-        <!-- Contact/Email & Location Info -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-x-5 gap-y-2.5">
+        <!-- Contact/Email Info & Location -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-x-5 gap-y-2.5 pt-2">
           <!-- Email -->
           <div class="flex items-center gap-2 text-xs font-mono text-zinc-450 hover:text-zinc-300 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-400/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -204,15 +186,15 @@ import { APP_CONFIG } from '../config';
           </div>
         </div>
 
-        <!-- Social Icons & Download CTA -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-2">
+        <!-- Social Icons & CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-1">
           <!-- Social Link Group -->
-          <div class="flex items-center gap-2.5">
+          <div class="flex items-center gap-2.5 shrink-0">
             <a
               href={APP_CONFIG.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
+              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm hover:scale-105 active:scale-95 duration-200"
               title="GitHub"
             >
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -223,7 +205,7 @@ import { APP_CONFIG } from '../config';
               href={APP_CONFIG.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
+              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm hover:scale-105 active:scale-95 duration-200"
               title="LinkedIn"
             >
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -235,7 +217,7 @@ import { APP_CONFIG } from '../config';
                 href={APP_CONFIG.socials.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
+                class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm hover:scale-105 active:scale-95 duration-200"
                 title="X (formerly Twitter)"
               >
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -248,7 +230,7 @@ import { APP_CONFIG } from '../config';
                 href={APP_CONFIG.socials.medium}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
+                class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm hover:scale-105 active:scale-95 duration-200"
                 title="Medium"
               >
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -260,7 +242,7 @@ import { APP_CONFIG } from '../config';
               href={APP_CONFIG.socials.upwork}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm"
+              class="w-9 h-9 rounded-xl border border-zinc-850 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100 flex items-center justify-center transition shadow-sm hover:scale-105 active:scale-95 duration-200"
               title="Upwork"
             >
               <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="w-4.5 h-4.5" xmlns="http://www.w3.org/2000/svg">
@@ -295,22 +277,123 @@ import { APP_CONFIG } from '../config';
         </div>
       </div>
 
+      <!-- Right Column: Interactive Code Terminal & Framed Profile Image -->
+      <div class="w-full lg:w-5/12 max-w-lg lg:max-w-none shrink-0 flex flex-col gap-6 relative mt-6 lg:mt-0 pt-4 md:pt-6">
+        <div class="relative w-full">
+          <!-- Glowing backplate behind the terminal window -->
+          <div class="absolute -inset-2.5 rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-70 blur-2xl pointer-events-none -z-10 animate-pulse-slow"></div>
+          
+          <!-- Interactive Terminal Container -->
+          <div class="glass-panel w-full border border-zinc-800/80 bg-zinc-950/75 rounded-2xl overflow-hidden shadow-2xl relative">
+            <!-- Terminal Title Bar -->
+            <div class="flex items-center justify-between px-4 py-3 border-b border-zinc-900 bg-zinc-950/90 select-none">
+              <div class="flex items-center gap-1.5">
+                <span class="w-3 h-3 rounded-full bg-[#ff5f56] opacity-90"></span>
+                <span class="w-3 h-3 rounded-full bg-[#ffbd2e] opacity-90"></span>
+                <span class="w-3 h-3 rounded-full bg-[#27c93f] opacity-90"></span>
+              </div>
+              <div class="text-[10px] font-mono text-zinc-550 font-medium">bash - developer@portfolio</div>
+              <div class="w-10"></div> <!-- Spacer -->
+            </div>
+            
+            <!-- Terminal Tab Headers -->
+            <div class="flex border-b border-zinc-900/60 bg-zinc-950/80 text-[10px] font-mono select-none overflow-x-auto scrollbar-none">
+              <button 
+                type="button" 
+                data-tab="profile" 
+                class="terminal-tab px-4.5 py-2.5 border-r border-b-2 border-r-zinc-900 border-b-blue-500 bg-zinc-900/60 text-zinc-100 font-bold transition-all cursor-pointer outline-none"
+              >
+                Profile.java
+              </button>
+              <button 
+                type="button" 
+                data-tab="logs" 
+                class="terminal-tab px-4.5 py-2.5 border-r border-r-zinc-900 border-b-2 border-b-transparent text-zinc-500 hover:text-zinc-305 transition-all cursor-pointer outline-none"
+              >
+                microservice.log
+              </button>
+              <button 
+                type="button" 
+                data-tab="contact" 
+                class="terminal-tab px-4.5 py-2.5 border-r border-r-zinc-900 border-b-2 border-b-transparent text-zinc-500 hover:text-zinc-305 transition-all cursor-pointer outline-none"
+              >
+                contact.json
+              </button>
+            </div>
+            
+            <!-- Terminal Text Content Box -->
+            <div class="relative min-h-[230px]">
+              <!-- Tab 1: Profile.java -->
+              <pre id="content-profile" class="terminal-content p-5 text-[11px] md:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none">
+<span class="text-purple-400">public class</span> <span class="text-blue-400">Developer</span> &#123;
+    <span class="text-purple-400">private String</span> name = <span class="text-green-300">"Mahendra S H"</span>;
+    <span class="text-purple-400">private String</span> role = <span class="text-green-300">"Specialist Programmer"</span>;
+    <span class="text-purple-400">private String</span> company = <span class="text-green-300">"Infosys"</span>;
+    <span class="text-purple-400">private int</span> experienceYrs = <span class="text-amber-300">3</span>;
+    <span class="text-purple-400">private String[]</span> stack = &#123;
+        <span class="text-green-300">"Java 21"</span>, <span class="text-green-300">"Spring Boot"</span>,
+        <span class="text-green-300">"AWS"</span>, <span class="text-green-300">"React"</span>, <span class="text-green-300">"PostgreSQL"</span>
+    &#125;;
+    <span class="text-purple-400">private boolean</span> openToOpportunities = <span class="text-amber-300">true</span>;
+
+    <span class="text-purple-400">public void</span> <span class="text-blue-400">code</span>() &#123;
+        <span class="text-blue-400">System</span>.out.println(<span class="text-green-300">"Building microservices..."</span>);
+    &#125;
+&#125;</pre>
+
+              <!-- Tab 2: microservice.log -->
+              <pre id="content-logs" class="terminal-content p-5 text-[11px] md:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none hidden">
+<span class="text-zinc-550">$ tail -f cma-cgm-cargo-readiness.log</span>
+<span class="text-blue-400">[INFO]</span> Kafka Consumer initiated on topic: container.ready
+<span class="text-blue-400">[INFO]</span> Spring Batch Job 'VerificationJob' launched
+<span class="text-blue-400">[INFO]</span> Active bookings to verify: 50,000+ daily
+<span class="text-blue-400">[INFO]</span> Executing database checks on PostgreSQL...
+<span class="text-blue-400">[INFO]</span> AWS SQS Message received: messageId=aws-7e1b
+<span class="text-blue-400">[INFO]</span> Processing verification: container loaded
+<span class="text-emerald-400">[SUCCESS]</span> Job finished: 0 errors, status complete!</pre>
+
+              <!-- Tab 3: contact.json -->
+              <pre id="content-contact" class="terminal-content p-5 text-[11px] md:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none hidden">
+&#123;
+    <span class="text-purple-400">"email"</span>: <span class="text-green-300">"mahendrashongunti@gmail.com"</span>,
+    <span class="text-purple-400">"phone"</span>: <span class="text-green-300">"+91-7892041114"</span>,
+    <span class="text-purple-400">"location"</span>: <span class="text-green-300">"Hyderabad, India"</span>,
+    <span class="text-purple-400">"github"</span>: <span class="text-green-300">"github.com/MahendraSH"</span>,
+    <span class="text-purple-400">"linkedin"</span>: <span class="text-green-300">"linkedin.com/in/mahendra-s-h"</span>,
+    <span class="text-purple-400">"status"</span>: <span class="text-green-300">"Open to Hybrid / Remote roles"</span>
+&#125;</pre>
+            </div>
+          </div>
+          
+          <!-- Profile Badge overlapping the terminal top-right corner -->
+          <div class="absolute -top-7 -right-3.5 z-30 select-none group/avatar">
+            <div class="relative w-18 h-18 md:w-22 md:h-22 rounded-2xl p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 group-hover/avatar:from-blue-500 group-hover/avatar:via-purple-500 group-hover/avatar:to-pink-500 transition-all duration-500 shadow-2xl">
+              <div class="w-full h-full rounded-[14px] overflow-hidden bg-zinc-950 p-1 flex items-center justify-center relative">
+                <!-- Grid Overlay inside image -->
+                <div class="absolute inset-0 bg-grid-dots opacity-20 z-0"></div>
+                <img
+                  src="https://github.com/MahendraSH.png"
+                  alt="Mahendra S H"
+                  class="w-full h-full object-cover rounded-lg z-10 filter grayscale group-hover/avatar:grayscale-0 transition-all duration-500 scale-[1.01]"
+                  loading="eager"
+                />
+                <!-- Active pulsing status dot -->
+                <span class="absolute bottom-1 right-1 flex h-3.5 w-3.5 z-20">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border border-zinc-950"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
 
 <style>
-  /* Blinking typewriter cursor */
-  @keyframes blinkCursor {
-    0%, 100% { border-color: rgba(96, 165, 250, 0.85); }
-    50% { border-color: transparent; }
-  }
-
-  .typewriter-cursor {
-    animation: blinkCursor 0.75s step-end infinite;
-  }
-
-  /* Bobbing Floating Animation */
+  /* Bobbing Floating Animation for Terminal Column */
   @keyframes floatAnimation {
     0%, 100% {
       transform: translateY(0);
@@ -322,6 +405,16 @@ import { APP_CONFIG } from '../config';
 
   .profile-container {
     animation: floatAnimation 6s ease-in-out infinite;
+  }
+
+  /* Blinking typewriter cursor */
+  @keyframes blinkCursor {
+    0%, 100% { border-color: rgba(96, 165, 250, 0.85); }
+    50% { border-color: transparent; }
+  }
+
+  .typewriter-cursor {
+    animation: blinkCursor 0.75s step-end infinite;
   }
 
   /* Independent Floating Animations for Tech Icons */
@@ -360,7 +453,12 @@ import { APP_CONFIG } from '../config';
 
 <script>
   function runTypewriter() {
-    const words = ["Java Cloud Full-Stack Engineer", "Specialist Programmer", "Microservices & Cloud Architect"];
+    const words = [
+      "high-throughput microservices.",
+      "event-driven event streams.",
+      "responsive SaaS dashboards.",
+      "scalable cloud applications."
+    ];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -377,15 +475,15 @@ import { APP_CONFIG } from '../config';
         charIndex++;
       }
 
-      let typeSpeed = isDeleting ? 40 : 80;
+      let typeSpeed = isDeleting ? 30 : 60;
 
       if (!isDeleting && charIndex === currentWord.length) {
-        typeSpeed = 2000; // Pause at end of word
+        typeSpeed = 2200; // Pause at end of word
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        typeSpeed = 350; // Pause before typing next word
+        typeSpeed = 300; // Pause before typing next word
       }
 
       setTimeout(type, typeSpeed);
@@ -394,9 +492,46 @@ import { APP_CONFIG } from '../config';
     type();
   }
 
+  function setupTerminalTabs() {
+    const tabs = document.querySelectorAll('.terminal-tab');
+    const contents = document.querySelectorAll('.terminal-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('data-tab');
+
+        // Reset active tab button styles
+        tabs.forEach(t => {
+          t.classList.remove('border-b-blue-500', 'bg-zinc-900/60', 'text-zinc-100', 'font-bold');
+          t.classList.add('border-b-transparent', 'text-zinc-500', 'hover:text-zinc-350');
+        });
+
+        // Add active tab button styles
+        tab.classList.remove('border-b-transparent', 'text-zinc-500', 'hover:text-zinc-350');
+        tab.classList.add('border-b-blue-500', 'bg-zinc-900/60', 'text-zinc-100', 'font-bold');
+
+        // Hide all pre contents
+        contents.forEach(content => {
+          content.classList.add('hidden');
+        });
+
+        // Show target content
+        const targetContent = document.getElementById(`content-${targetId}`);
+        if (targetContent) {
+          targetContent.classList.remove('hidden');
+        }
+      });
+    });
+  }
+
+  function initHero() {
+    runTypewriter();
+    setupTerminalTabs();
+  }
+
   // Initial load
-  runTypewriter();
+  initHero();
   
-  // Re-run typewriter on Astro page navigation swaps
-  document.addEventListener('astro:after-swap', runTypewriter);
+  // Re-run typewriter and tabs on Astro page navigation swaps
+  document.addEventListener('astro:after-swap', initHero);
 </script>
