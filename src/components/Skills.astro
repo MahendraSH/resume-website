@@ -23,7 +23,7 @@ const SKILL_ICONS: Record<string, string> = {
 
 function getSkillIcon(skill: string): string {
   const name = skill.toLowerCase();
-  if (name.includes('java (')) return 'java';
+  if (name.includes('java 21')) return 'java';
   if (name.includes('javascript')) return 'js';
   if (name.includes('typescript')) return 'ts';
   if (name.includes('sql') || name.includes('postgres') || name.includes('mysql') || name.includes('mongo') || name.includes('db')) return 'db';
@@ -42,24 +42,86 @@ function getSkillIcon(skill: string): string {
   if (name.includes('agile') || name.includes('scrum')) return 'agile';
   return 'default';
 }
-const tagHoverStyles = [
-  'hover:text-cyan-300 hover:border-cyan-500/30 hover:shadow-[0_0_12px_rgba(6,182,212,0.12)]',
-  'hover:text-purple-300 hover:border-purple-500/30 hover:shadow-[0_0_12px_rgba(168,85,247,0.12)]',
-  'hover:text-emerald-300 hover:border-emerald-500/30 hover:shadow-[0_0_12px_rgba(16,185,129,0.12)]',
-  'hover:text-blue-300 hover:border-blue-500/30 hover:shadow-[0_0_12px_rgba(59,130,246,0.12)]',
-  'hover:text-amber-300 hover:border-amber-500/30 hover:shadow-[0_0_12px_rgba(245,158,11,0.12)]',
-  'hover:text-pink-300 hover:border-pink-500/30 hover:shadow-[0_0_12px_rgba(236,72,153,0.12)]',
-  'hover:text-cyan-300 hover:border-cyan-500/30 hover:shadow-[0_0_12px_rgba(6,182,212,0.12)]'
+
+function getHeroSkillStyles(skill: string): { border: string; text: string; bg: string; dot: string } | null {
+  const name = skill.toLowerCase();
+  if (name === 'java 21') return { border: 'border-orange-500/30', text: 'text-orange-400 hover:text-orange-300', bg: 'bg-orange-500/5', dot: 'bg-orange-500' };
+  if (name === 'spring boot') return { border: 'border-emerald-500/30', text: 'text-emerald-400 hover:text-emerald-300', bg: 'bg-emerald-500/5', dot: 'bg-emerald-500' };
+  if (name === 'react.js') return { border: 'border-cyan-500/30', text: 'text-cyan-400 hover:text-cyan-300', bg: 'bg-cyan-500/5', dot: 'bg-cyan-500' };
+  if (name === 'apache kafka') return { border: 'border-indigo-500/30', text: 'text-indigo-400 hover:text-indigo-300', bg: 'bg-indigo-500/5', dot: 'bg-indigo-500' };
+  if (name.includes('aws ')) return { border: 'border-amber-500/30', text: 'text-amber-400 hover:text-amber-300', bg: 'bg-amber-500/5', dot: 'bg-amber-500' };
+  if (name === 'postgresql') return { border: 'border-blue-500/30', text: 'text-blue-400 hover:text-blue-350', bg: 'bg-blue-500/5', dot: 'bg-blue-500' };
+  return null;
+}
+
+// Extract and dynamically group skill lists for a highly structured Bento layout
+const languages = SKILL_CATEGORIES.find(c => c.category === "Languages & Specs")?.skills || [];
+const backend = SKILL_CATEGORIES.find(c => c.category === "Backend")?.skills || [];
+const messaging = SKILL_CATEGORIES.find(c => c.category === "Messaging & Cloud")?.skills || [];
+const frontend = SKILL_CATEGORIES.find(c => c.category === "Frontend")?.skills || [];
+const databases = SKILL_CATEGORIES.find(c => c.category === "Databases & ORM")?.skills || [];
+const devops = SKILL_CATEGORIES.find(c => c.category === "DevOps, QA & Tools")?.skills || [];
+const security = SKILL_CATEGORIES.find(c => c.category === "Security")?.skills || [];
+
+// Group 1: Core Backend & Specifications
+const groupBackend = [...languages.filter(s => s.toLowerCase().includes('java') || s.toLowerCase() === 'sql'), ...backend];
+
+// Group 2: Cloud, Messaging & Databases
+const groupCloudData = [...messaging, ...databases];
+
+// Group 3: Frontend & Design Systems
+const groupFrontend = [...frontend, ...languages.filter(s => !s.toLowerCase().includes('java') && s.toLowerCase() !== 'sql' && !s.toLowerCase().includes('api'))];
+
+// Group 4: DevOps, Security & QA
+const groupDevOpsSecurity = [...devops, ...security, ...languages.filter(s => s.toLowerCase().includes('api'))];
+
+const BENTO_CARDS = [
+  {
+    title: "Backend Core & Specifications",
+    desc: "Java microservices, workflow orchestration, and runtime engines.",
+    skills: groupBackend,
+    span: "md:col-span-3",
+    color: "text-emerald-400",
+    borderGlow: "group-hover:border-emerald-500/20 group-hover:shadow-[0_0_20px_rgba(52,211,153,0.02)]",
+    tagGlow: "hover:text-emerald-300 hover:border-emerald-500/30 hover:shadow-[0_0_12px_rgba(16,185,129,0.12)]"
+  },
+  {
+    title: "Cloud, Messaging & Storage",
+    desc: "Event streaming, cloud compute/storage, and database scaling.",
+    skills: groupCloudData,
+    span: "md:col-span-3",
+    color: "text-blue-400",
+    borderGlow: "group-hover:border-blue-500/20 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.02)]",
+    tagGlow: "hover:text-blue-300 hover:border-blue-500/30 hover:shadow-[0_0_12px_rgba(59,130,246,0.12)]"
+  },
+  {
+    title: "Frontend & Interfaces",
+    desc: "Responsive SaaS dashboards, single page apps, and css structures.",
+    skills: groupFrontend,
+    span: "md:col-span-2",
+    color: "text-cyan-400",
+    borderGlow: "group-hover:border-cyan-500/20 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.02)]",
+    tagGlow: "hover:text-cyan-300 hover:border-cyan-500/30 hover:shadow-[0_0_12px_rgba(6,182,212,0.12)]"
+  },
+  {
+    title: "DevOps, Security & QA Automation",
+    desc: "Container pipelines, test suites, cryptography, and agile methodologies.",
+    skills: groupDevOpsSecurity,
+    span: "md:col-span-4",
+    color: "text-purple-400",
+    borderGlow: "group-hover:border-purple-500/20 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.02)]",
+    tagGlow: "hover:text-purple-300 hover:border-purple-500/30 hover:shadow-[0_0_12px_rgba(168,85,247,0.12)]"
+  }
 ];
 ---
- 
+
 <section id="skills" class="w-full py-12">
   <div class="premium-card p-4 sm:p-6 md:p-10 rounded-3xl space-y-6">
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
       <div>
         <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">Tech Skills</h2>
         <p class="text-xs md:text-sm text-zinc-400 mt-1">
-          Technologies, frameworks, databases, and tools I've worked with.
+          Structured bento layout highlighting core and supporting technical strengths.
         </p>
       </div>
 
@@ -76,64 +138,54 @@ const tagHoverStyles = [
         />
       </div>
     </div>
- 
+
     <!-- Separator Line -->
     <div class="h-[1px] w-full bg-zinc-850/60"></div>
- 
-    <!-- Skills Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {SKILL_CATEGORIES.map((cat, idx) => {
-        // Choose a indicator color based on category index
-        const colors = [
-          'text-cyan-400 group-hover:text-cyan-300',
-          'text-purple-400 group-hover:text-purple-300',
-          'text-emerald-400 group-hover:text-emerald-300',
-          'text-blue-400 group-hover:text-blue-300',
-          'text-amber-400 group-hover:text-amber-300',
-          'text-pink-400 group-hover:text-pink-300'
-        ];
-        const glowColors = [
-          'group-hover:border-cyan-500/20 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.02)]',
-          'group-hover:border-purple-500/20 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.02)]',
-          'group-hover:border-emerald-500/20 group-hover:shadow-[0_0_20px_rgba(52,211,153,0.02)]',
-          'group-hover:border-blue-500/20 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.02)]',
-          'group-hover:border-amber-500/20 group-hover:shadow-[0_0_20px_rgba(251,191,36,0.02)]',
-          'group-hover:border-pink-500/20 group-hover:shadow-[0_0_20px_rgba(244,63,94,0.02)]'
-        ];
-        const activeColor = colors[idx % colors.length];
-        const activeGlow = glowColors[idx % glowColors.length];
-        const activeTagHover = tagHoverStyles[idx % tagHoverStyles.length];
 
-        return (
-          <div 
-            class={`skills-category-card p-5 rounded-2xl border border-zinc-850/60 bg-zinc-900/10 hover:bg-zinc-900/30 transition-all duration-300 flex flex-col justify-start group relative overflow-hidden ${activeGlow}`}
-          >
-            <!-- Top corner glow flash on hover -->
-            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
-            <h3 class={`font-bold text-[11px] uppercase font-mono tracking-widest mb-4 transition-colors ${activeColor}`}>
-              {cat.category}
-            </h3>
-            <div class="flex flex-wrap gap-2 z-10">
-              {cat.skills.map((skill) => {
-                const iconType = getSkillIcon(skill);
-                return (
-                  <span 
-                    class={`skill-tag inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900/80 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-default select-none shadow-sm group/tag ${activeTagHover}`}
-                  >
-                    {iconType !== 'default' && (
-                      <span class="shrink-0 text-zinc-500 group-hover/tag:text-[currentColor] transition-colors">
-                        <Fragment set:html={SKILL_ICONS[iconType]} />
-                      </span>
-                    )}
-                    <span>{skill}</span>
-                  </span>
-                );
-              })}
-            </div>
+    <!-- Skills Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+      {BENTO_CARDS.map((card) => (
+        <div 
+          class={`skills-category-card p-5 rounded-2xl border border-zinc-850/60 bg-zinc-900/10 hover:bg-zinc-900/35 transition-all duration-350 flex flex-col justify-start group relative overflow-hidden ${card.span} ${card.borderGlow}`}
+        >
+          <!-- Top corner glow flash on hover -->
+          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <h3 class={`font-bold text-[11px] uppercase font-mono tracking-widest transition-colors ${card.color}`}>
+            {card.title}
+          </h3>
+          <p class="text-[10px] text-zinc-500 leading-normal mb-4.5 mt-1 font-sans">
+            {card.desc}
+          </p>
+          
+          <div class="flex flex-wrap gap-2 z-10">
+            {card.skills.map((skill) => {
+              const iconType = getSkillIcon(skill);
+              const heroStyle = getHeroSkillStyles(skill);
+              
+              const tagClasses = heroStyle 
+                ? `${heroStyle.border} ${heroStyle.text} ${heroStyle.bg}`
+                : `border-zinc-850/60 text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 hover:bg-zinc-900/85 ${card.tagGlow}`;
+                
+              return (
+                <span 
+                  class={`skill-tag inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-950/60 border hover:scale-[1.015] active:scale-[0.985] transition-all duration-300 cursor-default select-none shadow-sm group/tag ${tagClasses}`}
+                >
+                  {heroStyle && (
+                    <span class={`w-1.5 h-1.5 rounded-full ${heroStyle.dot} shrink-0 animate-pulse`}></span>
+                  )}
+                  {iconType !== 'default' && (
+                    <span class="shrink-0 text-zinc-550 group-hover/tag:text-[currentColor] transition-colors">
+                      <Fragment set:html={SKILL_ICONS[iconType]} />
+                    </span>
+                  )}
+                  <span>{skill}</span>
+                </span>
+              );
+            })}
           </div>
-        );
-      })}
+        </div>
+      ))}
     </div>
   </div>
 </section>
