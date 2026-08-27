@@ -52,8 +52,6 @@ const miscSchema = {
           <!-- Project Preview (Themed Custom Gradient & Logo) -->
           <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-2xl border border-zinc-850/80 relative bg-zinc-950 flex items-center justify-center shadow-lg group-hover/project:border-zinc-700/85 transition-all duration-500">
             <div class={`w-full h-full bg-gradient-to-br ${project.themeGradient || 'from-zinc-900 via-indigo-950/45 to-zinc-950'} flex flex-col items-center justify-center p-6 text-center relative transition-transform duration-700 group-hover/project:scale-105`}>
-              <!-- Grid Lines -->
-              <div class="absolute inset-0 bg-grid-dots opacity-20"></div>
               {project.logo && (
                 <div class={`p-3.5 rounded-2xl border border-zinc-850/60 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100`}>
                   <div class="w-7 h-7 flex items-center justify-center">
