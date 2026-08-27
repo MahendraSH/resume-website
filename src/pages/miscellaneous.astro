@@ -34,7 +34,7 @@ const miscSchema = {
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-b from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent tracking-tight leading-none">
         Miscellaneous Works
       </h1>
-      <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
+      <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
         A monorepo workspace containing multiple high-performance developer tools, design labs, and developer utilities built with modern web technologies.
       </p>
     </div>
@@ -83,14 +83,14 @@ const miscSchema = {
                 </div>
               </div>
 
-              <p class="text-xs md:text-sm text-zinc-400 leading-relaxed font-sans">
+              <p class="text-sm text-zinc-300 leading-relaxed font-sans">
                 {project.description}
               </p>
 
               {project.bullets && project.bullets.length > 0 && (
-                <ul class="list-disc pl-5 space-y-1.5 text-[11px] md:text-xs text-zinc-450 leading-relaxed font-sans">
+                <ul class="list-disc pl-5 space-y-2 text-[13px] md:text-sm text-zinc-350 leading-relaxed font-sans">
                   {project.bullets.map((bullet) => (
-                    <li class="marker:text-blue-500/40">{bullet}</li>
+                    <li class="marker:text-blue-500/40 hover:text-zinc-200 transition-colors">{bullet}</li>
                   ))}
                 </ul>
               )}

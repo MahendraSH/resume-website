@@ -123,16 +123,27 @@ const BENTO_CARDS = [
       </div>
 
       <!-- Live Search Box -->
-      <div class="flex items-center gap-2 max-w-xs w-full sm:w-64 bg-zinc-950/60 border border-zinc-850/60 rounded-xl px-3 py-1.5 focus-within:border-zinc-700/80 transition-all duration-300 shrink-0">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <div class="flex items-center gap-2 max-w-xs w-full sm:w-64 bg-zinc-950/60 border border-zinc-850/60 rounded-xl px-3 py-1.5 focus-within:border-zinc-700/80 transition-all duration-300 shrink-0 relative group/search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-zinc-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
         <input 
           type="text" 
           id="skills-search" 
           placeholder="Filter skills..." 
-          class="w-full bg-transparent text-xs text-zinc-300 outline-none placeholder:text-zinc-500"
+          class="w-full bg-transparent text-xs text-zinc-300 outline-none placeholder:text-zinc-500 pr-6"
         />
+        <!-- Clear Button -->
+        <button 
+          id="skills-search-clear"
+          type="button"
+          class="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300 p-0.5 rounded-md hover:bg-zinc-900 transition-all cursor-pointer hidden"
+          aria-label="Clear search"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
     </div>
 
@@ -188,12 +199,21 @@ const BENTO_CARDS = [
 <script>
   function setupSkillsSearch() {
     const searchInput = document.getElementById('skills-search') as HTMLInputElement | null;
+    const clearBtn = document.getElementById('skills-search-clear') as HTMLButtonElement | null;
     const categories = document.querySelectorAll('.skills-category-card');
 
     if (!searchInput) return;
 
-    searchInput.addEventListener('input', (e) => {
-      const val = (e.target as HTMLInputElement).value.toLowerCase().trim();
+    const filterSkills = () => {
+      const val = searchInput.value.toLowerCase().trim();
+      
+      if (clearBtn) {
+        if (val.length > 0) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+      }
       
       categories.forEach(cat => {
         const tags = cat.querySelectorAll('.skill-tag');
@@ -217,7 +237,17 @@ const BENTO_CARDS = [
           cat.classList.add('hidden');
         }
       });
-    });
+    };
+
+    searchInput.addEventListener('input', filterSkills);
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        filterSkills();
+        searchInput.focus();
+      });
+    }
   }
 
   // Initial load
