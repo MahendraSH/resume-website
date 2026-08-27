@@ -1,5 +1,5 @@
 # Mahendra S H
-**Java Cloud Full-Stack Engineer**
+**Java Cloud Full-Stack Engineer | Java | Spring Boot | React | Microservices | AWS**
 
 Hyderabad, India | +91-7892041114 | [mahendrashongunti@gmail.com](mailto:mahendrashongunti@gmail.com) | [mahendrash.vercel.app](https://mahendrash.vercel.app)  
 [linkedin.com/in/mahendra-s-h-14a74721a](https://www.linkedin.com/in/mahendra-s-h-14a74721a/) | [github.com/MahendraSH](https://github.com/MahendraSH)
@@ -8,73 +8,75 @@ Hyderabad, India | +91-7892041114 | [mahendrashongunti@gmail.com](mailto:mahendr
 
 ## Professional Summary
 
-- **Java Cloud Full-Stack Engineer** (Specialist Programmer) with over 2 years of experience architecting high-throughput microservices and responsive SaaS applications using **Java 21, Spring Boot, React, and AWS**.
-- **Backend & Cloud**: Proven track record in event-driven microservices, AWS cloud infrastructure (**EC2, S3, SQS**), automated batch processing (**Spring Batch**), and RESTful API / OpenAPI management.
-- **Testing & Quality**: Expertise in test automation frameworks (**JUnit, Mockito**), conducting code reviews, Root Cause Analysis (RCA), and adhering to CI/CD quality gates and Docker containerization.
-- **Job Preferences**: Open to Remote and Hybrid roles. Preferred Locations: Bengaluru, Hyderabad, Pune, India.
-
----
-
-## Work Experience
-
-### **Infosys** — *Specialist Programmer*  
-*Hyderabad, India (Hybrid)* | **Jul 2024 – Jun 2026**
-
-- **Cargo Readiness (CMA-CGM Project)**: Architected and engineered a **microservices** backend using **Java 21**, **Spring Boot**, and **RESTful APIs (OpenAPI)** for event-driven container readiness assessment workflows.
-- Integrated **AWS SQS** queues, **AWS S3**, and **Camunda BPM** for event-driven queue orchestration, reducing manual verification overhead by **35%**.
-- Employed **Spring Batch** to automate high-throughput end-date verification and backend checks, processing **50k+ active bookings** daily.
-- Developed a responsive **React** frontend dashboard utilizing **React Query** and **TanStack Table**, improving officer decision-making efficiency.
-- Optimized database queries in **PostgreSQL (SQL)** to reduce REST API response times by **20%** and enhance overall system throughput.
-- Developed automated unit/integration test suites with **JUnit** & **Mockito**; performed code reviews and Root Cause Analysis (RCA) adhering to **CI/CD** quality gates and **Docker** deployments.
-
-### **Merav Infotech** — *Software Engineering Intern*  
-*Mysore, India (Remote)* | **Feb 2024 – May 2024**
-
-- Spearheaded frontend feature development and designed reusable UI components using **React.js** and modern **JavaScript (ES6+)**.
-- Collaborated with senior engineers to integrate **RESTful APIs**, reducing initial page load times by **15%** via lazy loading and code-splitting.
-- Participated in Agile sprint planning and daily standups to ensure timely delivery of software features.
-
----
-
-## Key Projects
-
-### **E-Commerce Platform (E-Store)**  
-*Next.js, React, Tailwind CSS, Shadcn UI, Prisma ORM, MySQL, AWS S3*
-- Built a full-stack e-commerce solution with admin capabilities for managing products, catalog categorization, and processing customer orders.
-- Designed scalable REST APIs for custom storefronts; deployed on **Vercel** with **AWS S3** for product asset and media management.
-- Configured database schemas using Prisma ORM with MySQL to ensure query scalability and high transaction reliability.
-
-### **SpendOptima**  
-*Next.js, React, Tailwind CSS, Recharts, TypeScript*
-- Built a premium personal finance tracking and expense optimization dashboard featuring clean budget analytics.
-- Designed responsive client dashboards with interactive statistics using Recharts, allowing users to analyze spending habits.
-- Structured modular frontend templates optimized for fast loading times and robust SEO search visibility.
-
-### **SaaS Form Builder Platform**  
-*Next.js, React, Node.js, Express, PostgreSQL, AWS*
-- Built a full-stack, **no-code** SaaS form builder allowing users to create and customize dynamic forms via an intuitive drag-and-drop interface.
-- Created a lightweight embeddable script package enabling external websites to embed and render forms dynamically.
-- Constructed secure REST APIs for form creation and analytics tracking across **20+ client sites**, deployed on **Vercel/AWS**.
-
-### **Shadcn UI Form & Table Generators (Open-Source)**  
-*Astro, React, TypeScript, TanStack Table v8, Shadcn UI, Zod*
-- Published open-source developer tools that scaffold fully-typed Shadcn UI form schemas and TanStack Table v8 components from JSON/OpenAPI specs.
-- Designed intuitive schema generator engines that automatically infer TypeScript types, reducing boilerplate UI code setup time by **80%** for developers.
+- **Java Cloud Full-Stack Engineer / Specialist Programmer** with 3+ years of enterprise software experience, plus hands-on full-stack development, using **Java 21, Spring Boot, React, microservices, REST APIs, PostgreSQL, and AWS**.
+- Experienced across backend engineering, event-driven systems, asynchronous messaging, **Spring Batch** processing, workflow automation, cloud infrastructure, database optimization, testing, **Docker**, and **CI/CD** quality practices.
+- Full-stack experience with **React, Next.js, TypeScript, Node.js**, responsive dashboards, secure authentication, **REST** integrations, and scalable SaaS applications.
 
 ---
 
 ## Technical Skills
 
-- **Languages & Specs:** Java (21), JavaScript (ES6+), TypeScript, SQL, OpenAPI, RESTful APIs, HTML5/CSS3
-- **Backend & Cloud:** Spring Boot, Microservices Architecture, Spring Batch, AWS (EC2, S3, SQS), API Management, Camunda BPM
-- **Frontend:** React.js, Next.js, Tailwind CSS, Shadcn UI, TanStack Table v8, Redux, React Query
-- **Databases & ORM:** PostgreSQL, MySQL, MongoDB, Prisma ORM
-- **DevOps, QA & Tools:** Docker, CI/CD Pipelines, Test Automation (JUnit, Mockito), Root Cause Analysis (RCA), Git, GitHub, Agile/Scrum
+- **Languages & Specs:** Java 21, JavaScript (ES6+), TypeScript, SQL, OpenAPI, RESTful APIs, HTML5, CSS3
+- **Backend:** Spring Boot, Microservices Architecture, Spring Batch, Camunda BPM, Apache Camel, Node.js, Express.js, REST APIs
+- **Messaging & Cloud:** Apache Kafka, AWS EC2, S3, SNS, SQS, API Management
+- **Frontend:** React.js, Next.js, Redux, React Query, TanStack Table v8, Tailwind CSS, Shadcn UI
+- **Databases & ORM:** PostgreSQL, MySQL, MongoDB, Prisma ORM, SQL query optimization & indexing
+- **DevOps, QA & Tools:** Docker, CI/CD Pipelines, JUnit, Mockito, Git, GitHub, Code Reviews, RCA, Agile/Scrum, Kanban
+- **Security:** SSL/TLS, Secure Authentication, Data Privacy
+
+---
+
+## Work Experience
+
+### **Infosys** — *Specialist Programmer / Software Developer*  
+*Hyderabad, India* | **Jul 2024 – Jun 2026**
+
+- Architected and engineered enterprise **microservices** using **Java 21, Spring Boot, RESTful APIs**, and **OpenAPI** for event-driven container readiness workflows.
+- Integrated **Apache Kafka, AWS SNS, AWS SQS, AWS S3**, and **Camunda BPM** for event-driven messaging, queue orchestration, and workflow automation, reducing manual verification overhead by **35%**.
+- Used **Spring Batch** to automate high-throughput end-date verification and backend checks, processing **50k+ active bookings** daily.
+- Developed responsive **React** dashboards using **React Query** and **TanStack Table**, improving operational decision-making efficiency.
+- Optimized **PostgreSQL** queries, reducing REST API response times by **20%** and improving system throughput.
+- Developed automated unit/integration tests with **JUnit** and **Mockito**; performed code reviews and Root Cause Analysis (RCA) while following **CI/CD** quality gates and **Docker** deployment practices.
+- Participated across planning, design, implementation, deployment, and maintenance within the enterprise SDLC; worked with secure authentication and **SSL/TLS** standards.
+
+### **Independent Software Development** — *Freelance Frontend & MERN Developer*  
+*Mysore, India* | **Jun 2023 – Jun 2024**
+
+- Engineered responsive frontend applications and full-stack solutions using the **MERN stack (MongoDB, Express, React, Node.js)**, **Next.js**, and **MySQL**.
+- Built tailored platforms using **TanStack, Zod, Material UI (MUI), Bootstrap, and React Hook Form**, including dashboards, admin panels, shirt e-commerce stores, cloud note portals, sci-fi research publications, blogs, and B2B/B2C websites.
+
+### **Merav Infotech** — *Software Engineering Intern*  
+*Mysore, India* | **Feb 2024 – May 2024**
+
+- Developed reusable **React.js** UI components and integrated **RESTful APIs**, reducing initial page load times by **15%** via lazy loading and code splitting.
+- Participated in **Agile** sprint planning, daily standups, code reviews, and cross-functional software delivery.
+
+---
+
+## Selected Projects
+
+### **Cargo Readiness — CMA CGM Project** • *Java 21, Spring Boot, Microservices, Kafka, AWS SNS/SQS/S3, Camunda, Spring Batch, React, PostgreSQL*
+- Built event-driven backend workflows for container readiness assessment; automated **50k+** daily booking checks and delivered **React** operational dashboards.
+
+### **ProjectX — Generative AI Shirt Studio** • *Next.js, React, TypeScript, Node.js, AWS S3, Tailwind CSS*
+- Built a full-stack application for AI-generated shirt designs; implemented asynchronous polling/WebSocket workflows and optimized **AWS S3** asset storage.
+
+### **SaaS Form Builder Platform** • *Next.js, React, Node.js, Express, PostgreSQL, AWS*
+- Built a **no-code** SaaS form builder with drag-and-drop creation, secure **REST APIs**, analytics tracking, and embeddable scripts used across **20+ client sites**.
+
+### **E-Commerce Platform** • *Next.js, React, Tailwind CSS, Shadcn UI, Prisma ORM, MySQL, AWS S3*
+- Built a full-stack e-commerce platform with admin product/catalog management, customer order processing, scalable **REST APIs**, and **AWS S3** media storage.
+
+### **SpendOptima** • *Next.js, React, Tailwind CSS, Recharts, TypeScript*
+- Built a responsive personal finance and expense-optimization dashboard featuring interactive budget analytics and SEO-focused frontend templates.
+
+### **Shadcn UI Form & Table Generators** • *Astro, React, TypeScript, TanStack Table v8, Shadcn UI, Zod*
+- Built schema generators from JSON/OpenAPI specifications that scaffold typed **Shadcn UI** form schemas and **TanStack Table v8** components, reducing frontend boilerplate setup time by **80%**.
 
 ---
 
 ## Education
 
 ### **National Institute of Engineering (NIE)** — *B.Tech in Computer Science & Engineering*  
-*Graduated: May 2024* | *Mysore, India*  
-Grade: 7.3 / 10 CGPA | *Relevant Coursework:* Data Structures, Database Systems, Software Engineering
+*Graduated May 2024* | *Mysore, India*  
+CGPA: 7.3 / 10 | *Relevant Coursework:* Data Structures & Algorithms, Database Systems, Software Engineering, DBMS, Object-Oriented Design
