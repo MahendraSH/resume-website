@@ -17,59 +17,58 @@ import { APP_CONFIG } from '../config';
     LATENCY // 0.05ms
   </div>
 
-  <!-- Floating Tech Icons scattered across the entire Hero section -->
-  <!-- Java (Top Left Area) -->
-  <div class="absolute top-[12%] left-[8%] z-10 p-3 rounded-2xl border border-orange-500/10 bg-zinc-950/40 text-orange-400/50 shadow-[0_0_20px_rgba(249,115,22,0.03)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-orange-400 hover:border-orange-500/30 hover:shadow-[0_0_25px_rgba(249,115,22,0.1)] hover:opacity-100 opacity-40 animate-float-icon-1 hidden lg:flex select-none pointer-events-none" title="Java">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-      <path d="M6 11a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V5H6v6Z"/>
-      <path d="M15 7h1a1.5 1.5 0 0 1 1.5 1.5v0A1.5 1.5 0 0 1 16 10h-1"/>
-      <path d="M5 15h11a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3Z"/>
-      <path d="M8 2c0 .8-.5 1.5-.5 1.5M11 2c0 .8-.5 1.5-.5 1.5"/>
-    </svg>
-  </div>
-
-  <!-- Spring Leaf (Top Right Area) -->
-  <div class="absolute top-[10%] right-[10%] z-10 p-3 rounded-2xl border border-emerald-500/10 bg-zinc-950/40 text-emerald-400/50 shadow-[0_0_20px_rgba(16,185,129,0.03)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-emerald-400 hover:border-emerald-500/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.1)] hover:opacity-100 opacity-40 animate-float-icon-2 hidden lg:flex select-none pointer-events-none" title="Spring Boot">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-      <path d="M12 2C6.5 2 2 6.5 2 12c0 3 1.5 5.5 4 7l2-5c0-1.5.5-3 1.5-4.5S11.5 6.5 13 6c1 .5 2 1.5 2 3s-1 3-3 4.5-3.5 2.5-4 4.5l2 4c2.5-.5 4.5-2 6-4 2.5-3.5 2-8-2-12.5C15 2.5 13.5 2 12 2z"/>
-    </svg>
-  </div>
-
-  <!-- React (Bottom Right Area) -->
-  <div class="absolute bottom-[15%] right-[8%] z-10 p-3 rounded-2xl border border-cyan-500/10 bg-zinc-950/40 text-cyan-400/50 shadow-[0_0_20px_rgba(6,182,212,0.03)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-cyan-400 hover:border-cyan-500/30 hover:shadow-[0_0_25px_rgba(6,182,212,0.1)] hover:opacity-100 opacity-40 animate-float-icon-3 hidden lg:flex select-none pointer-events-none" title="React">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-      <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/>
-      <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(90 12 12)"/>
-      <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(150 12 12)"/>
-      <circle cx="12" cy="12" r="1"/>
-    </svg>
-  </div>
-
-  <!-- AWS Cloud (Bottom Left Area) -->
-  <div class="absolute bottom-[12%] left-[10%] z-10 p-3 rounded-2xl border border-amber-500/10 bg-zinc-950/40 text-amber-400/50 shadow-[0_0_20px_rgba(245,158,11,0.03)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-amber-400 hover:border-amber-500/30 hover:shadow-[0_0_25px_rgba(245,158,11,0.1)] hover:opacity-100 opacity-40 animate-float-icon-4 hidden lg:flex select-none pointer-events-none" title="AWS">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-      <path d="M17.5 19A4.5 4.5 0 0 0 17 10h-1.25a7 7 0 1 0-11.75 3.5M17.5 19H9a4 4 0 0 1 0-8h1.25"/>
-    </svg>
-  </div>
-
-  <!-- Keyboard Command Key (Center Left Area) -->
-  <div class="absolute top-[48%] left-[4%] z-10 p-2.5 rounded-xl border border-indigo-500/10 bg-zinc-950/40 text-indigo-400/40 shadow-[0_0_15px_rgba(99,102,241,0.02)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-indigo-400 hover:border-indigo-500/30 hover:opacity-100 opacity-30 animate-float-icon-5 hidden xl:flex select-none pointer-events-none" title="Command Shortcut">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-      <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/>
-      <path d="M9 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/>
-      <path d="M3 18a3 3 0 0 0 3-3h12a3 3 0 0 0 0-6H6a3 3 0 0 0-3 3z"/>
-    </svg>
-  </div>
-
-  <!-- Code tag (Center Right Area) -->
-  <div class="absolute top-[45%] right-[5%] z-10 p-2.5 rounded-xl border border-purple-500/10 bg-zinc-950/40 text-purple-400/40 shadow-[0_0_15px_rgba(168,85,247,0.02)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-purple-400 hover:border-purple-500/30 hover:opacity-100 opacity-30 animate-float-icon-6 hidden xl:flex select-none pointer-events-none" title="Developer Tools">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-      <polyline points="16 18 22 12 16 6"/>
-      <polyline points="8 6 2 12 8 18"/>
-    </svg>
-  </div>
-
   <div class="max-w-7xl 2xl:max-w-[90rem] w-full mx-auto z-10 relative">
+    <!-- Floating Tech Icons (Foreground, positioned relative to container margins) -->
+    <!-- Java (Top Left Area) -->
+    <div class="absolute top-[12%] -left-12 xl:-left-20 2xl:-left-28 z-20 p-3 rounded-2xl border border-orange-500/10 bg-zinc-950/40 text-orange-400/50 shadow-[0_0_20px_rgba(249,115,22,0.03)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-orange-400 hover:border-orange-500/30 hover:shadow-[0_0_25px_rgba(249,115,22,0.1)] hover:opacity-100 opacity-40 animate-float-icon-1 hidden lg:flex select-none pointer-events-none" title="Java">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+        <path d="M6 11a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V5H6v6Z"/>
+        <path d="M15 7h1a1.5 1.5 0 0 1 1.5 1.5v0A1.5 1.5 0 0 1 16 10h-1"/>
+        <path d="M5 15h11a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3Z"/>
+        <path d="M8 2c0 .8-.5 1.5-.5 1.5M11 2c0 .8-.5 1.5-.5 1.5"/>
+      </svg>
+    </div>
+
+    <!-- Spring Leaf (Top Right Area) -->
+    <div class="absolute top-[10%] -right-12 xl:-right-20 2xl:-right-28 z-20 p-3 rounded-2xl border border-emerald-500/10 bg-zinc-950/40 text-emerald-400/50 shadow-[0_0_20px_rgba(16,185,129,0.03)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-emerald-400 hover:border-emerald-500/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.1)] hover:opacity-100 opacity-40 animate-float-icon-2 hidden lg:flex select-none pointer-events-none" title="Spring Boot">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+        <path d="M12 2C6.5 2 2 6.5 2 12c0 3 1.5 5.5 4 7l2-5c0-1.5.5-3 1.5-4.5S11.5 6.5 13 6c1 .5 2 1.5 2 3s-1 3-3 4.5-3.5 2.5-4 4.5l2 4c2.5-.5 4.5-2 6-4 2.5-3.5 2-8-2-12.5C15 2.5 13.5 2 12 2z"/>
+      </svg>
+    </div>
+
+    <!-- React (Bottom Right Area) -->
+    <div class="absolute bottom-[15%] -right-12 xl:-right-20 2xl:-right-28 z-20 p-3 rounded-2xl border border-cyan-500/10 bg-zinc-950/40 text-cyan-400/50 shadow-[0_0_20px_rgba(6,182,212,0.03)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-cyan-400 hover:border-cyan-500/30 hover:shadow-[0_0_25px_rgba(6,182,212,0.1)] hover:opacity-100 opacity-40 animate-float-icon-3 hidden lg:flex select-none pointer-events-none" title="React">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/>
+        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(90 12 12)"/>
+        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(150 12 12)"/>
+        <circle cx="12" cy="12" r="1"/>
+      </svg>
+    </div>
+
+    <!-- AWS Cloud (Bottom Left Area) -->
+    <div class="absolute bottom-[12%] -left-12 xl:-left-20 2xl:-left-28 z-20 p-3 rounded-2xl border border-amber-500/10 bg-zinc-950/40 text-amber-400/50 shadow-[0_0_20px_rgba(245,158,11,0.03)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-amber-400 hover:border-amber-500/30 hover:shadow-[0_0_25px_rgba(245,158,11,0.1)] hover:opacity-100 opacity-40 animate-float-icon-4 hidden lg:flex select-none pointer-events-none" title="AWS">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+        <path d="M17.5 19A4.5 4.5 0 0 0 17 10h-1.25a7 7 0 1 0-11.75 3.5M17.5 19H9a4 4 0 0 1 0-8h1.25"/>
+      </svg>
+    </div>
+
+    <!-- Keyboard Command Key (Center Left Area) -->
+    <div class="absolute top-[48%] -left-16 xl:-left-28 2xl:-left-36 z-20 p-2.5 rounded-xl border border-indigo-500/10 bg-zinc-950/40 text-indigo-400/40 shadow-[0_0_15px_rgba(99,102,241,0.02)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-indigo-400 hover:border-indigo-500/30 hover:opacity-100 opacity-30 animate-float-icon-5 hidden xl:flex select-none pointer-events-none" title="Command Shortcut">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+        <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/>
+        <path d="M9 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/>
+        <path d="M3 18a3 3 0 0 0 3-3h12a3 3 0 0 0 0-6H6a3 3 0 0 0-3 3z"/>
+      </svg>
+    </div>
+
+    <!-- Code tag (Center Right Area) -->
+    <div class="absolute top-[45%] -right-16 xl:-right-28 2xl:-right-36 z-20 p-2.5 rounded-xl border border-purple-500/10 bg-zinc-950/40 text-purple-400/40 shadow-[0_0_15px_rgba(168,85,247,0.02)] backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:text-purple-400 hover:border-purple-500/30 hover:opacity-100 opacity-30 animate-float-icon-6 hidden xl:flex select-none pointer-events-none" title="Developer Tools">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+      </svg>
+    </div>
     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
       
       <!-- Left Column: Content Details & Highlights -->
@@ -77,12 +76,12 @@ import { APP_CONFIG } from '../config';
         
         <!-- Centered Profile Image (Mobile Only) -->
         <div class="flex lg:hidden justify-center mb-4">
-          <div class="relative w-24 h-24 rounded-full p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 shadow-xl">
-            <div class="w-full h-full rounded-full overflow-hidden bg-zinc-950 p-1 flex items-center justify-center relative">
+          <div class="relative w-24 h-24 rounded-2xl p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 shadow-xl">
+            <div class="w-full h-full rounded-[14px] overflow-hidden bg-zinc-950 p-1 flex items-center justify-center relative">
               <img
                 src="https://github.com/MahendraSH.png"
                 alt="Mahendra S H"
-                class="w-full h-full object-cover rounded-full"
+                class="w-full h-full object-cover rounded-xl"
                 loading="eager"
               />
               <!-- Online status dot -->
@@ -295,9 +294,9 @@ import { APP_CONFIG } from '../config';
             </div>
             
             <!-- Terminal Text Content Box -->
-            <div class="relative min-h-[220px]">
+            <div class="relative h-[280px] sm:h-[340px]">
               <!-- Tab 1: Profile.java -->
-              <pre id="content-profile" class="terminal-content p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none">
+              <pre id="content-profile" class="terminal-content h-full p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-auto select-text scrollbar-none">
 <span class="text-purple-400">public class</span> <span class="text-blue-400">Developer</span> &#123;
     <span class="text-purple-400">private String</span> name = <span class="text-green-300">"Mahendra S H"</span>;
     <span class="text-purple-400">private String</span> role = <span class="text-green-300">"Specialist Programmer"</span>;
@@ -315,7 +314,7 @@ import { APP_CONFIG } from '../config';
 &#125;</pre>
 
               <!-- Tab 2: microservice.log -->
-              <pre id="content-logs" class="terminal-content p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none hidden">
+              <pre id="content-logs" class="terminal-content h-full p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-auto select-text scrollbar-none hidden">
 <span class="text-zinc-550">$ tail -f cma-cgm-cargo-readiness.log</span>
 <span class="text-blue-400">[INFO]</span> Kafka Consumer initiated on topic: container.ready
 <span class="text-blue-400">[INFO]</span> Spring Batch Job 'VerificationJob' launched
@@ -326,7 +325,7 @@ import { APP_CONFIG } from '../config';
 <span class="text-emerald-400">[SUCCESS]</span> Job finished: 0 errors, status complete!</pre>
 
               <!-- Tab 3: contact.json -->
-              <pre id="content-contact" class="terminal-content p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-x-auto select-text scrollbar-none hidden">
+              <pre id="content-contact" class="terminal-content h-full p-4 sm:p-5 text-[10px] sm:text-xs font-mono text-zinc-300 leading-relaxed overflow-auto select-text scrollbar-none hidden">
 &#123;
     <span class="text-purple-400">"email"</span>: <span class="text-green-300">"mahendrashongunti@gmail.com"</span>,
     <span class="text-purple-400">"phone"</span>: <span class="text-green-300">"+91-7892041114"</span>,
@@ -338,13 +337,13 @@ import { APP_CONFIG } from '../config';
           </div>
           
           <!-- Profile Badge overlapping the terminal top-right corner - Desktop Only -->
-          <div class="absolute -top-7 -right-3.5 z-30 select-none hidden lg:block">
-            <div class="relative w-18 h-18 md:w-22 md:h-22 rounded-2xl p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 shadow-2xl">
+          <div class="absolute -top-6 -right-4 z-30 select-none hidden lg:block">
+            <div class="relative w-20 h-20 lg:w-24 lg:h-24 rounded-2xl p-[1.5px] bg-gradient-to-tr from-zinc-800 via-zinc-700 to-zinc-800 shadow-2xl">
               <div class="w-full h-full rounded-[14px] overflow-hidden bg-zinc-950 p-1 flex items-center justify-center relative">
                 <img
                   src="https://github.com/MahendraSH.png"
                   alt="Mahendra S H"
-                  class="w-full h-full object-cover rounded-lg z-10"
+                  class="w-full h-full object-cover rounded-xl z-10"
                   loading="eager"
                 />
                 <!-- Active pulsing status dot -->

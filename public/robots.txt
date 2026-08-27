@@ -3,4 +3,4 @@ Allow: /
 Disallow: /404
 Disallow: /404.html
 
-Sitemap: https://mahendrash.vercel.app/sitemap.xml
+Sitemap: https://mahendrash.vercel.app/sitemap-index.xml

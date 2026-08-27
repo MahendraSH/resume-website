@@ -18,7 +18,7 @@ Hyderabad, India | +91-7892041114 | [mahendrashongunti@gmail.com](mailto:mahendr
 
 - **Languages & Specs:** Java 21, JavaScript (ES6+), TypeScript, SQL, OpenAPI, RESTful APIs, HTML5, CSS3
 - **Backend:** Spring Boot, Microservices Architecture, Spring Batch, Camunda BPM, Apache Camel, Node.js, Express.js, REST APIs
-- **Messaging & Cloud:** Apache Kafka, AWS EC2, S3, SNS, SQS, API Management
+- **Messaging & Cloud:** Apache Kafka, AWS S3, SNS, SQS, API Management
 - **Frontend:** React.js, Next.js, Redux, React Query, TanStack Table v8, Tailwind CSS, Shadcn UI
 - **Databases & ORM:** PostgreSQL, MySQL, MongoDB, Prisma ORM, SQL query optimization & indexing
 - **DevOps, QA & Tools:** Docker, CI/CD Pipelines, JUnit, Mockito, Git, GitHub, Code Reviews, RCA, Agile/Scrum, Kanban

@@ -69,7 +69,7 @@ export const SKILL_CATEGORIES = [
   },
   {
     category: "Messaging & Cloud",
-    skills: ["Apache Kafka", "AWS EC2", "S3", "SNS", "SQS", "API Management"]
+    skills: ["Apache Kafka", "AWS S3", "SNS", "SQS", "API Management"]
   },
   {
     category: "Frontend",
