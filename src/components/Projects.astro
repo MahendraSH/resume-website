@@ -12,6 +12,17 @@ const hoverShadows: Record<string, string> = {
   pink: "hover:shadow-[0_8px_30px_rgba(236,72,153,0.12)] hover:border-pink-500/25",
   purple: "hover:shadow-[0_8px_30px_rgba(168,85,247,0.12)] hover:border-purple-500/25"
 };
+
+const categoryOrder: Record<string, number> = {
+  "Freelance Client Project": 1,
+  "Enterprise Application": 2,
+  "Community Tool": 3,
+  "Personal Project": 4
+};
+
+const sortedProjects = PROJECTS.filter(project => project.category !== 'Tools').sort((a, b) => {
+  return (categoryOrder[a.category] || 99) - (categoryOrder[b.category] || 99);
+});
 ---
 
 <section id="projects" class="w-full">
@@ -67,7 +78,7 @@ const hoverShadows: Record<string, string> = {
 
     <!-- Projects List -->
     <div class="space-y-8 mt-4">
-      {PROJECTS.filter(project => project.category !== 'Tools').map((project, index) => {
+      {sortedProjects.map((project, index) => {
         const hasImages = project.image && project.image.length > 0;
 
         let shadowClass = "hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:border-zinc-800";

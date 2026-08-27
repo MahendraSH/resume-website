@@ -20,6 +20,7 @@ export interface AppConfig {
     github: string;
     linkedin: string;
     upwork: string;
+    contra: string;
     medium?: string;
     twitter?: string;
   };
@@ -27,6 +28,7 @@ export interface AppConfig {
     github: string;
     linkedin: string;
     upwork: string;
+    contra: string;
     medium?: string;
     twitter?: string;
   };
@@ -35,8 +37,8 @@ export interface AppConfig {
 export const APP_CONFIG: AppConfig = {
   name: "Mahendra S H",
   domain: "https://mahendrash.vercel.app",
-  tagline: "Java Cloud Full-Stack Engineer (Specialist Programmer) specializing in Java 21, Spring Boot, React, and AWS",
-  description: "Portfolio and Resume site of Mahendra S H, a Java Cloud Full-Stack Engineer architecting high-throughput event-driven microservices and responsive SaaS applications using Java 21, Spring Boot, React, and AWS.",
+  tagline: "Freelance Full-Stack Engineer — React, Next.js, Spring Boot & AWS",
+  description: "Portfolio of Mahendra S H, a Freelance Full-Stack Engineer building high-quality web apps, APIs, and dashboards for startups and businesses using React, Next.js, Spring Boot, and AWS.",
   author: {
     name: "Mahendra S H",
     url: "https://mahendrash.vercel.app",
@@ -46,6 +48,7 @@ export const APP_CONFIG: AppConfig = {
     github: "https://github.com/MahendraSH",
     linkedin: "https://www.linkedin.com/in/mahendra-s-h-14a74721a/",
     upwork: "https://www.upwork.com/freelancers/~015e4bc8c81692a6f2",
+    contra: "https://contra.com/mahendra_s_h_r9rbbb9o",
     medium: "https://medium.com/@maahi2001sh",
     twitter: "https://x.com/mahendrashon"
   },
@@ -53,6 +56,7 @@ export const APP_CONFIG: AppConfig = {
     github: "https://github.com/MahendraSH",
     linkedin: "https://www.linkedin.com/in/mahendra-s-h-14a74721a/",
     upwork: "https://www.upwork.com/freelancers/~015e4bc8c81692a6f2",
+    contra: "https://contra.com/mahendra_s_h_r9rbbb9o",
     medium: "https://medium.com/@maahi2001sh",
     twitter: "https://x.com/mahendrashon"
   }
@@ -86,6 +90,95 @@ export const SKILL_CATEGORIES = [
   {
     category: "Security",
     skills: ["SSL/TLS", "Secure Authentication", "Data Privacy"]
+  }
+];
+
+export interface FreelanceService {
+  id: string;
+  title: string;
+  description: string;
+  deliverables: string[];
+  techStack: string[];
+  icon: string;
+  themeColor: string;
+  idealFor: string;
+}
+
+export const FREELANCE_SERVICES: FreelanceService[] = [
+  {
+    id: "frontend",
+    title: "Frontend Development",
+    description: "Pixel-perfect, responsive UIs built with React, Next.js, and Tailwind CSS. From landing pages to complex dashboards.",
+    deliverables: [
+      "Responsive landing pages & marketing sites",
+      "Interactive dashboards with charts & data tables",
+      "Component libraries & design system implementation",
+      "Performance optimization & Core Web Vitals tuning"
+    ],
+    techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "TanStack Table"],
+    icon: "🖥️",
+    themeColor: "text-cyan-400 border-cyan-500/20 bg-cyan-500/10",
+    idealFor: "Startups, SaaS founders, agencies"
+  },
+  {
+    id: "fullstack",
+    title: "Full-Stack Applications",
+    description: "End-to-end web apps with secure APIs, databases, auth, and deployment. MERN or Java/Spring Boot stacks.",
+    deliverables: [
+      "Full-stack SaaS MVPs (auth, billing, dashboards)",
+      "REST & GraphQL API development",
+      "Database design & optimization (PostgreSQL, MongoDB, MySQL)",
+      "Admin panels & internal tools"
+    ],
+    techStack: ["Node.js", "Express", "Spring Boot", "Java 21", "PostgreSQL", "MongoDB", "Prisma"],
+    icon: "⚙️",
+    themeColor: "text-emerald-400 border-emerald-500/20 bg-emerald-500/10",
+    idealFor: "Founders building MVPs, growing startups"
+  },
+  {
+    id: "backend",
+    title: "Backend & API Engineering",
+    description: "Scalable microservices, event-driven architectures, and high-throughput APIs using Java 21 and Spring Boot.",
+    deliverables: [
+      "Microservices architecture design & implementation",
+      "Event-driven systems with Kafka, SNS/SQS",
+      "Spring Batch for bulk data processing",
+      "API design (OpenAPI/Swagger), versioning & documentation"
+    ],
+    techStack: ["Java 21", "Spring Boot", "Apache Kafka", "AWS SNS/SQS", "Docker", "PostgreSQL"],
+    icon: "🔧",
+    themeColor: "text-orange-400 border-orange-500/20 bg-orange-500/10",
+    idealFor: "Scale-ups, enterprise teams needing backend expertise"
+  },
+  {
+    id: "cloud-devops",
+    title: "Cloud & DevOps",
+    description: "AWS infrastructure, CI/CD pipelines, Docker containerization, and deployment automation.",
+    deliverables: [
+      "AWS S3, Lambda, SNS/SQS setup & configuration",
+      "CI/CD pipeline setup (GitHub Actions, Docker)",
+      "Infrastructure as code & deployment automation",
+      "Performance monitoring & optimization"
+    ],
+    techStack: ["AWS", "Docker", "GitHub Actions", "CI/CD", "Vercel", "S3"],
+    icon: "☁️",
+    themeColor: "text-amber-400 border-amber-500/20 bg-amber-500/10",
+    idealFor: "Teams needing DevOps support, cloud migrations"
+  },
+  {
+    id: "consulting",
+    title: "Technical Consulting",
+    description: "Architecture reviews, code audits, tech stack guidance, and migration planning for existing applications.",
+    deliverables: [
+      "Codebase audit & improvement recommendations",
+      "Architecture review & scalability planning",
+      "Tech stack evaluation & migration strategy",
+      "Performance profiling & bottleneck analysis"
+    ],
+    techStack: ["Architecture", "Code Review", "Performance", "Migration"],
+    icon: "🗺️",
+    themeColor: "text-purple-400 border-purple-500/20 bg-purple-500/10",
+    idealFor: "CTOs, tech leads, non-technical founders"
   }
 ];
 

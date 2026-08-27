@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ServicesComponent from '../components/Services.astro';
+import { APP_CONFIG } from '../config';
+
+const servicesDescription = "Freelance Full-Stack Developer services offered by Mahendra S H on Contra. Hire for React, Next.js, Spring Boot, Java, and AWS cloud engineering.";
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": `Freelance Services | ${APP_CONFIG.name}`,
+  "description": servicesDescription,
+  "url": `${APP_CONFIG.domain}/services/`
+};
+---
+
+<Layout 
+  title={`Freelance Services | ${APP_CONFIG.name}`}
+  description={servicesDescription}
+  schema={servicesSchema}
+>
+  <Navbar />
+
+  <main class="w-full max-w-7xl 2xl:max-w-[90rem] mx-auto px-4 md:px-8 2xl:px-12 pt-28 pb-16 md:pt-36 md:pb-24 space-y-12">
+    <!-- Page Header -->
+    <div class="text-center space-y-4 max-w-2xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-mono tracking-wider text-emerald-400 uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Hire on Contra or Upwork</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-b from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent tracking-tight leading-none">
+        Freelance Offerings
+      </h1>
+      <p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-sans">
+        From Frontend interfaces to enterprise Spring Boot microservices, hire me directly on Contra or Upwork for scoped projects, full-time contracts, or hourly consulting.
+      </p>
+    </div>
+
+    <!-- Separator Line -->
+    <div class="h-[1px] w-full bg-zinc-850/60"></div>
+
+    <!-- Services Component -->
+    <div class="mt-8">
+      <ServicesComponent />
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
