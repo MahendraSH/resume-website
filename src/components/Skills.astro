@@ -143,10 +143,8 @@ const BENTO_CARDS = [
     <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
       {BENTO_CARDS.map((card) => (
         <div 
-          class={`skills-category-card p-5 rounded-2xl border border-zinc-850/60 bg-zinc-900/10 hover:bg-zinc-900/35 transition-all duration-350 flex flex-col justify-start group relative overflow-hidden ${card.span} ${card.borderGlow}`}
+          class={`skills-category-card p-5 rounded-2xl border border-zinc-900/60 bg-zinc-900/10 flex flex-col justify-start relative overflow-hidden ${card.span}`}
         >
-          <!-- Top corner glow flash on hover -->
-          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
           <h3 class={`font-bold text-[11px] uppercase font-mono tracking-widest transition-colors ${card.color}`}>
             {card.title}

@@ -83,10 +83,10 @@ const hoverShadows: Record<string, string> = {
           <div
             id={`project-${project.id}`}
             data-category={project.category}
-            class={`project-card relative border border-zinc-850/50 bg-zinc-900/10 p-3.5 sm:p-5 md:p-6 rounded-3xl flex flex-col lg:flex-row gap-6 items-center justify-between transition-all duration-500 hover:bg-zinc-900/30 hover:border-zinc-700/80 group/project shadow-xl ${shadowClass}`}
+            class={`project-card relative border border-zinc-900/60 bg-zinc-900/10 p-3.5 sm:p-5 md:p-6 rounded-3xl flex flex-col lg:flex-row gap-6 items-center justify-between shadow-xl ${shadowClass}`}
           >
             <!-- Project Preview (Image Carousel or Gradient Showcase) -->
-            <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-2xl border border-zinc-850/80 relative bg-zinc-950 flex items-center justify-center shadow-lg group-hover/project:border-zinc-700/85 group-hover/project:shadow-2xl transition-all duration-500">
+            <div class="w-full lg:w-5/12 aspect-video shrink-0 overflow-hidden rounded-2xl border border-zinc-850/80 relative bg-zinc-950 flex items-center justify-center shadow-lg transition-all duration-500">
               {hasImages ? (
                 <div class="w-full h-full flex overflow-x-auto snap-x snap-mandatory scrollbar-none scroll-smooth">
                   {project.image.map((img) => (
@@ -94,23 +94,23 @@ const hoverShadows: Record<string, string> = {
                       <img
                         src={img}
                         alt={project.name}
-                        class="w-full h-full object-contain rounded-xl border border-zinc-850/80 group-hover/project:scale-[1.02] transition-transform duration-500"
+                        class="w-full h-full object-contain rounded-xl border border-zinc-850/80 hover:scale-[1.02] transition-transform duration-500"
                         loading="lazy"
                       />
                     </div>
                   ))}
                 </div>
               ) : (
-                <div class={`w-full h-full bg-gradient-to-br ${project.themeGradient || 'from-zinc-900 via-indigo-950/45 to-zinc-950'} flex flex-col items-center justify-center p-6 text-center relative transition-transform duration-700 group-hover/project:scale-105`}>
+                <div class={`w-full h-full bg-gradient-to-br ${project.themeGradient || 'from-zinc-900 via-indigo-950/45 to-zinc-950'} flex flex-col items-center justify-center p-6 text-center relative transition-transform duration-700`}>
                   {project.logo && (
-                    <div class={`p-3.5 rounded-2xl border border-zinc-850/60 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100 group-hover/project:scale-105 group-hover/project:border-zinc-750 transition-all duration-500`}>
+                    <div class={`p-3.5 rounded-2xl border border-zinc-850/60 bg-zinc-950/60 shadow-xl mb-3 ${project.themeColor || 'text-blue-500'} z-10 scale-95 md:scale-100`}>
                       <div class="w-7 h-7 flex items-center justify-center">
                         <Fragment set:html={project.logo} />
                       </div>
                     </div>
                   )}
                   <div class="font-bold text-sm text-zinc-200 z-10 tracking-wide">{project.name}</div>
-                  <div class="text-[9px] text-zinc-500 font-mono mt-1.5 uppercase tracking-widest z-10">
+                  <div class="text-[9px] text-zinc-550 font-mono mt-1.5 uppercase tracking-widest z-10">
                     {project.category}
                   </div>
                 </div>
@@ -154,7 +154,7 @@ const hoverShadows: Record<string, string> = {
                         <Fragment set:html={project.logo} />
                       </div>
                     )}
-                    <h3 class="text-xl font-bold text-zinc-150 group-hover/project:text-zinc-50 group-hover/project:translate-x-0.5 transition-all duration-300">{project.name}</h3>
+                    <h3 class="text-xl font-bold text-zinc-150">{project.name}</h3>
                   </div>
                 </div>
 
@@ -173,7 +173,7 @@ const hoverShadows: Record<string, string> = {
                 <!-- Tech labels -->
                 <div class="flex flex-wrap gap-1.5 pt-2">
                   {project.labels.map((lbl) => (
-                    <span class="px-2.5 py-1 text-[10px] font-mono rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-450 group-hover/project:border-zinc-800 group-hover/project:text-zinc-350 hover:!text-white hover:!border-zinc-550 transition-all duration-300">
+                    <span class="px-2.5 py-1 text-[10px] font-mono rounded-lg bg-zinc-950/60 border border-zinc-850/60 text-zinc-400 hover:text-white hover:border-zinc-500 transition-all duration-300">
                       {lbl}
                     </span>
                   ))}
