@@ -167,14 +167,46 @@ const isSubpageActive = ['/services', '/services/', '/miscellaneous', '/miscella
         <kbd class="hidden sm:inline-block text-[8px] font-sans text-zinc-550 bg-zinc-950 border border-zinc-900/80 px-1.5 py-0.5 rounded-md">⌘K</kbd>
       </button>
       
-      <a 
-        href="/mahendra_sh_fullstack_resume.pdf" 
-        target="_blank"
-        rel="noopener noreferrer"
-        class="px-3.5 py-1.5 rounded-lg bg-zinc-50 hover:bg-zinc-200 active:scale-[0.98] text-zinc-950 text-[10px] font-bold font-mono transition border border-zinc-200 shadow-sm cursor-pointer hover:shadow-md"
-      >
-        View CV
-      </a>
+      <!-- Resume Dropdown -->
+      <div class="relative group/resume">
+        <button 
+          type="button"
+          class="px-3 py-1.5 rounded-lg bg-zinc-50 hover:bg-zinc-200 active:scale-[0.98] text-zinc-950 text-[10px] font-bold font-mono transition border border-zinc-200 shadow-sm cursor-pointer hover:shadow-md flex items-center gap-1.5"
+          aria-label="View CV Dropdown"
+        >
+          <span>View CV</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-zinc-750 transition-transform group-hover/resume:rotate-180 duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+        <!-- Dropdown Menu -->
+        <div class="absolute right-0 top-full mt-2 w-56 p-1.5 bg-zinc-950/95 backdrop-blur-md border border-white/[0.08] rounded-xl shadow-2xl space-y-1 opacity-0 invisible group-hover/resume:opacity-100 group-hover/resume:visible transition-all duration-200 z-50">
+          <a 
+            href="/mahendrash_fullstack_resume.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2.5 p-2 rounded-lg text-zinc-300 hover:text-white hover:bg-zinc-900 text-[11px] font-mono transition-colors"
+          >
+            <span class="w-6 h-6 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center justify-center text-[10px] shrink-0 font-bold">FS</span>
+            <div>
+              <div class="font-bold text-zinc-200 leading-tight">Full-Stack CV</div>
+              <div class="text-[9px] text-zinc-500 font-sans">Java 21, Spring & React</div>
+            </div>
+          </a>
+          <a 
+            href="/mahendrash_data_analyst_resume.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2.5 p-2 rounded-lg text-zinc-300 hover:text-white hover:bg-zinc-900 text-[11px] font-mono transition-colors"
+          >
+            <span class="w-6 h-6 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-[10px] shrink-0 font-bold">DA</span>
+            <div>
+              <div class="font-bold text-zinc-200 leading-tight">Data Analyst CV</div>
+              <div class="text-[9px] text-zinc-500 font-sans">SQL, Power BI & Python</div>
+            </div>
+          </a>
+        </div>
+      </div>
 
       <!-- Mobile Menu Button -->
       <button 
@@ -246,6 +278,35 @@ const isSubpageActive = ['/services', '/services/', '/miscellaneous', '/miscella
         <span class="relative z-10">Contact</span>
         <span class="absolute inset-0 bg-zinc-900/40 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></span>
       </a>
+
+      <!-- Mobile Resumes -->
+      <div class="pt-2 pb-1 space-y-2">
+        <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider px-3">Download CV</div>
+        <div class="grid grid-cols-2 gap-2 px-1">
+          <a
+            href="/mahendrash_fullstack_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-1.5 p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-200 text-xs font-mono font-bold hover:bg-zinc-850"
+          >
+            <span>Full-Stack</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <a
+            href="/mahendrash_data_analyst_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-1.5 p-2 rounded-lg bg-zinc-900 border border-emerald-500/25 text-emerald-400 text-xs font-mono font-bold hover:bg-zinc-850"
+          >
+            <span>Data Analyst</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </nav>
   </div>
   

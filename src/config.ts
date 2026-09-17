@@ -11,6 +11,10 @@ export interface AppConfig {
   domain: string;
   tagline: string;
   description: string;
+  resumes: {
+    fullstack: string;
+    dataAnalyst: string;
+  };
   author: {
     name: string;
     url: string;
@@ -37,8 +41,12 @@ export interface AppConfig {
 export const APP_CONFIG: AppConfig = {
   name: "Mahendra S H",
   domain: "https://mahendrash.vercel.app",
-  tagline: "Freelance Full-Stack Engineer — React, Next.js, Spring Boot & AWS",
-  description: "Portfolio of Mahendra S H, a Freelance Full-Stack Engineer building high-quality web apps, APIs, and dashboards for startups and businesses using React, Next.js, Spring Boot, and AWS.",
+  tagline: "Full-Stack Software Engineer & Data Analyst — Java 21, React, Python, SQL & Power BI",
+  description: "Portfolio of Mahendra S H, a Full-Stack Software Engineer & Data Analyst building high-throughput microservices, event-driven pipelines, responsive web apps, and KPI-driven analytics dashboards with Java 21, Spring Boot, React, Python, PostgreSQL, and Power BI.",
+  resumes: {
+    fullstack: "/mahendrash_fullstack_resume.pdf",
+    dataAnalyst: "/mahendrash_data_analyst_resume.pdf"
+  },
   author: {
     name: "Mahendra S H",
     url: "https://mahendrash.vercel.app",
@@ -65,31 +73,31 @@ export const APP_CONFIG: AppConfig = {
 export const SKILL_CATEGORIES = [
   {
     category: "Languages & Specs",
-    skills: ["Java 21", "JavaScript (ES6+)", "TypeScript", "SQL", "OpenAPI", "RESTful APIs", "HTML5", "CSS3"]
+    skills: ["Java 21", "Python", "SQL", "JavaScript (ES6+)", "TypeScript", "OpenAPI", "RESTful APIs", "HTML5", "CSS3"]
   },
   {
-    category: "Backend",
-    skills: ["Spring Boot", "Microservices Architecture", "Spring Batch", "Camunda BPM", "Apache Camel", "Node.js", "Express.js", "REST APIs"]
+    category: "Backend & Microservices",
+    skills: ["Spring Boot", "Microservices Architecture", "Spring Batch", "Camunda BPM", "FastAPI", "Django", "Flask", "Node.js", "Express.js", "REST APIs"]
+  },
+  {
+    category: "Data Analytics & BI",
+    skills: ["Power BI", "DAX", "Power Query", "Advanced Excel", "KPI Development", "EDA", "Root Cause Analysis (RCA)", "Business Reporting", "Pandas", "NumPy", "Matplotlib"]
   },
   {
     category: "Messaging & Cloud",
-    skills: ["Apache Kafka", "AWS S3", "SNS", "SQS", "API Management"]
+    skills: ["Apache Kafka", "AWS (EC2, S3, SNS, SQS)", "API Management", "Docker", "CI/CD Pipelines"]
   },
   {
-    category: "Frontend",
-    skills: ["React.js", "Next.js", "Redux", "React Query", "TanStack Table v8", "Tailwind CSS", "Shadcn UI"]
+    category: "Frontend & Dashboards",
+    skills: ["React.js", "Next.js", "Redux", "React Query", "TanStack Table v8", "Tailwind CSS", "Shadcn UI", "Recharts"]
   },
   {
-    category: "Databases & ORM",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM", "SQL query optimization & indexing"]
+    category: "Databases & SQL Optimization",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM", "Complex Joins", "CTEs", "Window Functions", "Query Optimization & Indexing"]
   },
   {
     category: "DevOps, QA & Tools",
-    skills: ["Docker", "CI/CD Pipelines", "JUnit", "Mockito", "Git", "GitHub", "Code Reviews", "RCA", "Agile/Scrum", "Kanban"]
-  },
-  {
-    category: "Security",
-    skills: ["SSL/TLS", "Secure Authentication", "Data Privacy"]
+    skills: ["Docker", "CI/CD Pipelines", "JUnit", "Mockito", "Git", "GitHub", "Jupyter Notebook", "Agile/Scrum", "Kanban"]
   }
 ];
 
@@ -184,28 +192,28 @@ export const FREELANCE_SERVICES: FreelanceService[] = [
 
 export const EXPERIENCES = [
   {
-    role: "Specialist Programmer / Software Developer",
+    role: "Specialist Programmer / Software Developer & Data Analyst",
     company: "Infosys",
     location: "Hyderabad, India",
     duration: "Jul 2024 – Jun 2026",
     bullets: [
-      "Architected and engineered enterprise microservices using Java 21, Spring Boot, RESTful APIs, and OpenAPI for event-driven container readiness workflows.",
-      "Integrated Apache Kafka, AWS SNS, AWS SQS, AWS S3, and Camunda BPM for event-driven messaging, queue orchestration, and workflow automation, reducing manual verification overhead by 35%.",
-      "Used Spring Batch to automate high-throughput end-date verification and backend checks, processing 50k+ active bookings daily.",
-      "Developed responsive React dashboards using React Query and TanStack Table, improving operational decision-making efficiency.",
-      "Optimized PostgreSQL queries, reducing REST API response times by 20% and improving system throughput.",
-      "Developed automated unit/integration tests with JUnit and Mockito; performed code reviews and Root Cause Analysis (RCA) while following CI/CD quality gates and Docker deployment practices.",
-      "Participated across planning, design, implementation, deployment, and maintenance within the enterprise SDLC; worked with secure authentication and SSL/TLS standards."
+      "Architected microservices with Java 21, Spring Boot, and OpenAPI for CMA CGM container readiness workflows, integrating AWS SQS, SNS, S3, and Camunda BPM to automate decision pipelines and cut manual verification overhead by 35%.",
+      "Built high-throughput Spring Batch jobs to automate validation checks, processing 50,000+ daily booking events and transaction records.",
+      "Analyzed operational datasets of 50,000+ active bookings daily for CMA CGM using complex PostgreSQL SQL (CTEs, joins, window functions) to identify trends, operational bottlenecks, and exception patterns.",
+      "Developed interactive Power BI dashboards and responsive React (TanStack Table v8, React Query) operational views for real-time KPI monitoring, booking readiness, and exception tracking.",
+      "Investigated data inconsistencies and conducted Root Cause Analysis (RCA) to safeguard data quality; tuned PostgreSQL queries and data-access operations to reduce API latency by 20%.",
+      "Enforced testing and delivery standards with JUnit, Mockito, Docker, and automated CI/CD pipelines."
     ]
   },
   {
-    role: "Freelance Frontend & MERN Developer",
+    role: "Freelance Full-Stack & Data Developer",
     company: "Independent Software Development",
     location: "Mysore, India",
     duration: "Jun 2023 – Jun 2024",
     bullets: [
-      "Engineered responsive frontend applications and full-stack solutions using the MERN stack (MongoDB, Express, React, Node.js), Next.js, and MySQL.",
-      "Built tailored platforms using TanStack, Zod, Material UI (MUI), Bootstrap, and React Hook Form, including dashboards, admin panels, shirt e-commerce stores, cloud note portals, sci-fi research publications, blogs, and B2B/B2C websites."
+      "Delivered 6+ custom production web applications (e-commerce, SaaS tools, analytics portals) using the MERN stack, Next.js, and PostgreSQL/MySQL.",
+      "Designed database schemas and developed complex SQL queries for application reporting, filtering, aggregation, and analytics across production systems.",
+      "Implemented type-safe data pipelines and modular UI architectures using TypeScript, TanStack Table/Query, Zod, and Tailwind CSS."
     ]
   },
   {
@@ -228,6 +236,39 @@ export const EDUCATION = {
   grade: "7.3 / 10 CGPA",
   coursework: "Data Structures & Algorithms, Database Systems, Software Engineering, DBMS, Object-Oriented Design"
 };
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  credentialId?: string;
+  issueDate: string;
+  description: string;
+  skills: string[];
+  badge: string;
+}
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    id: "data-analyst-associate",
+    name: "Data Analyst Associate",
+    issuer: "DataCamp",
+    credentialId: "DAA0011831242181",
+    issueDate: "Issued Sep 2026",
+    description: "Certified proficiency in exploratory data analysis, data extraction, statistical metrics, KPI reporting, and data-driven communication using SQL & Python.",
+    skills: ["Data Analysis", "SQL", "Python", "Business Intelligence", "EDA", "Reporting"],
+    badge: "Verified Associate"
+  },
+  {
+    id: "postgresql-advanced-sql",
+    name: "PostgreSQL & Advanced SQL Specialization",
+    issuer: "DataCamp",
+    issueDate: "Issued Sep 2026",
+    description: "Specialized mastery covering complex joins, subqueries, relational database schemas, window functions, and advanced data manipulation in PostgreSQL.",
+    skills: ["PostgreSQL", "Joining Data", "Data Manipulation", "Window Functions", "CTEs", "Query Optimization"],
+    badge: "Specialization"
+  }
+];
 
 export interface Project {
   id: number;
@@ -446,6 +487,23 @@ export const PROJECTS: Project[] = [
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>`,
     themeColor: "text-emerald-400 border-emerald-500/20 bg-emerald-500/10",
     themeGradient: "from-zinc-900 via-emerald-950/40 to-zinc-950"
+  },
+  {
+    id: 13,
+    name: "E-Commerce REST API Platform",
+    description: "Scalable multi-service e-commerce REST API built with Django REST Framework, Flask microservices, and FastAPI async endpoints achieving sub-50ms response times.",
+    bullets: [
+      "Architected and developed a scalable e-commerce REST API with Django REST Framework, featuring product catalog, cart, order management, and user authentication.",
+      "Built a lightweight microservice layer using Flask for payment webhook handling and notification services.",
+      "Developed high-performance async API endpoints with FastAPI for real-time inventory tracking and search, achieving sub-50ms response times.",
+      "Implemented a Node.js/Express.js API gateway for routing, rate limiting, and request aggregation across backend services."
+    ],
+    labels: ["Python", "FastAPI", "Django REST", "Flask", "PostgreSQL", "Node.js", "Express.js", "RESTful API", "Microservices"],
+    duration: "Backend & API Project",
+    category: "Personal Project",
+    logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>`,
+    themeColor: "text-cyan-400 border-cyan-500/20 bg-cyan-500/10",
+    themeGradient: "from-zinc-900 via-cyan-950/40 to-zinc-950"
   }
 ].sort((a, b) => a.id - b.id);
 

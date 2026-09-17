@@ -3,6 +3,8 @@ import { SKILL_CATEGORIES } from '../config';
 
 const SKILL_ICONS: Record<string, string> = {
   java: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M6 11a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V5H6v6Z"/><path d="M15 7h1a1.5 1.5 0 0 1 1.5 1.5v0A1.5 1.5 0 0 1 16 10h-1"/><path d="M5 15h11a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3Z"/><path d="M8 2c0 .8-.5 1.5-.5 1.5M11 2c0 .8-.5 1.5-.5 1.5"/></svg>`,
+  python: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M12 2c-3.3 0-6 1.3-6 4v2h6v1H4c-2.7 0-4 2.7-4 6s1.3 6 4 6h2v-2c0-3.3 1.3-6 4-6h2V6c0-2.7-2.7-4-6-4z"/><circle cx="8.5" cy="5.5" r=".75" fill="currentColor"/><path d="M12 22c3.3 0 6-1.3 6-4v-2h-6v-1h8c2.7 0 4-2.7 4-6s-1.3-6-4-6h-2v2c0 3.3-1.3 6-4 6h-2v7c0 2.7 2.7 4 6 4z"/><circle cx="15.5" cy="18.5" r=".75" fill="currentColor"/></svg>`,
+  bi: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="17" y="4" width="4" height="16" rx="1"/></svg>`,
   js: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M15 9h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2"/><path d="M15 15v-6"/></svg>`,
   ts: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M10 9H8v6"/><path d="M9 9h3"/><path d="M16 15v-6h2"/><path d="M15 9h2"/></svg>`,
   db: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>`,
@@ -24,10 +26,12 @@ const SKILL_ICONS: Record<string, string> = {
 function getSkillIcon(skill: string): string {
   const name = skill.toLowerCase();
   if (name.includes('java 21')) return 'java';
+  if (name.includes('python')) return 'python';
+  if (name.includes('power bi') || name.includes('dax') || name.includes('kpi') || name.includes('reporting') || name.includes('eda')) return 'bi';
   if (name.includes('javascript')) return 'js';
   if (name.includes('typescript')) return 'ts';
-  if (name.includes('sql') || name.includes('postgres') || name.includes('mysql') || name.includes('mongo') || name.includes('db')) return 'db';
-  if (name.includes('openapi') || name.includes('restful') || name.includes('api')) return 'api';
+  if (name.includes('sql') || name.includes('postgres') || name.includes('mysql') || name.includes('mongo') || name.includes('cte') || name.includes('join')) return 'db';
+  if (name.includes('openapi') || name.includes('restful') || name.includes('api') || name.includes('fastapi') || name.includes('django') || name.includes('flask')) return 'api';
   if (name.includes('html') || name.includes('css')) return 'web';
   if (name.includes('spring')) return 'spring';
   if (name.includes('microservices') || name.includes('camunda')) return 'workflow';
@@ -48,66 +52,64 @@ function getHeroSkillStyles(skill: string): { border: string; text: string; bg: 
   if (name === 'java 21') return { border: 'border-orange-500/30', text: 'text-orange-400 hover:text-orange-300', bg: 'bg-orange-500/5', dot: 'bg-orange-500' };
   if (name === 'spring boot') return { border: 'border-emerald-500/30', text: 'text-emerald-400 hover:text-emerald-300', bg: 'bg-emerald-500/5', dot: 'bg-emerald-500' };
   if (name === 'react.js') return { border: 'border-cyan-500/30', text: 'text-cyan-400 hover:text-cyan-300', bg: 'bg-cyan-500/5', dot: 'bg-cyan-500' };
+  if (name === 'power bi') return { border: 'border-amber-500/30', text: 'text-amber-400 hover:text-amber-300', bg: 'bg-amber-500/5', dot: 'bg-amber-500' };
+  if (name === 'python') return { border: 'border-yellow-500/30', text: 'text-yellow-400 hover:text-yellow-300', bg: 'bg-yellow-500/5', dot: 'bg-yellow-500' };
   if (name === 'apache kafka') return { border: 'border-indigo-500/30', text: 'text-indigo-400 hover:text-indigo-300', bg: 'bg-indigo-500/5', dot: 'bg-indigo-500' };
-  if (name.includes('aws ')) return { border: 'border-amber-500/30', text: 'text-amber-400 hover:text-amber-300', bg: 'bg-amber-500/5', dot: 'bg-amber-500' };
+  if (name.includes('aws')) return { border: 'border-amber-500/30', text: 'text-amber-400 hover:text-amber-300', bg: 'bg-amber-500/5', dot: 'bg-amber-500' };
   if (name === 'postgresql') return { border: 'border-blue-500/30', text: 'text-blue-400 hover:text-blue-350', bg: 'bg-blue-500/5', dot: 'bg-blue-500' };
   return null;
 }
 
-// Extract and dynamically group skill lists for a highly structured Bento layout
-const languages = SKILL_CATEGORIES.find(c => c.category === "Languages & Specs")?.skills || [];
-const backend = SKILL_CATEGORIES.find(c => c.category === "Backend")?.skills || [];
+// Extract skill categories from config
+const backend = SKILL_CATEGORIES.find(c => c.category === "Backend & Microservices")?.skills || [];
+const dataAnalytics = SKILL_CATEGORIES.find(c => c.category === "Data Analytics & BI")?.skills || [];
+const databases = SKILL_CATEGORIES.find(c => c.category === "Databases & SQL Optimization")?.skills || [];
+const frontend = SKILL_CATEGORIES.find(c => c.category === "Frontend & Dashboards")?.skills || [];
 const messaging = SKILL_CATEGORIES.find(c => c.category === "Messaging & Cloud")?.skills || [];
-const frontend = SKILL_CATEGORIES.find(c => c.category === "Frontend")?.skills || [];
-const databases = SKILL_CATEGORIES.find(c => c.category === "Databases & ORM")?.skills || [];
 const devops = SKILL_CATEGORIES.find(c => c.category === "DevOps, QA & Tools")?.skills || [];
-const security = SKILL_CATEGORIES.find(c => c.category === "Security")?.skills || [];
-
-// Group 1: Core Backend & Specifications
-const groupBackend = [...languages.filter(s => s.toLowerCase().includes('java') || s.toLowerCase() === 'sql'), ...backend];
-
-// Group 2: Cloud, Messaging & Databases
-const groupCloudData = [...messaging, ...databases];
-
-// Group 3: Frontend & Design Systems
-const groupFrontend = [...frontend, ...languages.filter(s => !s.toLowerCase().includes('java') && s.toLowerCase() !== 'sql' && !s.toLowerCase().includes('api'))];
-
-// Group 4: DevOps, Security & QA
-const groupDevOpsSecurity = [...devops, ...security, ...languages.filter(s => s.toLowerCase().includes('api'))];
 
 const BENTO_CARDS = [
   {
-    title: "Backend Core & Specifications",
-    desc: "Java microservices, workflow orchestration, and runtime engines.",
-    skills: groupBackend,
+    title: "Backend Core & Microservices",
+    desc: "Java 21, Spring Boot, Spring Batch, Camunda, and high-throughput REST APIs.",
+    skills: ["Java 21", ...backend],
     span: "md:col-span-3",
     color: "text-emerald-400",
     borderGlow: "group-hover:border-emerald-500/20 group-hover:shadow-[0_0_20px_rgba(52,211,153,0.02)]",
     tagGlow: "hover:text-emerald-300 hover:border-emerald-500/30 hover:shadow-[0_0_12px_rgba(16,185,129,0.12)]"
   },
   {
-    title: "Cloud, Messaging & Storage",
-    desc: "Event streaming, cloud compute/storage, and database scaling.",
-    skills: groupCloudData,
+    title: "Data Analytics & Business Intelligence",
+    desc: "Power BI dashboards, DAX, Python EDA, KPI monitoring, and data pipelines.",
+    skills: ["Python", ...dataAnalytics],
     span: "md:col-span-3",
+    color: "text-amber-400",
+    borderGlow: "group-hover:border-amber-500/20 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.02)]",
+    tagGlow: "hover:text-amber-300 hover:border-amber-500/30 hover:shadow-[0_0_12px_rgba(245,158,11,0.12)]"
+  },
+  {
+    title: "Databases & SQL Optimization",
+    desc: "PostgreSQL tuning, complex joins, CTEs, window functions, and indexing.",
+    skills: ["SQL", ...databases],
+    span: "md:col-span-2",
     color: "text-blue-400",
     borderGlow: "group-hover:border-blue-500/20 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.02)]",
     tagGlow: "hover:text-blue-300 hover:border-blue-500/30 hover:shadow-[0_0_12px_rgba(59,130,246,0.12)]"
   },
   {
-    title: "Frontend & Interfaces",
-    desc: "Responsive SaaS dashboards, single page apps, and css structures.",
-    skills: groupFrontend,
+    title: "Frontend & Dashboards",
+    desc: "React.js, Next.js, TanStack Table v8, TypeScript, and Tailwind CSS.",
+    skills: ["TypeScript", "JavaScript (ES6+)", ...frontend],
     span: "md:col-span-2",
     color: "text-cyan-400",
     borderGlow: "group-hover:border-cyan-500/20 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.02)]",
     tagGlow: "hover:text-cyan-300 hover:border-cyan-500/30 hover:shadow-[0_0_12px_rgba(6,182,212,0.12)]"
   },
   {
-    title: "DevOps, Security & QA Automation",
-    desc: "Container pipelines, test suites, cryptography, and agile methodologies.",
-    skills: groupDevOpsSecurity,
-    span: "md:col-span-4",
+    title: "Cloud, DevOps & Tooling",
+    desc: "AWS infrastructure, Kafka messaging, Docker containers, and CI/CD gates.",
+    skills: [...messaging, ...devops],
+    span: "md:col-span-2",
     color: "text-purple-400",
     borderGlow: "group-hover:border-purple-500/20 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.02)]",
     tagGlow: "hover:text-purple-300 hover:border-purple-500/30 hover:shadow-[0_0_12px_rgba(168,85,247,0.12)]"
